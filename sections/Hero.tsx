@@ -15,6 +15,7 @@ export interface Props {
    */
   title?: string;
   /**
+   * @format rich-text
    * @default This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.
    */
   description?: string;
