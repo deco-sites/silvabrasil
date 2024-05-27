@@ -20,40 +20,29 @@ export interface Props {
    */
   description?: string;
   image?: ImageWidget;
-  placement?: "left" | "right";
   cta?: CTA[];
 }
 
-const PLACEMENT = {
-  left: "flex-col text-left lg:flex-row-reverse",
-  right: "flex-col text-left lg:flex-row",
-};
+
 
 export default function HeroFlats({
   title = "Click here to tweak this text however you want.",
   description =
-    "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
-  image,
-  placement = "left",
+    "Description text",image,
   cta = [
     { id: "change-me-1", href: "/", text: "Change me", outline: false },
     { id: "change-me-2", href: "/", text: "Change me", outline: true },
   ],
 }: Props) {
   return (
-    <nav class="lg:container lg:mx-auto mx-4">
       <div class="flex flex-col items-center gap-8">
         <div
-          class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${
-            image
-              ? PLACEMENT[placement]
-              : "flex-col items-center justify-center text-center"
-          } lg:py-36 gap-12 md:gap-20 items-center`}
+          class="relative flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 flex-col items-center justify-center text-center lg:py-36 gap-12 md:gap-20 items-center"
         >
           {image && (
             <Image
               width={640}
-              class="w-full lg:w-1/2 object-fit"
+              class="absolute inset-0 w-full h-full object-cover -z-10"
               sizes="(max-width: 640px) 100vw, 30vw"
               src={image}
               alt={image}
@@ -100,6 +89,5 @@ export default function HeroFlats({
           </div>
         </div>
       </div>
-    </nav>
   );
 }

@@ -14,23 +14,12 @@
           "href": "/"
         }
       ],
-      "description": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala,</span></strong><span> organizando a cadeia de suprimentos da restauração florestal</span></p>"
-    },
-    {
-      "__resolveType": "site/sections/Logos.tsx"
+      "description": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala,</span></strong><span> organizando a cadeia de suprimentos da restauração florestal</span></p>",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f275e742-333f-4a37-bf91-548592406955"
     },
     {
       "__resolveType": "site/sections/ImageWithParagraph.tsx",
       "placement": "right"
-    },
-    {
-      "__resolveType": "site/sections/ImageWithParagraph.tsx"
-    },
-    {
-      "__resolveType": "site/sections/BlogPosts.tsx"
-    },
-    {
-      "__resolveType": "site/sections/Testimonials.tsx"
     },
     {
       "__resolveType": "site/sections/Faq.tsx"
