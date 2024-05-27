@@ -1,1 +1,29 @@
-{"__resolveType":"site/sections/Header.tsx","navigation":{"links":[{"label":"Para viveiros"},{"label":"Para compradores de mudas"},{"label":"Sobre a Silva"},{"label":"Trabalhe Conosco"}],"buttons":[{"text":"Fale com a gente","href":"/","outline":false}]},"logo":{"src":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/eb3b884b-c3a5-47c9-be9d-e8238fee34a6"}}
+{
+  "__resolveType": "site/sections/Header.tsx",
+  "navigation": {
+    "links": [
+      {
+        "label": "Para viveiros"
+      },
+      {
+        "label": "Para compradores de mudas"
+      },
+      {
+        "label": "Sobre a Silva"
+      },
+      {
+        "label": "Trabalhe Conosco"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Fale com a gente",
+        "href": "/",
+        "outline": false
+      }
+    ]
+  },
+  "logo": {
+    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/86c59f7c-459b-481a-a3d5-6433f6e554e1"
+  }
+}
