@@ -43,37 +43,36 @@ export default function Header({
   },
 }: Nav) {
   return (
-    <nav class="drawer drawer-end">
+    <nav class="drawer drawer-end bg-green-900">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
+      <div class="drawer-content container lg:px-0 px-4 flex gap-8 w-full items-center justify-between py-4">
         <a href="/">
-          <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
+          <Image src={logo.src || ""} width={146} height={35} alt={logo.alt} />
         </a>
 
-        <div class="hidden items-center justify-between lg:flex w-full">
-          <ul class="flex">
+          <ul class="flex hidden items-center lg:flex">
             {navigation.links.map((link) => (
               <li>
                 <a
                   href={link.url}
                   aria-label={link.label}
-                  class="link no-underline hover:underline p-4"
+                  class="text-white whitespace-nowrap font-semibold link no-underline hover:underline p-4"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
-          <ul class="flex gap-3">
+          <ul class="flex gap-3 hidden items-center lg:flex">
             {navigation.buttons?.map((item) => (
               <a
                 key={item?.id}
                 id={item?.id}
                 href={item?.href ?? "#"}
                 target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-normal btn btn-primary ${
+                class={`font-bold btn bg-white text-green-900 ${
                   item.outline && "btn-outline"
                 }`}
               >
@@ -81,7 +80,6 @@ export default function Header({
               </a>
             ))}
           </ul>
-        </div>
 
         <label
           htmlFor="mobile-drawer-nav"
