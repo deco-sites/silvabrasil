@@ -10,6 +10,10 @@ export default {
       animation: {
         sliding: "sliding 30s linear infinite",
       },
+      colors: {
+        "slate": "#FEF5E6",
+        "green-950": "#004D3D",
+      },
       keyframes: {
         sliding: {
           "0%": { transform: "translateX(0)" },

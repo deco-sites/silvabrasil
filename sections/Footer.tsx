@@ -1,5 +1,5 @@
-import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import Image from "apps/website/components/Image.tsx";
 
 export interface Column {
   title: string;
@@ -106,8 +106,8 @@ export default function Footer({
   ],
 }: Props) {
   return (
-    <div class="lg:container mx-auto md:max-w-6xl px-4 pt-16 text-sm">
-      <div class="flex flex-col gap-20">
+    <div class="w-full mx-auto px-4 pt-16 text-sm bg-green-950 text-white">
+      <div class="container flex flex-col gap-20">
         <div class="flex flex-col gap-6 justify-between lg:flex-row">
           <div>
             <Image
@@ -116,9 +116,31 @@ export default function Footer({
               height={28}
               alt={logo.alt}
             />
+
+            <div class="flex flex-col max-w-[300px]">
+              <span class="mb-6">
+                Somos uma plataforma que comercializa{" "}
+                <b>mudas e sementes nativas em escala</b>{" "}
+                organizando a cadeia de suprimentos
+              </span>
+              <span class="mb-6">
+                Feita no Brasil 🇧🇷 para o Planeta Terra
+              </span>
+              <span class="mb-6">
+                #clima #comunidade #biodiversidade
+              </span>
+            </div>
           </div>
-          <div class="flex gap-9">
-            {links?.map((link) => (
+          <div class="flex gap-9 flex-col text-slate">
+            <h2>Informação</h2>
+            <span>
+              Para viveiros
+            </span>
+            <span>Para compradores de mudas</span>
+            <span>Sobre a Silva</span>
+            <span>Nosso impacto</span>
+            {
+              /* {links?.map((link) => (
               <div>
                 <h4 class="font-semibold mb-4">{link.title}</h4>
                 {link.items?.map((item) => (
@@ -130,11 +152,14 @@ export default function Footer({
                   </a>
                 ))}
               </div>
-            ))}
+            ))} */
+            }
           </div>
           <div class="lg:w-[40%]">
-            <h4 class="font-semibold mb-4">{subscribe?.title}</h4>
-            <form class="flex flex-col gap-4">
+            <h2 class="font-semibold mb-4">Contato</h2>
+
+            {
+              /* <form class="flex flex-col gap-4">
               <p class="font-normal">{subscribe.description}</p>
               <div class="flex gap-4">
                 <input
@@ -155,32 +180,13 @@ export default function Footer({
                 dangerouslySetInnerHTML={{ __html: subscribe.instructions }}
               >
               </p>
-            </form>
+            </form> */
+            }
           </div>
         </div>
-        <div class="border-primary border-t flex flex-col gap-4 items-center justify-between lg:flex-row lg:items-center py-8">
+        <div class="border-white border-t flex flex-col gap-4 items-center justify-between lg:flex-row lg:items-center py-8">
           <div class="flex flex-col gap-4 items-center lg:flex-row lg:gap-6">
-            <a
-              href={madeWith?.href}
-              class="flex items-center gap-2"
-              target="_blank"
-            >
-              <span>{madeWith?.label}</span>
-              <Image
-                src={madeWith?.src || ""}
-                width={100}
-                height={28}
-                alt={madeWith?.label}
-              />
-            </a>
-            <span>{copyright}</span>
-            <div class="flex gap-2 justify-between lg:gap-6">
-              {bottomLinks?.map((item) => (
-                <a class="link" href={item.href} target="_blank">
-                  {item.label}
-                </a>
-              ))}
-            </div>
+            <p>® Silva 2024. Todos os direitos reservados.</p>
           </div>
           <div class="flex gap-3">
             {social?.map((item) => (
