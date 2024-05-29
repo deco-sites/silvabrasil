@@ -8,12 +8,15 @@
     {
       "__resolveType": "site/sections/Hero.tsx",
       "title": "<p>Organizamos a cadeia da restauração florestal para os viveiros</p>",
-      "cta": [
-        {
+      "cta": {
+        "0": {
           "text": "Fale com a gente",
           "href": "/"
-        }
-      ],
+        },
+        "outline": false,
+        "text": "Fale com a gente",
+        "href": "/"
+      },
       "description": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala,</span></strong><span> organizando a cadeia de suprimentos da restauração florestal</span></p>",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f275e742-333f-4a37-bf91-548592406955"
     },
