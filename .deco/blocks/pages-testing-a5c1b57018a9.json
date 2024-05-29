@@ -21,18 +21,13 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f275e742-333f-4a37-bf91-548592406955"
     },
     {
-      "__resolveType": "site/sections/ImageWithParagraph.tsx",
-      "placement": "right",
-      "image1": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f46a64f6-8876-4b87-b965-72a5036a5383",
-      "image2": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/b377a138-ecdc-44b1-aac3-bd735344eb52",
-      "button1": {
-        "href": "/",
-        "text": "Quero VENDER mudas"
-      },
-      "button2": {
-        "href": "/",
-        "text": "Quero COMPRAR mudas"
-      }
+      "__resolveType": "site/sections/Logos.tsx"
+    },
+    {
+      "__resolveType": "site/sections/BlogPosts.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Testimonials.tsx"
     },
     {
       "__resolveType": "site/sections/Faq.tsx"
