@@ -5,7 +5,6 @@ export interface CTA {
   id?: string;
   href: string;
   text: string;
-  outline?: boolean;
 }
 
 export interface Props {
@@ -35,6 +34,7 @@ export default function HeroFlats({
         {image && (
           <Image
             width={640}
+            height={742}
             class="absolute inset-0 w-full h-full object-cover -z-10"
             src={image}
             alt={image}
@@ -42,7 +42,7 @@ export default function HeroFlats({
             loading="lazy"
           />
         )}
-        <div class="text-green-900 container w-full lg:gap-12 gap-4 flex flex-col items-center justify-center">
+        <div class="text-green-900 lg:container md:max-w-7xl lg:mx-auto mx-4 lg:gap-12 gap-4 flex flex-col items-center justify-center">
           <div
             class="inline-block lg:text-[70px] text-4xl leading-none font-bold"
             dangerouslySetInnerHTML={{
@@ -62,7 +62,9 @@ export default function HeroFlats({
             id={cta?.id}
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class="font-bold text-2xl bg-green-900 text-white py-6 px-[42px] flex justify-center items-center h-auto"
+            class="font-bold text-2xl bg-green-900 text-white py-6 px-[42px] flex justify-center items-center h-auto rounded-xl transform
+			transition duration-700
+			hover:scale-105"
           >
             <span>
               {cta?.text}

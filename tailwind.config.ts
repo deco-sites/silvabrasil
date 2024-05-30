@@ -12,6 +12,8 @@ export default {
       },
       colors: {
         "green-900": "#004D3D",
+        "slate": "#FEF5E6",
+        "white": "#FDFDFD",
       },
       keyframes: {
         sliding: {

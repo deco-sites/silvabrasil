@@ -21,16 +21,46 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f275e742-333f-4a37-bf91-548592406955"
     },
     {
-      "__resolveType": "site/sections/Logos.tsx"
+      "__resolveType": "site/sections/Faq.tsx",
+      "title": "Dúvidas e respostas",
+      "description": "Encontre aqui a resposta para suas dúvidas mais comuns e descubra como podemos te ajudar",
+      "questions": [
+        {
+          "title": "Como posso começar a comprar mudas na Silva?",
+          "answer": "<p><span style=\"color: rgb(254, 245, 230)\">Simples! Cadastre-se em nossa plataforma e explore a diversidade de fornecedores, mudas e sementes. Nossa equipe está pronta para auxiliar em cada etapa do processo.</span></p>"
+        },
+        {
+          "title": "Como a Silva contribui para a qualidade das mudas?",
+          "answer": "<p>Trabalhamos com viveiros que certificamos e realizamos visitas técnicas regulares para assegurar que as mudas atendam aos padrões de qualidade exigidos.</p><p></p>"
+        },
+        {
+          "title": "Quais são as vantagens para viveiros ao trabalhar com a Silva?",
+          "answer": "<p><span style=\"color: rgb(254, 245, 230)\">Oferecemos acesso a um mercado amplo, suporte técnico, equipamentos de ponta e garantia de uma remuneração justa pelo seu trabalho.</span></p>"
+        },
+        {
+          "title": "Como a Silva ajuda os viveiros?",
+          "answer": "<p><span style=\"color: rgb(254, 245, 230)\">Trazemos para os viveiros pedidos de maior prazo e com melhores condições comerciais, por meio do nosso relacionamento e acesso aos principais compradores de mudas e sementes do Brasil. Além disso, mapeamos as principais necessidades dos viveiros parceiros e promovemos, de forma customizada, as melhorias necessárias nos viveiros, sejam elas comerciais, operacionais, regulatórias ou administrativas.</span></p>"
+        }
+      ]
     },
     {
-      "__resolveType": "site/sections/BlogPosts.tsx"
-    },
-    {
-      "__resolveType": "site/sections/Testimonials.tsx"
-    },
-    {
-      "__resolveType": "site/sections/Faq.tsx"
+      "__resolveType": "site/sections/MadeInBrazil.tsx",
+      "text": "",
+      "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/e4a2bf0a-00cd-49a3-8e92-efed2ebe9acd",
+      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/4fd594b9-a0f5-4446-ade7-59cf1510622b",
+      "socialButtons": [
+        {
+          "network": "Instagram",
+          "href": "https://www.instagram.com/mudasdasilva"
+        },
+        {
+          "network": "Linkedin",
+          "href": "https://www.linkedin.com/company/mudasdasilva/"
+        }
+      ],
+      "firstText": "Feita no Brasil",
+      "secondText": "para o Planeta Terra",
+      "hashtags": "#clima  #comunidade  #biodiversidade"
     },
     {
       "__resolveType": "Footer"

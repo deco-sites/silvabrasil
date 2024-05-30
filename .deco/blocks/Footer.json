@@ -1,1 +1,54 @@
-{"__resolveType":"site/sections/Footer.tsx","links":[],"bottomLinks":[],"social":[],"subscribe":{}}
+{
+  "__resolveType": "site/sections/Footer.tsx",
+  "links": [
+    {
+      "items": [
+        {
+          "label": "Para viveiros",
+          "href": "#"
+        },
+        {
+          "label": "Para compradores de mudas",
+          "href": "#"
+        },
+        {
+          "label": "Sobre a Silva",
+          "href": "#"
+        },
+        {
+          "label": "Nosso impacto",
+          "href": "#"
+        }
+      ],
+      "title": "Informação"
+    }
+  ],
+  "bottomLinks": [],
+  "social": [
+    {
+      "network": "Instagram",
+      "href": "/"
+    },
+    {
+      "network": "Linkedin",
+      "href": "/"
+    },
+    {
+      "network": "Facebook",
+      "href": "/"
+    }
+  ],
+  "subscribe": {},
+  "linksTilte": "Informação",
+  "logo": {
+    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/2d66fd38-64e5-427b-9de1-e5eeb2b06071",
+    "alt": "Silva Logo"
+  },
+  "copyright": "® Silva 2024. Todos os direitos reservados.",
+  "contact": {
+    "title": "Contato",
+    "phone": "(11) 96476-9833",
+    "email": "contato@silvabrasil.bio"
+  },
+  "socialTitle": "Redes sociais"
+}
