@@ -58,8 +58,6 @@ export default function HeroFlats({
           >
           </div>
           <a
-            key={cta?.id}
-            id={cta?.id}
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
             class="font-bold text-2xl bg-green-900 text-white py-6 px-[42px] flex justify-center items-center h-auto rounded-xl transform

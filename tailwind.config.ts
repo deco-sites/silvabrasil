@@ -11,6 +11,7 @@ export default {
         sliding: "sliding 30s linear infinite",
       },
       colors: {
+        "green-500": "#85B549",
         "green-900": "#004D3D",
         "slate": "#FEF5E6",
         "white": "#FDFDFD",

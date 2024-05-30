@@ -10,7 +10,7 @@ import * as $$$$$$2 from "./sections/Faq.tsx";
 import * as $$$$$$3 from "./sections/Footer.tsx";
 import * as $$$$$$4 from "./sections/Header.tsx";
 import * as $$$$$$5 from "./sections/Hero.tsx";
-import * as $$$$$$6 from "./sections/ImageWithParagraph.tsx";
+import * as $$$$$$6 from "./sections/ImagesSection.tsx";
 import * as $$$$$$7 from "./sections/Logos.tsx";
 import * as $$$$$$8 from "./sections/MadeInBrazil.tsx";
 import * as $$$$$$9 from "./sections/Testimonials.tsx";
@@ -25,7 +25,7 @@ const manifest = {
     "site/sections/Footer.tsx": $$$$$$3,
     "site/sections/Header.tsx": $$$$$$4,
     "site/sections/Hero.tsx": $$$$$$5,
-    "site/sections/ImageWithParagraph.tsx": $$$$$$6,
+    "site/sections/ImagesSection.tsx": $$$$$$6,
     "site/sections/Logos.tsx": $$$$$$7,
     "site/sections/MadeInBrazil.tsx": $$$$$$8,
     "site/sections/Testimonials.tsx": $$$$$$9,

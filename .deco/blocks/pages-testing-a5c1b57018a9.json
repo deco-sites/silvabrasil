@@ -13,12 +13,35 @@
           "text": "Fale com a gente",
           "href": "/"
         },
-        "outline": false,
         "text": "Fale com a gente",
-        "href": "/"
+        "href": "/",
+        "outline": false
       },
       "description": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala,</span></strong><span> organizando a cadeia de suprimentos da restauração florestal</span></p>",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f275e742-333f-4a37-bf91-548592406955"
+    },
+    {
+      "__resolveType": "site/sections/ImageWithParagraph.tsx",
+      "image1": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/0ea2bf34-9fdc-4f65-9413-fb2887952abb",
+      "image2": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/ecbe28f5-891f-4d17-b824-ea904acd6997",
+      "button1": {
+        "text": "Quero VENDER mudas",
+        "href": "/"
+      },
+      "button2": {
+        "href": "/",
+        "text": "Quero COMPRAR mudas"
+      }
+    },
+    {
+      "__resolveType": "site/sections/WorkWithUs.tsx",
+      "title": "Trabalhe conosco",
+      "description": "<p>Transforme a restauração florestal aqui<br><br>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável. Se você deseja fazer parte de uma equipe que está na vanguarda da restauração florestal no Brasil, venha crescer conosco.</p>",
+      "cta": {
+        "text": "Junte-se à Silva",
+        "href": "/"
+      },
+      "subTitle": "Transforme a restauração florestal aqui"
     },
     {
       "__resolveType": "site/sections/Faq.tsx",
