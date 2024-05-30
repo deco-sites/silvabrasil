@@ -13,9 +13,10 @@ import * as $$$$$$5 from "./sections/Hero.tsx";
 import * as $$$$$$6 from "./sections/ImagesSection.tsx";
 import * as $$$$$$7 from "./sections/Logos.tsx";
 import * as $$$$$$8 from "./sections/MadeInBrazil.tsx";
-import * as $$$$$$9 from "./sections/Testimonials.tsx";
-import * as $$$$$$10 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$11 from "./sections/WorkWithUs.tsx";
+import * as $$$$$$9 from "./sections/MapSection.tsx";
+import * as $$$$$$10 from "./sections/Testimonials.tsx";
+import * as $$$$$$11 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$12 from "./sections/WorkWithUs.tsx";
 
 const manifest = {
   "sections": {
@@ -28,9 +29,10 @@ const manifest = {
     "site/sections/ImagesSection.tsx": $$$$$$6,
     "site/sections/Logos.tsx": $$$$$$7,
     "site/sections/MadeInBrazil.tsx": $$$$$$8,
-    "site/sections/Testimonials.tsx": $$$$$$9,
-    "site/sections/Theme/Theme.tsx": $$$$$$10,
-    "site/sections/WorkWithUs.tsx": $$$$$$11,
+    "site/sections/MapSection.tsx": $$$$$$9,
+    "site/sections/Testimonials.tsx": $$$$$$10,
+    "site/sections/Theme/Theme.tsx": $$$$$$11,
+    "site/sections/WorkWithUs.tsx": $$$$$$12,
   },
   "apps": {
     "site/apps/decohub.ts": $$$$$$$$$$$0,

@@ -21,17 +21,42 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f275e742-333f-4a37-bf91-548592406955"
     },
     {
-      "__resolveType": "site/sections/ImageWithParagraph.tsx",
-      "image1": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/0ea2bf34-9fdc-4f65-9413-fb2887952abb",
-      "image2": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/ecbe28f5-891f-4d17-b824-ea904acd6997",
+      "__resolveType": "site/sections/ImagesSection.tsx",
+      "image1": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/8e4b376d-921f-4bb4-ba50-2d2dee39c714",
+      "image2": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/63069836-b60c-4078-84f8-2c2d26acbe5f",
       "button1": {
         "text": "Quero VENDER mudas",
-        "href": "/"
+        "href": "/",
+        "id": "viveirista"
       },
       "button2": {
         "href": "/",
-        "text": "Quero COMPRAR mudas"
-      }
+        "text": "Quero COMPRAR mudas",
+        "id": "comprador"
+      },
+      "cards": [
+        {
+          "type": "Viveirista",
+          "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/13b2900b-8524-4db9-9540-43b39515e6e5",
+          "description": "Prosperidade e crescimento sustentável para seu viveiro, com receitas previsíveis e apoio técnico.",
+          "topics": "<li>Proporcionamos estabilidade de receita</li>\n<li>Expandimos suas vendas</li>\n<li>Organizamos sua gestão financeira</li>\n<li>Melhoramos a produtividade do seu viveiro</li>",
+          "button": {
+            "href": "/",
+            "text": "Quero VENDER mudas",
+            "id": "viveirista"
+          }
+        },
+        {
+          "type": "Comprador",
+          "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/ac59749d-749b-459d-91e4-954689b181f4",
+          "description": "<p><span>Projetos de </span><strong><span>ARR, SAFs, compensação e regularização ambiental</span></strong><span>: mudas e sementes entregues no prazo e com qualidade.</span></p>",
+          "topics": "<li>Descomplicamos o processo de compras</li>\n<li>Cuidamos da seleção de fornecedores</li>\n<li>Proporcionamos transparência e rastreabilidade</li>\n<li>Acompanhamos a produção de mudas compradas</li>",
+          "button": {
+            "href": "/",
+            "text": "Quero COMPRAR mudas"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/WorkWithUs.tsx",

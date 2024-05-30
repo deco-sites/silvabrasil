@@ -47,39 +47,39 @@ export default function Header({
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content container lg:px-0 px-4 flex gap-8 w-full items-center justify-between py-4">
+      <div class="drawer-content lg:container md:max-w-7xl lg:mx-auto mx-4 flex gap-8 w-full items-center justify-between py-4">
         <a href="/">
           <Image src={logo.src || ""} width={146} height={35} alt={logo.alt} />
         </a>
 
-          <ul class="flex hidden items-center lg:flex">
-            {navigation.links.map((link) => (
-              <li>
-                <a
-                  href={link.url}
-                  aria-label={link.label}
-                  class="text-white whitespace-nowrap font-semibold link no-underline hover:underline p-4"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ul class="flex gap-3 hidden items-center lg:flex">
-            {navigation.buttons?.map((item) => (
+        <ul class="hidden items-center lg:flex">
+          {navigation.links.map((link) => (
+            <li>
               <a
-                key={item?.id}
-                id={item?.id}
-                href={item?.href ?? "#"}
-                target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-bold btn bg-white text-green-900 ${
-                  item.outline && "btn-outline"
-                }`}
+                href={link.url}
+                aria-label={link.label}
+                class="text-white whitespace-nowrap font-semibold link no-underline hover:underline p-4"
               >
-                {item?.text}
+                {link.label}
               </a>
-            ))}
-          </ul>
+            </li>
+          ))}
+        </ul>
+        <ul class="gap-3 hidden items-center lg:flex">
+          {navigation.buttons?.map((item) => (
+            <a
+              key={item?.id}
+              id={item?.id}
+              href={item?.href ?? "#"}
+              target={item?.href.includes("http") ? "_blank" : "_self"}
+              class={`font-bold btn bg-white border-none text-green-900 ${
+                item.outline && "btn-outline"
+              }`}
+            >
+              {item?.text}
+            </a>
+          ))}
+        </ul>
 
         <label
           htmlFor="mobile-drawer-nav"

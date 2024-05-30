@@ -7,65 +7,79 @@ export interface CTA {
   text: string;
 }
 
+interface Card {
+  type: "Viveirista" | "Comprador";
+  imageBg: ImageWidget;
+  /** @format rich-text  */
+  description?: string;
+  /** @format rich-text  */
+  topics?: string;
+  button?: CTA;
+}
+
 export interface Props {
-  image1: ImageWidget;
-  image2: ImageWidget;
-  button1: CTA;
-  button2: CTA;
+  cards: Card[];
 }
 
 export default function ImagesSection({
-  image1,
-  image2,
-  button1,
-  button2,
+  cards,
 }: Props) {
   return (
-    <div class="relative flex w-full h-[332px] md:h-[824px] flex-col lg:flex-row">
-      <div class="w-full relative md:w-1/2 p- border md:border-r-2 border-[#85B549]">
-        <span>Sou</span>
-        <Image
-          class="absolute inset-0 w-full h-full object-cover -z-10"
-          width={976}
-          height={824}
-          src={image1}
-          alt={image1}
-          decoding="async"
-          loading="lazy"
-        />
-        <a
-          key={button1?.id}
-          id={button1?.id}
-          href={button1?.href}
-          target={button1?.href.includes("http") ? "_blank" : "_self"}
-          class="font-normal btn btn-primary btn-outline"
+    <div class="relative flex w-full h-[332px] md:h-auto flex-col lg:flex-row">
+      {cards?.map((card, index) => (
+        <div
+          key={card.type}
+          class={`w-full relative md:w-1/2 ${
+            index === 0 ? "md:border-r-[3px] border-green-500" : ""
+          }  md:py-28  md:px-36`}
         >
-          {button1?.text}
-        </a>
-      </div>
-      <div class="w-full relative md:w-1/2 p-">
-        <span>Sou</span>
-        <Image
-          class="absolute inset-0 w-full h-full object-cover -z-10"
-          width={976}
-          height={824}
-          src={image2}
-          alt={image2}
-          decoding="async"
-          loading="lazy"
-        />
-        <div>
-          <a
-            key={button2?.id}
-            id={button2?.id}
-            href={button2?.href}
-            target={button2?.href.includes("http") ? "_blank" : "_self"}
-            class="font-normal btn btn-primary btn-outline"
-          >
-            {button2?.text}
-          </a>
+          <Image
+            class="absolute inset-0 w-full h-full object-cover -z-10"
+            width={776}
+            height={624}
+            src={card.imageBg}
+            alt={card.imageBg}
+            decoding="async"
+            loading="lazy"
+          />
+
+          <div class="flex flex-col max-w-[565px] text-slate">
+            <div class="flex flex-col mb-16">
+              <span class="text-3xl">Sou</span>
+              <b class="text-5xl">{card.type}</b>
+            </div>
+
+            {card?.description && (
+              <div
+                class="max-w-[428px] mb-16 text-2xl h-24"
+                dangerouslySetInnerHTML={{
+                  __html: card.description,
+                }}
+              />
+            )}
+
+            {card?.topics &&
+              (
+                <ul
+                  class="list-disc list-inside mb-8 text-lg whitespace-nowrap h-[152px]"
+                  dangerouslySetInnerHTML={{
+                    __html: card.topics,
+                  }}
+                />
+              )}
+            <a
+              id={card.button?.id}
+              href={card.button?.href}
+              target={card.button?.href.includes("http") ? "_blank" : "_self"}
+              class="font-bold text-2xl max-w-fit bg-slate text-green-900 p-6 flex justify-center items-center h-auto rounded-xl transform
+				  transition duration-700
+				  hover:scale-105"
+            >
+              {card.button?.text}
+            </a>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }
