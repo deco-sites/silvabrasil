@@ -7,9 +7,18 @@
     },
     {
       "__resolveType": "site/sections/Hero.tsx",
-      "title": "<p><span>Organizamos a cadeia da restauração florestal para os viveiros</span></p>",
-      "cta": [],
-      "description": "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away."
+      "title": "<p>Organizamos a cadeia da restauração florestal para os viveiros</p>",
+      "cta": {
+        "0": {
+          "text": "Fale com a gente",
+          "href": "/"
+        },
+        "text": "Fale com a gente",
+        "href": "/",
+        "outline": false
+      },
+      "description": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala,</span></strong><span> organizando a cadeia de suprimentos da restauração florestal</span></p>",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f275e742-333f-4a37-bf91-548592406955"
     },
     {
       "__resolveType": "site/sections/ImagesSection.tsx",
@@ -39,9 +48,9 @@
         },
         {
           "type": "Comprador",
+          "topics": "<li>Descomplicamos o processo de compras</li>\n<li>Cuidamos da seleção de fornecedores</li>\n<li>Proporcionamos transparência e rastreabilidade</li>\n<li>Acompanhamos a produção de mudas compradas</li>",
           "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/ac59749d-749b-459d-91e4-954689b181f4",
           "description": "<p><span>Projetos de </span><strong><span>ARR, SAFs, compensação e regularização ambiental</span></strong><span>: mudas e sementes entregues no prazo e com qualidade.</span></p>",
-          "topics": "<li>Descomplicamos o processo de compras</li>\n<li>Cuidamos da seleção de fornecedores</li>\n<li>Proporcionamos transparência e rastreabilidade</li>\n<li>Acompanhamos a produção de mudas compradas</li>",
           "button": {
             "href": "/",
             "text": "Quero COMPRAR mudas"
