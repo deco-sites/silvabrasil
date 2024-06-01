@@ -19,7 +19,7 @@ export default function MadeInBrazilSection(
   { imageBg, logo, socialButtons, firstText, secondText, hashtags }: Props,
 ) {
   return (
-    <div class="pb-14 lg:container md:max-w-7xl lg:mx-auto mx-4">
+    <div class="pb-14 lg:container md:max-w-[88%] lg:mx-auto mx-4">
       <div class="relative pt-32 pb-16">
         {imageBg && (
           <Image

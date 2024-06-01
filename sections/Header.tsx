@@ -47,18 +47,18 @@ export default function Header({
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content lg:container md:max-w-7xl lg:mx-auto mx-4 flex gap-8 w-full items-center justify-between py-4">
-        <a href="/">
+      <div class="drawer-content lg:container lg:max-w-7xl xl:max-w-[88%] xl:mx-32 xl:gap-8 mx-4 flex w-full items-center justify-between py-4">
+        <a class="max-h-[62px]" href="/">
           <Image src={logo.src || ""} width={146} alt={logo.alt} />
         </a>
 
-        <ul class="hidden items-center lg:flex">
+        <ul class="hidden lg:flex items-center lg:mt-2 lg:max-w-4xl xl:gap-8">
           {navigation.links.map((link) => (
             <li>
               <a
                 href={link.url}
                 aria-label={link.label}
-                class="text-white whitespace-nowrap font-semibold link no-underline hover:underline p-4"
+                class="text-white whitespace-nowrap font-semibold text-xl link no-underline hover:underline px-4"
               >
                 {link.label}
               </a>
@@ -72,7 +72,7 @@ export default function Header({
               id={item?.id}
               href={item?.href ?? "#"}
               target={item?.href.includes("http") ? "_blank" : "_self"}
-              class={`font-bold btn bg-white border-none text-green-900 ${
+              class={`font-bold text-xl btn bg-white border-none text-green-900 ${
                 item.outline && "btn-outline"
               }`}
             >

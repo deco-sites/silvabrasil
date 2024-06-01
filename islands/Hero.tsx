@@ -28,8 +28,8 @@ export default function HeroFlats({
   image,
   cta,
 }: Props) {
-  const [currentWord, setCurrentWord] = useState(0);
-  const words = ["Word1", "Word2", "Word3"];
+  //   const [currentWord, setCurrentWord] = useState(0);
+  //   const words = ["Word1", "Word2", "Word3"];
 
   return (
     <div class="flex flex-col items-center gap-8">
@@ -45,7 +45,7 @@ export default function HeroFlats({
             loading="lazy"
           />
         )}
-        <div class="text-green-900 lg:container md:max-w-7xl lg:mx-auto mx-4 lg:gap-12 gap-4 flex flex-col items-center justify-center">
+        <div class="text-green-900 lg:container md:max-w-full lg:mx-auto mx-4 lg:gap-12 gap-4 flex flex-col items-center justify-center">
           <div
             class="inline-block lg:text-[70px] text-4xl leading-none font-bold"
             dangerouslySetInnerHTML={{

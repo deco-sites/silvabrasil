@@ -15,7 +15,10 @@ export default function Section(
   { title = "Work with us", description = "Description text", cta }: Props,
 ) {
   return (
-    <div class="py-16 lg:container md:max-w-7xl lg:mx-auto mx-4">
+    <div
+      id="work-with-us"
+      class="py-16 lg:container md:max-w-[88%] lg:mx-auto mx-4"
+    >
       <div class="py-16 px-28 bg-green-900 rounded-2xl text-slate flex flex-col items-center">
         <div class="border-2 border-slate rounded-[106px] px-7 py-2 mb-10">
           <h2 class="text-4xl">{title}</h2>

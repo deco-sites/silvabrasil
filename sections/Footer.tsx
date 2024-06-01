@@ -73,7 +73,7 @@ export default function Footer({
 }: Props) {
   return (
     <div class="w-full text-sm text-slate bg-green-900">
-      <div class="pt-14 lg:container md:max-w-7xl lg:mx-auto mx-4">
+      <div class="pt-14 lg:container md:max-w-[88%] lg:mx-auto mx-4">
         <div class="flex flex-col gap-6 justify-between lg:flex-row mb-14">
           <div>
             <Image

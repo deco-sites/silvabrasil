@@ -59,6 +59,16 @@
       ]
     },
     {
+      "__resolveType": "site/sections/MapSection.tsx",
+      "title": "Presente onde a restauracão acontece no Brasil",
+      "description": "<p><span>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada<br><br>Os principais viveiros e projetos já estão com a Silva. </span><span style=\"color: #004d3d\">Faça parte você também!</span></p>",
+      "cta": {
+        "text": "Quero fazer parte",
+        "href": "#work-with-us"
+      },
+      "mapImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/89de9045-5163-42b7-b823-b868bf897bf4"
+    },
+    {
       "__resolveType": "site/sections/WorkWithUs.tsx",
       "title": "Trabalhe conosco",
       "description": "<p>Transforme a restauração florestal aqui<br><br>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável. Se você deseja fazer parte de uma equipe que está na vanguarda da restauração florestal no Brasil, venha crescer conosco.</p>",

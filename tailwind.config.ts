@@ -12,9 +12,21 @@ export default {
       },
       colors: {
         "green-500": "#85B549",
+        "green-600": "#6B8E23",
         "green-900": "#004D3D",
         "slate": "#FEF5E6",
         "white": "#FDFDFD",
+      },
+      screens: {
+        "sm": "640px",
+
+        "md": "768px",
+
+        "lg": "1024px",
+
+        "xl": "1550px",
+
+        "2xl": "1600px",
       },
       keyframes: {
         sliding: {

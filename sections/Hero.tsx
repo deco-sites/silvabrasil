@@ -1,7 +1,7 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 
-export interface CTA {
+interface CTA {
   id?: string;
   href: string;
   text: string;
@@ -42,7 +42,7 @@ export default function HeroFlats({
             loading="lazy"
           />
         )}
-        <div class="text-green-900 lg:container md:max-w-7xl lg:mx-auto mx-4 lg:gap-12 gap-4 flex flex-col items-center justify-center">
+        <div class="text-green-900 md:container md:max-w-full md:mx-auto mx-4 lg:gap-12 gap-4 flex flex-col items-center justify-center">
           <div
             class="inline-block lg:text-[70px] text-4xl leading-none font-bold"
             dangerouslySetInnerHTML={{
