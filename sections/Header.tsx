@@ -64,7 +64,7 @@ export default function Header({
           />
         </a>
 
-        <ul class="hidden lg:flex items-center lg:mt-2 lg:max-w-4xl xl:gap-8">
+        <ul class="hidden lg:flex items-center lg:mt-[10px] lg:max-w-4xl xl:gap-8">
           {navigation.links.map((link) => (
             <li class="transform
 			transition-all duration-700
@@ -88,9 +88,9 @@ export default function Header({
               id={item?.id}
               href={item?.href ?? "#"}
               target={item?.href.includes("http") ? "_blank" : "_self"}
-              class="font-bold text-lg lg:text-xl cursor-pointer bg-slate rounded-xl transform
+              class="font-bold text-lg lg:text-xl cursor-pointer bg-slate rounded-lg transform
 			  transition duration-700
-			  hover:scale-105 px-6 py-2 text-green-900"
+			  hover:scale-105 px-9 py-5 text-green-900"
             >
               {item?.text}
             </a>

@@ -86,7 +86,7 @@ export default function AboutUsSection(
           }}
         />
         <Image
-          class="absolute -top-52 aspect-auto right-0 h-auto z-10 max-h-[705px]"
+          class="absolute -top-52 aspect-auto right-0 h-auto z-10 max-w-[332px]  max-h-[240px] lg:max-w-full lg:max-h-[705px]"
           width={714}
           height={705}
           src={image}
