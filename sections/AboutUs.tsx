@@ -22,14 +22,14 @@ export default function AboutUsSection(
   return (
     <div
       id="about-us"
-      class="py-16 lg:container lg:max-w-[88%] lg:mx-auto px-6"
+      class="py-16 lg:container lg:max-w-[88%] lg:mx-auto px-6 text-center lg:text-start"
     >
-      <div class="w-full flex justify-between mb-8">
-        <div class="flex flex-col">
+      <div class="w-full flex justify-center lg:justify-between mb-8">
+        <div class="flex flex-col items-center lg:items-start">
           <h2 class="text-4xl border-2 border-green-900 text-green-900 rounded-[106px] px-7 py-2 mb-4 whitespace-nowrap w-fit">
             {title}
           </h2>
-          <span class="text-black text-lg ml-8">{subTitle}</span>
+          <span class="text-black text-lg lg:ml-8">{subTitle}</span>
         </div>
 
         <svg
@@ -79,15 +79,18 @@ export default function AboutUsSection(
         </svg>
       </div>
 
-      <div class="relative py-12 px-4 lg:px-12 bg-green-900 rounded-2xl text-white flex items-center flex-col-reverse lg:flex-row">
+      <div class="relative py-12 px-4 lg:px-12 bg-green-900 rounded-2xl text-white flex items-center flex-col-reverse lg:flex-row ">
         <div
-          class="font-regular text-[28px] max-w-[600px] xl:max-w-[800px]"
+          //   consertar isso
+          class="font-regular text-[28px] max-w-[600px] xl:max-w-[800px]
+		  -mt-[7rem] lg:-mt-0"
           dangerouslySetInnerHTML={{
             __html: description,
           }}
         />
         <Image
-          class="absolute -top-24 xl:-top-52 aspect-auto right-0 z-10
+          // consertar isso
+          class="relative -mr-[11.3rem] mt-[1rem] lg:-mr-0 lg:mt-0 lg:absolute -top-24 xl:-top-52 aspect-auto right-0 z-10
 		  w-auto h-auto
 		  max-w-[514px]  max-h-[505px] xl:max-w-[714px] xl:max-h-[705px]"
           width={714}
