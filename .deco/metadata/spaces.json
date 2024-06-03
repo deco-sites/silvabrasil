@@ -795,7 +795,8 @@
           "viewId": "Properties",
           "id": "%2F.deco%2Fblocks%2FHeader.json::Properties::list::Properties::%7B%7D",
           "state": {
-            "__signal": null
+            "__signal": null,
+            "value": null
           }
         },
         "%2F.deco%2Fblocks%2FHeader.json::Preview::world::Preview::%7B%7D": {

@@ -3,6 +3,14 @@
   "path": "/",
   "sections": [
     {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx",
+      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/425cb986-bc0c-4012-a37b-dfda5dfe597b",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/ec3a29c2-a423-4ad4-859f-84c73968a31a",
+      "title": "Silva | Cadeias de suprimentos para a restauração florestal",
+      "description": "Para viveiros Para compradores de mudas Sobre a Silva Trabalhe Conosco Fale com a gente Organizamos a cadeia de suprimentos de mudas e sementes para Slider viveiristas sistemas agroflorestais desenvolvedores compensação ambiental implementadores Somos uma plataforma que comercializa mudas e sementes nativas em escala, organizando a cadeia de suprimentos da restauração florestal",
+      "type": "website"
+    },
+    {
       "__resolveType": "Header"
     },
     {
