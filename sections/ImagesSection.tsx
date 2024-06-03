@@ -35,8 +35,8 @@ export default function ImagesSection({
         >
           <Image
             class="absolute inset-0 w-full h-full object-cover -z-10"
-            width={776}
-            height={624}
+            width={960}
+            height={824}
             src={card.imageBg}
             alt={card.imageBg}
             decoding="async"
