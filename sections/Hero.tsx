@@ -42,16 +42,16 @@ export default function HeroFlats({
             loading="lazy"
           />
         )}
-        <div class="text-green-900 md:container md:max-w-full md:mx-auto mx-4 lg:gap-12 gap-4 flex flex-col items-center justify-center">
+        <div class="lg:container lg:max-w-7xl xl:max-w-[88%] mx-auto lg:gap-12 gap-4 flex flex-col items-center justify-center">
           <div
-            class="inline-block lg:text-[70px] text-4xl leading-none font-bold"
+            class="text-green-900 inline-block lg:text-[70px] text-4xl leading-none font-bold"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           >
           </div>
           <div
-            class="text-base md:text-[32px] leading-[150%]"
+            class="text-green-900 text-base md:text-[32px] leading-[150%]"
             dangerouslySetInnerHTML={{
               __html: description,
             }}

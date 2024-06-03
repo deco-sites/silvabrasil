@@ -14,7 +14,7 @@
           "href": "/"
         },
         "text": "Fale com a gente",
-        "href": "/",
+        "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21",
         "outline": false
       },
       "description": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala,</span></strong><span> organizando a cadeia de suprimentos da restauração florestal</span></p>",
@@ -67,6 +67,26 @@
         "href": "#work-with-us"
       },
       "mapImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/89de9045-5163-42b7-b823-b868bf897bf4"
+    },
+    {
+      "__resolveType": "site/sections/TalkWithUs.tsx",
+      "title": "Fale com a gente",
+      "description": "<p><span style=\"color: rgb(0, 77, 61)\">Vamos marcar uma conversa!</span></p><p>Queremos entender sua </p><p>situação para te apoiar da </p><p>melhor forma.<br></p>",
+      "cta": {
+        "text": "Falar no WhatsApp",
+        "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21"
+      },
+      "form": {
+        "title": "Preencha os dados abaixo e  receba nosso contato",
+        "buttonLabel": "Enviar",
+        "placeholder": {
+          "name": "Nome*",
+          "organization": "Nome da empresa / organização*",
+          "phone": "Telefone (WhatsApp)*",
+          "email": "Email",
+          "message": "Sua mensagem aqui"
+        }
+      }
     },
     {
       "__resolveType": "site/sections/WorkWithUs.tsx",

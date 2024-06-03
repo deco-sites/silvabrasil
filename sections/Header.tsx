@@ -38,7 +38,6 @@ export default function Header({
     ],
     buttons: [
       { id: "change-me-1", href: "/", text: "Change me", outline: false },
-      { id: "change-me-2", href: "/", text: "Change me", outline: true },
     ],
   },
 }: Nav) {
@@ -54,13 +53,17 @@ export default function Header({
 
         <ul class="hidden lg:flex items-center lg:mt-2 lg:max-w-4xl xl:gap-8">
           {navigation.links.map((link) => (
-            <li>
+            <li class="transform
+			transition-all duration-700
+			hover:scale-105">
               <a
                 href={link.url}
                 aria-label={link.label}
-                class="text-white whitespace-nowrap font-semibold text-xl link no-underline hover:underline px-4"
+                class="text-white whitespace-nowrap font-semibold text-lg cursor-pointer px-4 hover:underline underline-offset-4"
               >
-                {link.label}
+                <span>
+                  {link.label}
+                </span>
               </a>
             </li>
           ))}
@@ -72,9 +75,9 @@ export default function Header({
               id={item?.id}
               href={item?.href ?? "#"}
               target={item?.href.includes("http") ? "_blank" : "_self"}
-              class={`font-bold text-xl btn bg-white border-none text-green-900 ${
-                item.outline && "btn-outline"
-              }`}
+              class="font-bold text-xl cursor-pointer bg-slate rounded-xl transform
+			  transition duration-700
+			  hover:scale-105 px-8 py-4 text-green-900"
             >
               {item?.text}
             </a>
@@ -118,17 +121,19 @@ export default function Header({
           </ul>
 
           <ul class="p-4 flex items-center gap-3">
-            {navigation.buttons?.map((item) => (
+            {navigation.buttons?.map((button) => (
               <a
-                key={item?.id}
-                id={item?.id}
-                href={item?.href ?? "#"}
-                target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-normal btn btn-primary ${
-                  item.outline && "btn-outline"
+                key={button?.id}
+                id={button?.id}
+                href={button?.href ?? "#"}
+                target={button?.href.includes("http") ? "_blank" : "_self"}
+                class={`font-normal cursor-pointer bg-slate rounded-xl transform
+				transition duration-700
+				hover:scale-105 px-[35px] py-5 text-green-900 ${
+                  button.outline && "btn-outline"
                 }`}
               >
-                {item?.text}
+                {button?.text}
               </a>
             ))}
           </ul>
