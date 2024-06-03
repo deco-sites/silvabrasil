@@ -3,13 +3,16 @@
   "navigation": {
     "links": [
       {
-        "label": "Para viveiros"
+        "label": "Para viveiros",
+        "url": "#viveiros"
       },
       {
-        "label": "Para compradores de mudas"
+        "label": "Para compradores de mudas",
+        "url": "#viveiros"
       },
       {
-        "label": "Sobre a Silva"
+        "label": "Sobre a Silva",
+        "url": "#about-us"
       },
       {
         "label": "Trabalhe Conosco",
