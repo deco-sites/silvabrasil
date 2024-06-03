@@ -119,7 +119,11 @@ export default function Footer({
               <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
                 {contact?.title}
               </h4>
-              <li class="flex items-center mb-2">
+              <a
+                target="_blank"
+                href="https://wa.me/5511964769833?text=Ol%C3%A1%21"
+                class="flex items-center cursor-pointer mb-2"
+              >
                 <svg
                   class="max-w-[10px] lg:max-w-6"
                   width="20"
@@ -134,8 +138,12 @@ export default function Footer({
                   />
                 </svg>
                 <span class="ml-4">{contact?.phone}</span>
-              </li>
-              <li class="flex items-center">
+              </a>
+              <a
+                target="_blank"
+                href="mailto:carreiras@silvabrasil.bio"
+                class="flex items-center cursor-pointer"
+              >
                 <svg
                   class="max-w-[10px] lg:max-w-6"
                   width="20"
@@ -150,7 +158,7 @@ export default function Footer({
                   />
                 </svg>
                 <span class="ml-4">{contact?.email}</span>
-              </li>
+              </a>
             </div>
             <div>
               <h4 class="hidden lg:inline-block font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
