@@ -73,9 +73,9 @@ export default function Footer({
 }: Props) {
   return (
     <div class="w-full text-sm text-slate bg-green-900">
-      <div class="pt-14 lg:container md:max-w-[88%] lg:mx-auto mx-4">
-        <div class="flex flex-col gap-6 justify-between lg:flex-row mb-14">
-          <div>
+      <div class="pt-14 lg:container lg:max-w-[88%] lg:mx-auto px-6">
+        <div class="flex flex-col items-center gap-6 justify-between lg:flex-row mb-14">
+          <div class="hidden lg:inline-block">
             <Image
               src={logo.src || ""}
               width={144}
@@ -97,26 +97,31 @@ export default function Footer({
               </span>
             </div>
           </div>
-          <div class="flex lex-col text-slate">
+          <div class="flex flex-col text-slate text-center lg:text-start">
             {links?.map((link) => (
-              <div>
-                <h4 class="font-bold text-xl mt-4 mb-2">{link.title}</h4>
+              <>
+                <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
+                  {link.title}
+                </h4>
                 {link.items?.map((item) => (
                   <a
-                    class="block hover:underline link no-underline py-1 font-regular text-lg"
+                    class="block hover:underline link no-underline py-1 font-regular text-sm lg:text-lg"
                     href={item.href}
                   >
                     {item.label}
                   </a>
                 ))}
-              </div>
+              </>
             ))}
           </div>
-          <div class="flex flex-col gap-2">
-            <div class="list-none">
-              <h4 class="font-bold text-xl mt-4 mb-2">{contact?.title}</h4>
+          <div class="flex flex-col gap-2 lg:flex items-center lg:items-start">
+            <div class="list-none flex flex-col items-center lg:items-start">
+              <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
+                {contact?.title}
+              </h4>
               <li class="flex items-center mb-2">
                 <svg
+                  class="max-w-[10px] lg:max-w-6"
                   width="20"
                   height="20"
                   viewBox="0 0 20 20"
@@ -132,6 +137,7 @@ export default function Footer({
               </li>
               <li class="flex items-center">
                 <svg
+                  class="max-w-[10px] lg:max-w-6"
                   width="20"
                   height="16"
                   viewBox="0 0 20 16"
@@ -147,7 +153,9 @@ export default function Footer({
               </li>
             </div>
             <div>
-              <h4 class="font-bold text-xl mt-4 mb-2">{socialTitle}</h4>
+              <h4 class="hidden lg:inline-block font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
+                {socialTitle}
+              </h4>
               <div class="flex gap-6">
                 {social?.map((item) => (
                   <a class="block" href={item.href} target="_blank">
@@ -186,6 +194,28 @@ export default function Footer({
                   </a>
                 ))}
               </div>
+            </div>
+          </div>
+          <div class="visible lg:hidden flex flex-col items-center text-center mt-6">
+            <Image
+              src={logo.src || ""}
+              width={144}
+              height={58}
+              alt={logo.alt}
+            />
+
+            <div class="flex flex-col max-w-[300px]">
+              <span class="mt-6 mb-4">
+                Somos uma plataforma que comercializa{" "}
+                <b>mudas e sementes nativas em escala</b>{" "}
+                organizando a cadeia de suprimentos
+              </span>
+              <span class="mb-4">
+                Feita no Brasil 🇧🇷 para o Planeta Terra
+              </span>
+              <span class="mb-4">
+                #clima #comunidade #biodiversidade
+              </span>
             </div>
           </div>
         </div>

@@ -18,9 +18,9 @@ export default function MapSection(
   { title, description = "my description", mapImage, cta }: Props,
 ) {
   return (
-    <div class="pt-28 pb-14 lg:container md:max-w-[88%] lg:mx-auto mx-4 flex gap-16">
-      <div class="w-1/2">
-        <div class="pt-32 pb-12">
+    <div class="py-14 lg:container md:max-w-[88%] lg:mx-auto px-6 flex gap-16 flex-col lg:flex-row">
+      <div class="w-full lg:w-1/2">
+        <div class="lg:pt-32 lg:pb-12 text-center lg:text-start">
           <h1 class="text-3xl lg:text-5xl font-bold text-green-900 mb-12">
             {title}
           </h1>
@@ -35,7 +35,7 @@ export default function MapSection(
         <a
           href={cta?.href}
           target={cta?.href.includes("http") ? "_blank" : "_self"}
-          class="font-bold text-3xl bg-green-900 text-white w-fit py-6 px-[42px] flex justify-center items-center h-auto rounded-xl transform
+          class="hidden lg:flex font-bold text-3xl bg-green-900 text-white w-fit py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
 			transition duration-700
 			hover:scale-105"
         >
@@ -44,7 +44,7 @@ export default function MapSection(
           </span>
         </a>
       </div>
-      <div class="w-1/2">
+      <div class="w-full lg:w-1/2 flex flex-col items-center">
         {mapImage && (
           <Image
             width={540}
@@ -56,6 +56,17 @@ export default function MapSection(
             loading="lazy"
           />
         )}
+        <a
+          href={cta?.href}
+          target={cta?.href.includes("http") ? "_blank" : "_self"}
+          class="flex lg:hidden mt-8 font-bold text-3xl bg-green-900 text-white w-fit py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
+			transition duration-700
+			hover:scale-105"
+        >
+          <span>
+            {cta?.text}
+          </span>
+        </a>
       </div>
     </div>
   );

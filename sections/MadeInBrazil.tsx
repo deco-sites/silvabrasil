@@ -19,8 +19,8 @@ export default function MadeInBrazilSection(
   { imageBg, logo, socialButtons, firstText, secondText, hashtags }: Props,
 ) {
   return (
-    <div class="pb-14 lg:container md:max-w-[88%] lg:mx-auto mx-4">
-      <div class="relative pt-32 pb-16">
+    <div class="pb-14 lg:container md:max-w-[88%] lg:mx-auto px-6">
+      <div class="relative pt-6 lg:pt-32 pb-16">
         {imageBg && (
           <Image
             width={1280}
@@ -41,7 +41,7 @@ export default function MadeInBrazilSection(
           />
 
           <div class="font-bold text-slate mb-20 mt-8 flex flex-col items-center w-full">
-            <p class="flex items-center text-[50px] font-bold">
+            <p class="flex items-center text-3xl lg:text-5xl font-bold flex-col lg-flex-row">
               <span class="mr-2">{firstText}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,11 +86,11 @@ export default function MadeInBrazilSection(
                 >
                 </path>
               </svg>
-              <span class="text-[50px] font-bold ml-2">
+              <span class="text-3xl lg:text-5xl font-bold ml-2">
                 {secondText}
               </span>
             </p>
-            <p class="font-medium text-3xl">
+            <p class="font-medium mt-4 text-base lg:text-3xl">
               <span>{hashtags}</span>
             </p>
           </div>
