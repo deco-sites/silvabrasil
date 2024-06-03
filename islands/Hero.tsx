@@ -1,7 +1,8 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import TextAnimation from "site/islands/TextAnimation.tsx";
 
-export interface CTA {
+interface CTA {
   id?: string;
   href: string;
   text: string;
@@ -28,12 +29,9 @@ export default function HeroFlats({
   image,
   cta,
 }: Props) {
-  //   const [currentWord, setCurrentWord] = useState(0);
-  //   const words = ["Word1", "Word2", "Word3"];
-
   return (
     <div class="flex flex-col items-center gap-8">
-      <div class="relative flex w-full xl:mx-auto py-20 mx-5 md:mx-10 flex-col items-center justify-center text-center lg:py-36 gap-12 md:gap-20">
+      <div class="relative flex w-full xl:mx-auto py-20 flex-col items-center justify-center text-center lg:py-36 gap-12 lg:gap-20">
         {image && (
           <Image
             width={640}
@@ -45,25 +43,27 @@ export default function HeroFlats({
             loading="lazy"
           />
         )}
-        <div class="text-green-900 lg:container md:max-w-full lg:mx-auto mx-4 lg:gap-12 gap-4 flex flex-col items-center justify-center">
+        <div class="container lg:max-w-7xl xl:max-w-[88%] mx-auto lg:gap-12 gap-4 flex flex-col items-center justify-center">
           <div
-            class="inline-block lg:text-[70px] text-4xl leading-none font-bold"
+            class="text-green-900 inline-block lg:text-[70px] text-4xl leading-none font-bold"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
-          >
-          </div>
+          />
+          <TextAnimation />
+
           <div
-            class="text-base md:text-[32px] leading-[150%]"
+            class="text-green-900 text-base lg:text-[32px] leading-[150%]"
             dangerouslySetInnerHTML={{
               __html: description,
             }}
           >
           </div>
+
           <a
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class="font-bold text-2xl bg-green-900 text-white py-6 px-[42px] flex justify-center items-center h-auto rounded-xl transform
+            class="font-bold text-2xl bg-green-900 text-white px-9 py-4 lg:py-6 lg:px-[42px] flex justify-center items-center h-auto rounded-xl transform
 			transition duration-700
 			hover:scale-105"
           >
