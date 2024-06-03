@@ -25,7 +25,7 @@ export default function ImagesSection({
   cards,
 }: Props) {
   return (
-    <div class="flex w-full h-auto flex-col lg:flex-row">
+    <div id="viveiros" class="flex w-full h-auto flex-col lg:flex-row">
       {cards?.map((card, index) => (
         <div
           key={card.type}

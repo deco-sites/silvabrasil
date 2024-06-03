@@ -34,7 +34,7 @@ export default function AboutUsSection(
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          //   class="hidden lg:inline-block"
+          class="hidden lg:inline-block"
           width="214"
           height="90"
           viewBox="0 0 214 90"

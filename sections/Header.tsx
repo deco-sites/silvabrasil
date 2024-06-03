@@ -57,9 +57,9 @@ export default function Header({
         <a href="/">
           <Image
             src={logo.src || ""}
-            class="max-h-[33px] max-w-[79px] lg:max-h-[62px] lg:max-w-[146px]"
-            width={148}
-            height={64}
+            class="max-h-[34px] max-w-[80px] lg:max-h-[64px] lg:max-w-[148px]"
+            width={150}
+            height={66}
             alt={logo.alt}
           />
         </a>
