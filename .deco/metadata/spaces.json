@@ -445,7 +445,7 @@
             "content": [
               {
                 "type": "stack",
-                "width": 33.333333333333336,
+                "width": 18.63237139272271,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -466,7 +466,7 @@
               },
               {
                 "type": "stack",
-                "width": 33.33333333333333,
+                "width": 81.36762860727728,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -479,27 +479,6 @@
                     "componentName": "component",
                     "componentState": {
                       "id": "%2F.deco%2Fblocks%2Fpages-testing-a5c1b57018a9.json::Preview::world::Preview::%7B%7D"
-                    },
-                    "isClosable": true,
-                    "reorderEnabled": true
-                  }
-                ]
-              },
-              {
-                "type": "stack",
-                "width": 33.333333333333336,
-                "isClosable": true,
-                "reorderEnabled": true,
-                "title": "",
-                "activeItemIndex": 0,
-                "content": [
-                  {
-                    "id": "%2F.deco%2Fblocks%2Fpages-testing-a5c1b57018a9.json::JSON%20Properties::braces::JSON%20Properties::%7B%7D",
-                    "title": "<div class=\"contents text-base-700\" id=\"header-%2F.deco%2Fblocks%2Fpages-testing-a5c1b57018a9.json::JSON%20Properties::braces::JSON%20Properties::%7B%7D\" />",
-                    "type": "component",
-                    "componentName": "component",
-                    "componentState": {
-                      "id": "%2F.deco%2Fblocks%2Fpages-testing-a5c1b57018a9.json::JSON%20Properties::braces::JSON%20Properties::%7B%7D"
                     },
                     "isClosable": true,
                     "reorderEnabled": true
@@ -525,7 +504,7 @@
           "id": "%2F.deco%2Fblocks%2Fpages-testing-a5c1b57018a9.json::Properties::list::Properties::%7B%7D",
           "state": {
             "__signal": null,
-            "value": null
+            "value": "error"
           }
         },
         "%2F.deco%2Fblocks%2Fpages-testing-a5c1b57018a9.json::Preview::world::Preview::%7B%7D": {

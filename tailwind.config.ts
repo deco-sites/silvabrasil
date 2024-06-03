@@ -28,6 +28,9 @@ export default {
 
         "2xl": "1600px",
       },
+      maxWidth: {
+        "6xl": "81rem",
+      },
       keyframes: {
         sliding: {
           "0%": { transform: "translateX(0)" },

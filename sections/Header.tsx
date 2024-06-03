@@ -59,6 +59,7 @@ export default function Header({
             src={logo.src || ""}
             class="max-h-[33px] max-w-[79px] lg:max-h-[62px] lg:max-w-[146px]"
             width={146}
+            height={62}
             alt={logo.alt}
           />
         </a>
@@ -124,7 +125,8 @@ export default function Header({
             <a href="/">
               <Image
                 src={logo.src || ""}
-                width={80}
+                width={83}
+                height={34}
                 alt={logo.alt}
               />
             </a>

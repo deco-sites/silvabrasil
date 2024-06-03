@@ -47,9 +47,8 @@ export default function MapSection(
       <div class="w-full lg:w-1/2 flex flex-col items-center">
         {mapImage && (
           <Image
-            width={580}
-            height={700}
-            class="w-full h-full"
+            width={810}
+            height={806}
             src={mapImage}
             alt={mapImage}
             decoding="async"
