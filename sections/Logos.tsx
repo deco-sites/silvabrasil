@@ -37,7 +37,7 @@ export default function Logos({
     </div>
   );
   return (
-    <div class="lg:container md:max-w-[88%] lg:mx-auto px-6 py-6 lg:py-14">
+    <div class="lg:container lg:max-w-[88%] lg:mx-auto px-6 py-6 lg:py-14">
       <div class="flex flex-col gap-12">
         <p class="text-center text-lg">{title}</p>
         <div class="relative w-full overflow-hidden h-11">

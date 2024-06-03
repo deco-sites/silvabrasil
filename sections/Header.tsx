@@ -53,13 +53,13 @@ export default function Header({
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content w-full px-6 py-4 flex items-center justify-between lg:container lg:max-w-6xl xl:max-w-[88%] xl:mx-32 xl:gap-8">
+      <div class="drawer-content w-full py-8 px-6 lg:px-4 xl:px-0 flex items-center justify-between lg:container lg:max-w-6xl xl:max-w-[88%] xl:mx-32 xl:gap-8">
         <a href="/">
           <Image
             src={logo.src || ""}
             class="max-h-[33px] max-w-[79px] lg:max-h-[62px] lg:max-w-[146px]"
-            width={146}
-            height={62}
+            width={148}
+            height={64}
             alt={logo.alt}
           />
         </a>
@@ -82,17 +82,17 @@ export default function Header({
           ))}
         </ul>
         <ul class="gap-3 hidden items-center lg:flex">
-          {navigation.buttons?.map((item) => (
+          {navigation.buttons?.map((button) => (
             <a
-              key={item?.id}
-              id={item?.id}
-              href={item?.href ?? "#"}
-              target={item?.href.includes("http") ? "_blank" : "_self"}
-              class="font-bold text-lg lg:text-xl cursor-pointer bg-slate rounded-lg transform
+              key={button?.id}
+              id={button?.id}
+              href={button?.href ?? "#"}
+              target={button?.href.includes("http") ? "_blank" : "_self"}
+              class="font-bold text-lg lg:text-xl whitespace-nowrap cursor-pointer bg-slate rounded-lg transform
 			  transition duration-700
 			  hover:scale-105 px-9 py-5 text-green-900"
             >
-              {item?.text}
+              {button?.text}
             </a>
           ))}
         </ul>

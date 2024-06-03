@@ -17,7 +17,7 @@ export default function Section(
   return (
     <div
       id="work-with-us"
-      class="py-16 lg:container md:max-w-[88%] lg:mx-auto px-6"
+      class="py-16 lg:container lg:max-w-[88%] lg:mx-auto px-6"
     >
       <div class="py-16 px-4 lg:px-28 bg-green-900 rounded-2xl text-slate flex flex-col items-center">
         <div class="border-2 border-slate rounded-[106px] px-7 py-2 mb-10 whitespace-nowrap">

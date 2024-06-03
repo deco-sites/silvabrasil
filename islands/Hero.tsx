@@ -34,8 +34,8 @@ export default function HeroFlats({
       <div class="relative flex w-full xl:mx-auto py-20 flex-col items-center justify-center text-center lg:py-36 gap-12 lg:gap-20">
         {image && (
           <Image
-            width={1280}
-            height={1484}
+            width={920}
+            height={800}
             class="absolute inset-0 w-full h-full object-cover -z-10"
             src={image}
             alt={image}
@@ -45,7 +45,7 @@ export default function HeroFlats({
         )}
         <div class="container lg:max-w-7xl xl:max-w-[88%] mx-auto lg:gap-12 gap-4 flex flex-col items-center justify-center">
           <div
-            class="text-green-900 inline-block lg:text-[70px] text-4xl leading-none font-bold"
+            class="text-green-900 leading-normal lg:leading-[5rem] font-bold lg:text-[70px] text-4xl max-w-[1360px]"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
@@ -53,7 +53,7 @@ export default function HeroFlats({
           <TextAnimation />
 
           <div
-            class="text-green-900 text-base lg:text-[32px] leading-[150%]"
+            class="text-green-900 text-base lg:text-[32px] leading-normal max-w-[1124px]"
             dangerouslySetInnerHTML={{
               __html: description,
             }}
@@ -63,7 +63,8 @@ export default function HeroFlats({
           <a
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class="font-bold text-2xl bg-green-900 text-white px-9 py-4 lg:py-6 lg:px-[42px] flex justify-center items-center h-auto rounded-xl transform
+            class="font-bold text-2xl bg-green-900 text-white
+			px-[25px] py-[14px] lg:px-[42px] lg:py-6 flex justify-center items-center w-fit rounded-xl transform
 			transition duration-700
 			hover:scale-105"
           >

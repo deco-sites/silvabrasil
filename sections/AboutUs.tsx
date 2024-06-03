@@ -22,7 +22,7 @@ export default function AboutUsSection(
   return (
     <div
       id="about-us"
-      class="py-16 lg:container md:max-w-[88%] lg:mx-auto px-6"
+      class="py-16 lg:container lg:max-w-[88%] lg:mx-auto px-6"
     >
       <div class="w-full flex justify-between mb-8">
         <div class="flex flex-col">
@@ -34,6 +34,7 @@ export default function AboutUsSection(
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          //   class="hidden lg:inline-block"
           width="214"
           height="90"
           viewBox="0 0 214 90"
@@ -78,15 +79,17 @@ export default function AboutUsSection(
         </svg>
       </div>
 
-      <div class="relative py-12 px-4 lg:px-12 bg-green-900 rounded-2xl text-white flex items-center">
+      <div class="relative py-12 px-4 lg:px-12 bg-green-900 rounded-2xl text-white flex items-center flex-col-reverse lg:flex-row">
         <div
-          class="font-regular text-[28px] max-w-[800px]"
+          class="font-regular text-[28px] max-w-[600px] xl:max-w-[800px]"
           dangerouslySetInnerHTML={{
             __html: description,
           }}
         />
         <Image
-          class="absolute -top-52 aspect-auto right-0 h-auto z-10 max-w-[332px]  max-h-[240px] lg:max-w-full lg:max-h-[705px]"
+          class="absolute -top-24 xl:-top-52 aspect-auto right-0 z-10
+		  w-auto h-auto
+		  max-w-[514px]  max-h-[505px] xl:max-w-[714px] xl:max-h-[705px]"
           width={714}
           height={705}
           src={image}

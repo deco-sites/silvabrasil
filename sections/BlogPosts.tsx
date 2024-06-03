@@ -57,7 +57,7 @@ export default function BlogPosts({
   ],
 }: Props) {
   return (
-    <div class="lg:container md:max-w-[88%] lg:mx-auto px-6 text-sm py-12 lg:py-28">
+    <div class="lg:container lg:max-w-[88%] lg:mx-auto px-6 text-sm py-12 lg:py-28">
       <div class="space-y-16">
         <div class="flex flex-col lg:flex-row gap-4 justify-between">
           <div class="space-y-6 lg:w-1/2">

@@ -23,7 +23,7 @@ export default function FAQ({
   ],
 }: Props) {
   return (
-    <div class="lg:container md:max-w-[88%] lg:mx-auto px-6 text-sm py-12 lg:py-28">
+    <div class="lg:container lg:max-w-[88%] lg:mx-auto px-6 text-sm py-12 lg:py-28">
       <div class="flex flex-col gap-10">
         <div class="flex flex-col lg:flex-row justify-between items-center text-center lg:text-start text-green-900">
           <p class="text-5xl font-bold mb-4 lg:mb-0">
