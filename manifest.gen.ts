@@ -4,37 +4,39 @@
 
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
-import * as $$$$$$0 from "./sections/BlogPosts.tsx";
-import * as $$$$$$1 from "./sections/Clients.tsx";
-import * as $$$$$$2 from "./sections/Faq.tsx";
-import * as $$$$$$3 from "./sections/Footer.tsx";
-import * as $$$$$$4 from "./sections/Header.tsx";
-import * as $$$$$$5 from "./sections/Hero.tsx";
-import * as $$$$$$6 from "./sections/ImagesSection.tsx";
-import * as $$$$$$7 from "./sections/Logos.tsx";
-import * as $$$$$$8 from "./sections/MadeInBrazil.tsx";
-import * as $$$$$$9 from "./sections/MapSection.tsx";
-import * as $$$$$$10 from "./sections/TalkWithUs.tsx";
-import * as $$$$$$11 from "./sections/Testimonials.tsx";
-import * as $$$$$$12 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$13 from "./sections/WorkWithUs.tsx";
+import * as $$$$$$0 from "./sections/AboutUs.tsx";
+import * as $$$$$$1 from "./sections/BlogPosts.tsx";
+import * as $$$$$$2 from "./sections/Clients.tsx";
+import * as $$$$$$3 from "./sections/Faq.tsx";
+import * as $$$$$$4 from "./sections/Footer.tsx";
+import * as $$$$$$5 from "./sections/Header.tsx";
+import * as $$$$$$6 from "./sections/Hero.tsx";
+import * as $$$$$$7 from "./sections/ImagesSection.tsx";
+import * as $$$$$$8 from "./sections/Logos.tsx";
+import * as $$$$$$9 from "./sections/MadeInBrazil.tsx";
+import * as $$$$$$10 from "./sections/MapSection.tsx";
+import * as $$$$$$11 from "./sections/TalkWithUs.tsx";
+import * as $$$$$$12 from "./sections/Testimonials.tsx";
+import * as $$$$$$13 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$14 from "./sections/WorkWithUs.tsx";
 
 const manifest = {
   "sections": {
-    "site/sections/BlogPosts.tsx": $$$$$$0,
-    "site/sections/Clients.tsx": $$$$$$1,
-    "site/sections/Faq.tsx": $$$$$$2,
-    "site/sections/Footer.tsx": $$$$$$3,
-    "site/sections/Header.tsx": $$$$$$4,
-    "site/sections/Hero.tsx": $$$$$$5,
-    "site/sections/ImagesSection.tsx": $$$$$$6,
-    "site/sections/Logos.tsx": $$$$$$7,
-    "site/sections/MadeInBrazil.tsx": $$$$$$8,
-    "site/sections/MapSection.tsx": $$$$$$9,
-    "site/sections/TalkWithUs.tsx": $$$$$$10,
-    "site/sections/Testimonials.tsx": $$$$$$11,
-    "site/sections/Theme/Theme.tsx": $$$$$$12,
-    "site/sections/WorkWithUs.tsx": $$$$$$13,
+    "site/sections/AboutUs.tsx": $$$$$$0,
+    "site/sections/BlogPosts.tsx": $$$$$$1,
+    "site/sections/Clients.tsx": $$$$$$2,
+    "site/sections/Faq.tsx": $$$$$$3,
+    "site/sections/Footer.tsx": $$$$$$4,
+    "site/sections/Header.tsx": $$$$$$5,
+    "site/sections/Hero.tsx": $$$$$$6,
+    "site/sections/ImagesSection.tsx": $$$$$$7,
+    "site/sections/Logos.tsx": $$$$$$8,
+    "site/sections/MadeInBrazil.tsx": $$$$$$9,
+    "site/sections/MapSection.tsx": $$$$$$10,
+    "site/sections/TalkWithUs.tsx": $$$$$$11,
+    "site/sections/Testimonials.tsx": $$$$$$12,
+    "site/sections/Theme/Theme.tsx": $$$$$$13,
+    "site/sections/WorkWithUs.tsx": $$$$$$14,
   },
   "apps": {
     "site/apps/decohub.ts": $$$$$$$$$$$0,

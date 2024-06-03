@@ -59,6 +59,13 @@
       ]
     },
     {
+      "__resolveType": "site/sections/AboutUs.tsx",
+      "title": "Sobre a Silva",
+      "description": "<p><strong><span>Já fomos viveiristas. </span></strong></p><p><strong><span>Já fomos coletores de sementes. </span></strong></p><p><strong><span>Já fomos compradores de mudas.</span></strong><span><br><br>Nossa equipe é composta por </span><strong><span>profissionais com experiências práticas em viveiros</span></strong><span>, coleta de sementes e compra de mudas. comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz </span><strong><span>eficácia e sustentabilidade à cadeia da restauração florestal</span></strong><span>.</span></p>",
+      "subTitle": "Criamos cadeias de suprimentos para a restauração florestal",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/d629b96a-247d-4864-ac5d-96e0bd187c99"
+    },
+    {
       "__resolveType": "site/sections/MapSection.tsx",
       "title": "Presente onde a restauracão acontece no Brasil",
       "description": "<p><span>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada<br><br>Os principais viveiros e projetos já estão com a Silva. </span><span style=\"color: #004d3d\">Faça parte você também!</span></p>",
