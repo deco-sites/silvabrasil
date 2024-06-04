@@ -31,7 +31,7 @@ export default function HeroFlats({
 }: Props) {
   return (
     <div class="flex flex-col items-center gap-8">
-      <div class="relative flex w-full xl:mx-auto py-20 flex-col items-center justify-center text-center lg:py-36 gap-12 lg:gap-20">
+      <div class="relative flex w-full xl:mx-auto py-24 flex-col items-center justify-center text-center lg:py-36 gap-12 lg:gap-20">
         {image && (
           <Image
             width={1079}
@@ -44,9 +44,9 @@ export default function HeroFlats({
             fetchPriority="high"
           />
         )}
-        <div class="container lg:max-w-7xl xl:max-w-[88%] mx-auto lg:gap-12 gap-4 flex flex-col items-center justify-center">
+        <div class="container px-3 lg:px-0 lg:max-w-7xl xl:max-w-[88%] mx-auto lg:gap-12 gap-4 flex flex-col items-center justify-center">
           <div
-            class="text-green-900 leading-normal lg:leading-[5rem] font-bold lg:text-[70px] text-4xl max-w-[1360px]"
+            class="text-green-900 lg:leading-[5rem] font-bold lg:text-[70px] text-3xl max-w-[1360px]"
             dangerouslySetInnerHTML={{
               __html: title,
             }}

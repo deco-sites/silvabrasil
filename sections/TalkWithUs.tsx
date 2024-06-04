@@ -59,16 +59,16 @@ export default function TalkWithUsSection(
   };
 
   return (
-    <div class="lg:pt-28 pb-14 lg:container lg:max-w-[88%] lg:mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
+    <div class="lg:pt-28 pb-14 lg:container lg:max-w-[88%] lg:mx-auto px-3 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
       <div class="w-full lg:w-1/2">
         <div class="lg:pb-12 flex flex-col items-center text-center  lg:items-start lg:text-start">
-          <div class="rounded-[191px] px-9 py-[18px] w-fit border-2 border-green-900 mb-6 lg:mb-20">
-            <span class="text-3xl lg:text-4xl font-bold text-green-900 mb-12">
+          <div class="rounded-[191px] px-7 py-2 w-fit border-2 border-green-900 mb-6 lg:mb-20">
+            <span class="text-2xl lg:text-4xl font-bold text-green-900 mb-12">
               {title}
             </span>
           </div>
           <div
-            class="text-3xl lg:text-5xl font-bold text-green-600"
+            class="text-xl lg:text-5xl font-bold text-green-600"
             dangerouslySetInnerHTML={{
               __html: description,
             }}
@@ -135,10 +135,10 @@ export default function TalkWithUsSection(
         </div>
       </div>
       <div class="w-full lg:w-1/2">
-        <div class="flex flex-col items-center bg-green-900 rounded-[20px] px-12 py-9">
+        <div class="flex flex-col items-center bg-green-900 rounded-[20px] px-4 lg:px-12 py-9">
           {form && (
             <>
-              <h2 class="text-white font-bold text-3xl mb-6 max-w-[500px] text-center">
+              <h2 class="text-white font-bold text-2xl lg:text-3xl mb-6 max-w-[500px] text-center">
                 {form.title}
               </h2>
 
@@ -187,7 +187,7 @@ export default function TalkWithUsSection(
                 />
                 <Button
                   type="submit"
-                  class="font-bold text-lg lg:text-[26px]"
+                  class="w-full font-bold text-xl lg:text-[26px]"
                 >
                   {form.buttonLabel}
                 </Button>

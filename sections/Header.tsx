@@ -50,11 +50,11 @@ export default function Header({
   social,
 }: Nav) {
   return (
-    <nav class="drawer drawer-end bg-green-900 flex justify-center">
+    <nav class="drawer drawer-end bg-green-900 flex justify-center fixed z-10 lg:relative">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content w-full py-8 px-6 lg:px-4 xl:px-0 flex items-center justify-between lg:container lg:max-w-6xl xl:max-w-[88%] xl:mx-32 xl:gap-8">
+      <div class="drawer-content w-full py-3 lg:py-8 px-3 lg:px-4 xl:px-0 flex items-center justify-between lg:container lg:max-w-6xl xl:max-w-[88%] xl:mx-32 xl:gap-8">
         <a href="/">
           <Picture>
             <Source
@@ -70,6 +70,7 @@ export default function Header({
               height={61}
             />
             <img
+              class="max-w-[80px] lg:max-w-[142px]"
               src={logo.src || ""}
               alt="Logo Silva"
             />

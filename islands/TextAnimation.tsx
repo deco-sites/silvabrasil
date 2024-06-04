@@ -47,7 +47,7 @@ const TextAnimation = () => {
     <>
       <span
         ref={wordRef}
-        class="lg:text-[70px] text-4xl font-bold text-slate bg-green-900 rounded-[10px] p-[14px] lg:p-6 -mt-2
+        class="lg:text-[70px] text-2xl font-bold text-slate bg-green-900 rounded-[10px] p-[14px] lg:p-6 -mt-2
 		 lg:-mt-8"
       >
         {words[currentWord]}

@@ -31,7 +31,7 @@ export default function ImagesSection({
           key={card.type}
           class={`w-full relative lg:w-1/2 ${
             index === 0 ? "lg:border-r-[3px] border-green-500" : ""
-          } px-6 py-10 lg:py-28  lg:px-28`}
+          } px-3 py-10 lg:py-28  lg:px-28`}
         >
           <Image
             class="absolute inset-0 w-full h-full object-cover -z-10"
