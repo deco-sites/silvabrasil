@@ -34,13 +34,14 @@ export default function HeroFlats({
       <div class="relative flex w-full xl:mx-auto py-20 flex-col items-center justify-center text-center lg:py-36 gap-12 lg:gap-20">
         {image && (
           <Image
-            width={920}
-            height={800}
+            width={1079}
+            height={484}
             class="absolute inset-0 w-full h-full object-cover -z-10"
             src={image}
             alt={image}
-            decoding="async"
-            loading="lazy"
+            preload
+            loading="eager"
+            fetchPriority="high"
           />
         )}
         <div class="container lg:max-w-7xl xl:max-w-[88%] mx-auto lg:gap-12 gap-4 flex flex-col items-center justify-center">

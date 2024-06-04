@@ -61,7 +61,7 @@ export default function ImagesSection({
             {card?.topics &&
               (
                 <ul
-                  class="list-disc list-inside mb-8 text-lg whitespace-nowrap h-[152px]"
+                  class="list-disc list-inside mb-8 text-lg h-[152px]"
                   dangerouslySetInnerHTML={{
                     __html: card.topics,
                   }}

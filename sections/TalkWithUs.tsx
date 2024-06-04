@@ -62,7 +62,7 @@ export default function TalkWithUsSection(
     <div class="lg:pt-28 pb-14 lg:container lg:max-w-[88%] lg:mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
       <div class="w-full lg:w-1/2">
         <div class="lg:pb-12 flex flex-col items-center text-center  lg:items-start lg:text-start">
-          <div class="rounded-[191px] px-9 py-[18px] w-fit border-4 border-green-900 mb-6 lg:mb-20">
+          <div class="rounded-[191px] px-9 py-[18px] w-fit border-2 border-green-900 mb-6 lg:mb-20">
             <span class="text-3xl lg:text-4xl font-bold text-green-900 mb-12">
               {title}
             </span>

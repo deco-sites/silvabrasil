@@ -95,7 +95,7 @@ export default function MadeInBrazilSection(
             </p>
           </div>
 
-          <div class="flex gap-9">
+          <div class="flex gap-9 max-md:flex-col">
             {socialButtons?.map((item) => (
               <a
                 class="flex items-center border-2 border-slate text-slate font-normal text-xl rounded-[159px] px-7 py-4"

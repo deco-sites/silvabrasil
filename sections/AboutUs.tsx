@@ -1,5 +1,5 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
-import Image from "apps/website/components/Image.tsx";
+import { Picture, Source } from "apps/website/components/Picture.tsx";
 
 interface Props {
   title: string;
@@ -26,7 +26,7 @@ export default function AboutUsSection(
     >
       <div class="w-full flex justify-center lg:justify-between mb-8">
         <div class="flex flex-col items-center lg:items-start">
-          <h2 class="text-4xl border-2 border-green-900 text-green-900 rounded-[106px] px-7 py-2 mb-4 whitespace-nowrap w-fit">
+          <h2 class="text-3xl lg:text-4xl font-bold border-2 border-green-900 text-green-900 rounded-[106px] px-7 py-2 mb-4 whitespace-nowrap w-fit">
             {title}
           </h2>
           <span class="text-black text-lg lg:ml-8">{subTitle}</span>
@@ -88,18 +88,24 @@ export default function AboutUsSection(
             __html: description,
           }}
         />
-        <Image
-          // consertar isso
-          class="relative -mr-[11.3rem] mt-[1rem] lg:-mr-0 lg:mt-0 lg:absolute -top-24 xl:-top-52 aspect-auto right-0 z-10
-		  w-auto h-auto
-		  max-w-[514px]  max-h-[505px] xl:max-w-[714px] xl:max-h-[705px]"
-          width={714}
-          height={705}
-          src={image}
-          alt="Muda Silva"
-          decoding="async"
-          loading="lazy"
-        />
+        <Picture>
+          <Source
+            media="(max-width: 768px)"
+            src={image || ""}
+            width={332}
+            height={240}
+          />
+          <Source
+            media="(min-width: 768px)"
+            src={image || ""}
+            width={714}
+            height={705}
+          />
+          <img
+            src={image || ""}
+            alt="Muda Silva"
+          />
+        </Picture>
       </div>
     </div>
   );
