@@ -22,7 +22,7 @@ export default function AboutUsSection(
   return (
     <div
       id="about-us"
-      class="py-16 lg:container lg:max-w-[88%] lg:mx-auto px-3 text-center lg:text-start"
+      class="py-16 lg:container lg:max-w-[88%] lg:mx-auto px-[10px] text-center lg:text-start"
     >
       <div class="w-full flex justify-center lg:justify-between mb-8">
         <div class="flex flex-col items-center lg:items-start">
@@ -79,32 +79,42 @@ export default function AboutUsSection(
         </svg>
       </div>
 
-      <div class="relative py-12 px-4 lg:px-12 bg-green-900 rounded-2xl text-white flex items-center flex-col-reverse lg:flex-row ">
+      <div class="relative py-12 px-4 lg:px-8 max-sm:pt-[200px] max-md:pt-[250px] md:px-5
+	 flex-wrap basis-auto grow shrink self-auto
+	 flex
+
+
+
+	 bg-green-900 rounded-2xl text-white  ">
         <div
-          class="font-regular text-2xl max-w-[600px] xl:max-w-[800px]
-		  -mt-[7rem] lg:-mt-0"
+          class="font-regular text-lg lg:text-2xl max-w-[600px] xl:max-w-[800px]
+
+		  "
           dangerouslySetInnerHTML={{
             __html: description,
           }}
         />
-        <Picture>
-          <Source
-            media="(max-width: 768px)"
-            src={image || ""}
-            width={332}
-            height={240}
-          />
-          <Source
-            media="(min-width: 768px)"
-            src={image || ""}
-            width={714}
-            height={705}
-          />
-          <img
-            src={image || ""}
-            alt="Muda Silva"
-          />
-        </Picture>
+
+        <div class="absolute max-sm:-top-5 max-md:-top-8 lg:-top-16 max-sm:right-0 max-md:-right-28 lg:right-0 max-sm:w-[55%] max-md:w-[67%] md:w-[40%]">
+          <Picture>
+            <Source
+              media="(max-width: 768px)"
+              src={image || ""}
+              width={332}
+              height={240}
+            />
+            <Source
+              media="(min-width: 768px)"
+              src={image || ""}
+              width={714}
+              height={705}
+            />
+            <img
+              src={image || ""}
+              alt="Muda Silva"
+            />
+          </Picture>
+        </div>
       </div>
     </div>
   );
