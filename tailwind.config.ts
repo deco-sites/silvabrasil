@@ -24,7 +24,7 @@ export default {
 
         "lg": "1151px",
 
-        "xl": "1550px",
+        "xl": "1530px",
 
         "2xl": "1600px",
       },

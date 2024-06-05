@@ -22,7 +22,7 @@ export default function AboutUsSection(
   return (
     <div
       id="about-us"
-      class="py-16 lg:container lg:max-w-[88%] lg:mx-auto px-[10px] text-center lg:text-start"
+      class="py-16 lg:container lg:m-auto lg:max-w-[70%] lg:mx-auto px-[10px] text-center lg:text-start"
     >
       <div class="w-full flex justify-center lg:justify-between mb-8">
         <div class="flex flex-col items-center lg:items-start">
@@ -87,7 +87,7 @@ export default function AboutUsSection(
 
 	 bg-green-900 rounded-2xl text-white  ">
         <div
-          class="font-regular text-lg lg:text-2xl max-w-[600px] xl:max-w-[800px]
+          class="font-regular text-lg lg:text-2xl max-w-[600px] xl:max-w-[680px]
 
 		  "
           dangerouslySetInnerHTML={{
@@ -95,7 +95,7 @@ export default function AboutUsSection(
           }}
         />
 
-        <div class="absolute max-sm:-top-5 max-md:-top-8 lg:-top-16 max-sm:right-0 max-md:-right-28 lg:right-0 max-sm:w-[55%] max-md:w-[67%] md:w-[40%]">
+        <div class="absolute max-sm:-top-5 max-md:-top-8 lg:-top-16 max-sm:right-0 max-md:-right-28 lg:right-0 max-sm:w-[65%] max-md:w-[67%] md:w-[40%] xl:-top-36">
           <Picture>
             <Source
               media="(max-width: 768px)"

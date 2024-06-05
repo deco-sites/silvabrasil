@@ -45,13 +45,13 @@ export default function ImagesSection({
 
           <div class="flex flex-col lg:max-w-[565px] text-slate">
             <div class="flex flex-col mb-16">
-              <span class="text-3xl">Sou</span>
+              <span class="text-2xl lg:text-3xl">Sou</span>
               <b class="text-5xl">{card.type}</b>
             </div>
 
             {card?.description && (
               <div
-                class="max-w-[428px] mb-16 text-2xl h-24"
+                class="max-w-[428px] mb-6 lg:mb-16 text-base lg:text-2xl h-24"
                 dangerouslySetInnerHTML={{
                   __html: card.description,
                 }}
@@ -61,7 +61,7 @@ export default function ImagesSection({
             {card?.topics &&
               (
                 <ul
-                  class="list-disc list-inside mb-8 text-lg h-[152px]"
+                  class="list-disc list-inside mb-8 text-base lg:text-lg max-h-[152px]"
                   dangerouslySetInnerHTML={{
                     __html: card.topics,
                   }}
