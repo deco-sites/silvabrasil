@@ -69,7 +69,7 @@
     {
       "__resolveType": "site/sections/AboutUs.tsx",
       "title": "Sobre a Silva",
-      "description": "<p><strong><span>Já fomos viveiristas. </span></strong></p><p><strong><span>Já fomos coletores de sementes. </span></strong></p><p><strong><span>Já fomos compradores de mudas.</span></strong><span><br><br>Nossa equipe é composta por </span><strong><span>profissionais com experiências práticas em viveiros</span></strong><span>, coleta de sementes e compra de mudas. comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz </span><strong><span>eficácia e sustentabilidade à cadeia da restauração florestal</span></strong><span>.</span></p>",
+      "description": "<p><strong>Já fomos viveiristas. </strong></p><p><strong>Já fomos coletores de sementes. </strong></p><p><strong>Já fomos compradores de mudas.</strong><br><br>Nossa equipe é composta por <strong>profissionais com experiências práticas em viveiros</strong>, coleta de sementes e compra de mudas. Comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz <strong>eficácia e sustentabilidade à cadeia da restauração florestal</strong>.</p>",
       "subTitle": "Criamos cadeias de suprimentos para a restauração florestal",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/d629b96a-247d-4864-ac5d-96e0bd187c99"
     },
