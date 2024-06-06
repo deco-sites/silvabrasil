@@ -87,7 +87,7 @@ export default function AboutUsSection(
 
 	 bg-green-900 rounded-2xl text-white  ">
         <div
-          class="font-regular text-lg lg:text-2xl max-w-[600px] xl:max-w-[680px]
+          class="font-regular text-lg lg:text-2xl w-full md:max-w-[60%] lg:max-w-[600px] xl:max-w-[680px]
 
 		  "
           dangerouslySetInnerHTML={{
@@ -95,7 +95,10 @@ export default function AboutUsSection(
           }}
         />
 
-        <div class="absolute max-sm:-top-5 max-md:-top-8 lg:-top-16 max-sm:right-0 max-md:-right-28 lg:right-0 max-sm:w-[65%] max-md:w-[67%] md:w-[40%] xl:-top-36">
+        <div class="absolute
+		max-sm:-top-5 max-md:-top-8 md:-top-8 lg:-top-16 xl:-top-40
+		max-sm:right-0 max-md:-right-28 md:right-0
+		max-sm:w-[65%] max-md:w-[67%] md:w-[33%]">
           <Picture>
             <Source
               media="(max-width: 768px)"

@@ -18,7 +18,7 @@ export default function MapSection(
   { title, description = "my description", mapImage, cta }: Props,
 ) {
   return (
-    <div class="pt-0 pb-14 lg:py-14 lg:container lg:max-w-[88%] lg:mx-auto px-3 flex gap-16 flex-col lg:flex-row">
+    <div class="pt-0 pb-14 lg:py-14 lg:container lg:max-w-[70%] lg:mx-auto px-3 flex gap-16 flex-col lg:flex-row items-center">
       <div class="w-full lg:w-1/2">
         <div class="lg:pt-32 lg:pb-12 text-center lg:text-start">
           <h1 class="text-3xl lg:text-5xl font-bold text-green-900 mb-12">
