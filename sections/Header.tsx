@@ -143,11 +143,16 @@ export default function Header({
                 alt={logo.alt}
               />
             </a>
-            <Icon
-              size={24}
-              stroke-width={2}
-              id="XMark"
-            />
+            <label
+              htmlFor="mobile-drawer-nav"
+              class="btn btn-ghost drawer-button"
+            >
+              <Icon
+                size={24}
+                stroke-width={2}
+                id="XMark"
+              />
+            </label>
           </div>
 
           <ul class="mt-8 mb-16">

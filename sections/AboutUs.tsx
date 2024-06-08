@@ -79,7 +79,7 @@ export default function AboutUsSection(
         </svg>
       </div>
 
-      <div class="relative py-12 px-4 lg:px-8 max-sm:pt-[200px] max-md:pt-[250px] md:px-5
+      <div class="relative py-12 px-4 lg:px-8 max-sm:pt-[224px] max-md:pt-[250px] md:px-5
 	 flex-wrap basis-auto grow shrink self-auto
 	 flex
 
@@ -96,7 +96,7 @@ export default function AboutUsSection(
         />
 
         <div class="absolute
-		max-sm:-top-5 max-md:-top-8 md:-top-8 lg:-top-16 xl:-top-40
+		max-sm:-top-5 max-md:-top-8 md:-top-8 lg:-top-16 xl:-top-20
 		max-sm:right-0 max-md:-right-28 md:right-0
 		max-sm:w-[65%] max-md:w-[67%] md:w-[33%]">
           <Picture>
