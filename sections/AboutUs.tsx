@@ -96,7 +96,7 @@ export default function AboutUsSection(
         />
 
         <div class="absolute
-		max-sm:-top-5 max-md:-top-8 md:-top-8 lg:-top-16 xl:-top-20
+		max-sm:-top-5 max-md:-top-8 md:-top-8 lg:-top-16 xl:-top-24
 		max-sm:right-0 max-md:-right-28 md:right-0
 		max-sm:w-[65%] max-md:w-[67%] md:w-[33%]">
           <Picture>
