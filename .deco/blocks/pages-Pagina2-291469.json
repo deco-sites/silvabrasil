@@ -1,0 +1,55 @@
+{
+  "name": "Pagina2",
+  "path": "/pagina-2",
+  "sections": [
+    {
+      "__resolveType": "Preview /sections/Header.tsx"
+    },
+    {
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "site/sections/Hero.tsx",
+            "title": "<h2><strong>Super Black Friday</strong></h2>",
+            "cta": {
+              "0": {
+                "text": "Fale com a gente",
+                "href": "/"
+              },
+              "text": "Fale com a gente",
+              "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21",
+              "outline": false
+            },
+            "description": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala,</span></strong><span> organizando a cadeia de suprimentos da restauração florestal</span></p>",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f275e742-333f-4a37-bf91-548592406955"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/queryString.ts",
+            "conditions": [
+              {
+                "case": {
+                  "type": "Equals",
+                  "value": "blackfriday"
+                },
+                "param": "campaign"
+              }
+            ]
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "123"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/always.ts"
+          }
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
