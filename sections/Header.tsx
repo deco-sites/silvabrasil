@@ -56,25 +56,16 @@ export default function Header({
       {/* main content */}
       <div class="drawer-content w-full py-3 lg:py-8 px-3 lg:px-4 xl:px-0 flex items-center justify-between lg:container lg:max-w-6xl xl:max-w-[70%] xl:mx-32 xl:gap-8">
         <a href="/">
-          <Picture>
-            <Source
-              media="(max-width: 768px)"
-              src={logo.src || ""}
-              width={80}
-              height={34}
-            />
-            <Source
-              media="(min-width: 768px)"
-              src={logo.src || ""}
-              width={146}
-              height={61}
-            />
-            <img
-              class="max-w-[80px] lg:max-w-[142px]"
-              src={logo.src || ""}
-              alt="Logo Silva"
-            />
-          </Picture>
+		<Image
+            width={146}
+            height={61}
+            class="max-w-[80px] lg:max-w-[142px]"
+            src={logo.src}
+            alt='Logo'
+            preload
+            loading="eager"
+            fetchPriority="high"
+          />
         </a>
 
         <ul class="hidden lg:flex items-center lg:mt-[10px] lg:max-w-4xl xl:gap-8">
