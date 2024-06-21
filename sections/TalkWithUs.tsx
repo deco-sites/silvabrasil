@@ -78,6 +78,7 @@ export default function TalkWithUsSection(
         <div class="hidden lg:flex items-center justify-between">
           <svg
             xmlns="http://www.w3.org/2000/svg"
+			class="lg:hidden"
             width="190"
             height="75"
             viewBox="0 0 190 75"
