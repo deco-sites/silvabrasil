@@ -41,7 +41,7 @@ export default function MadeInBrazilSection(
           />
 
           <div class="font-bold text-slate mb-20 mt-8 flex flex-col items-center w-full">
-            <p class="flex items-center text-3xl lg:text-5xl font-bold flex-col lg-flex-row">
+            <p class="flex items-center text-2xl lg:text-5xl font-bold flex-col lg-flex-row">
               <span class="mr-2">{firstText}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,11 +86,11 @@ export default function MadeInBrazilSection(
                 >
                 </path>
               </svg>
-              <span class="text-3xl lg:text-5xl font-bold ml-2">
+              <span class="text-2xl lg:text-5xl font-bold ml-2">
                 {secondText}
               </span>
             </p>
-            <p class="font-medium mt-4 text-base lg:text-3xl">
+            <p class="font-medium mt-4 text-base lg:text-2xl">
               <span>{hashtags}</span>
             </p>
           </div>

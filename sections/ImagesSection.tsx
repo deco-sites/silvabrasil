@@ -45,7 +45,7 @@ export default function ImagesSection({
 
           <div class="flex flex-col lg:max-w-[565px] text-slate">
             <div class="flex flex-col mb-16">
-              <span class="text-2xl lg:text-3xl">Sou</span>
+              <span class="text-2xl lg:text-2xl">Sou</span>
               <b class="text-5xl">{card.type}</b>
             </div>
 

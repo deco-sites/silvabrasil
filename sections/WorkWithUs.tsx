@@ -24,7 +24,7 @@ export default function Section(
           <h2 class="text-2xl lg:text-4xl">{title}</h2>
         </div>
         <div
-          class="mb-8 lg:mb-16 text-center font-regular text-xl lg:text-3xl"
+          class="mb-8 lg:mb-16 text-center font-regular text-xl lg:text-2xl"
           dangerouslySetInnerHTML={{
             __html: description,
           }}

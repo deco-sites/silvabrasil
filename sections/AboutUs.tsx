@@ -26,7 +26,7 @@ export default function AboutUsSection(
     >
       <div class="w-full flex justify-center lg:justify-between mb-8">
         <div class="flex flex-col items-center lg:items-start">
-          <h2 class="text-2xl lg:text-4xl font-bold border-2 border-green-900 text-green-900 rounded-[106px] px-7 py-2 mb-4 whitespace-nowrap w-fit">
+          <h2 class="text-xl lg:text-2xl font-bold border-2 border-green-900 text-green-900 rounded-[106px] px-7 py-2 mb-4 whitespace-nowrap w-fit">
             {title}
           </h2>
           <span class="text-black text-lg lg:ml-8">{subTitle}</span>
@@ -79,17 +79,10 @@ export default function AboutUsSection(
         </svg>
       </div>
 
-      <div class="relative py-12 px-4 lg:px-8 max-sm:pt-[224px] max-md:pt-[250px] md:px-5
-	 flex-wrap basis-auto grow shrink self-auto
-	 flex
-
-
-
-	 bg-green-900 rounded-2xl text-white  ">
+      <div class="relative py-12 px-4 lg:px-8 max-sm:pt-[224px] max-md:pt-[250px] md:px-5 flex-wrap basis-auto grow shrink self-auto
+	 flex bg-green-900 rounded-2xl text-white">
         <div
-          class="font-regular text-lg lg:text-2xl w-full md:max-w-[60%] lg:max-w-[600px] xl:max-w-[680px]
-
-		  "
+          class="font-regular text-base lg:text-xl w-full md:max-w-[60%] lg:max-w-[600px] xl:max-w-[680px]"
           dangerouslySetInnerHTML={{
             __html: description,
           }}

@@ -124,7 +124,7 @@ export default function TalkWithUsSection(
           <a
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class="self-end whitespace-nowrap font-bold text-3xl bg-green-500 text-white w-fit h-fit py-5 px-7 flex justify-center items-center rounded-xl transform
+            class="self-end whitespace-nowrap font-bold text-2xl bg-green-500 text-white w-fit h-fit py-5 px-7 flex justify-center items-center rounded-xl transform
 			transition duration-700
 			hover:scale-105"
           >
@@ -138,7 +138,7 @@ export default function TalkWithUsSection(
         <div class="flex flex-col items-center bg-green-900 rounded-[20px] px-4 lg:px-12 py-9">
           {form && (
             <>
-              <h2 class="text-white font-bold text-2xl lg:text-3xl mb-6 max-w-[500px] text-center">
+              <h2 class="text-white font-bold text-2xl lg:text-2xl mb-6 max-w-[500px] text-center">
                 {form.title}
               </h2>
 

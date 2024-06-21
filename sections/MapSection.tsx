@@ -21,11 +21,11 @@ export default function MapSection(
     <div class="pt-0 pb-14 lg:py-14 lg:container lg:max-w-[70%] lg:mx-auto px-3 flex gap-16 flex-col lg:flex-row items-center">
       <div class="w-full lg:w-1/2">
         <div class="lg:pt-32 lg:pb-12 text-center lg:text-start">
-          <h1 class="text-3xl lg:text-5xl font-bold text-green-900 mb-12">
+          <h1 class="text-xl lg:text-3xl font-bold text-green-900 mb-12">
             {title}
           </h1>
           <div
-            class="text-xl lg:text-3xl font-bold text-green-600"
+            class="text-lg lg:text-xl font-bold text-green-600"
             dangerouslySetInnerHTML={{
               __html: description,
             }}
@@ -35,7 +35,7 @@ export default function MapSection(
         <a
           href={cta?.href}
           target={cta?.href.includes("http") ? "_blank" : "_self"}
-          class="hidden lg:flex font-bold text-3xl bg-green-900 text-white w-fit py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
+          class="hidden lg:flex font-bold text-xl bg-green-900 text-white w-fit py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
 			transition duration-700
 			hover:scale-105"
         >
@@ -58,11 +58,11 @@ export default function MapSection(
         <a
           href={cta?.href}
           target={cta?.href.includes("http") ? "_blank" : "_self"}
-          class="flex lg:hidden mt-8 font-bold text-3xl bg-green-900 text-white w-full lg:w-fit py-3 lg:py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
+          class="flex lg:hidden mt-8 font-bold text-xl bg-green-900 text-white w-full lg:w-fit py-3 lg:py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
 			transition duration-700
 			hover:scale-105"
         >
-          <span class="text-base lg:text-3xl">
+          <span class="text-base lg:text-xl">
             {cta?.text}
           </span>
         </a>
