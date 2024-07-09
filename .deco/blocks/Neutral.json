@@ -29,9 +29,18 @@
     "__resolveType": "website/loaders/fonts/googleFonts.ts",
     "fonts": [
       {
+        "variations": [
+          {
+            "weight": "100"
+          }
+        ],
+        "family": "Rufina"
+      },
+      {
         "variations": [],
-        "family": "Inter"
+        "family": "Open Sans"
       }
     ]
-  }
+  },
+  "mode": "dark"
 }

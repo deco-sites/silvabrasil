@@ -431,7 +431,8 @@
           "viewId": "Theme Selector",
           "id": "themes::Theme%20Selector::palette::Theme%20Selector::%7B%7D",
           "state": {
-            "__signal": null
+            "__signal": null,
+            "value": null
           }
         },
         "themes::Theme%20Viewer::palette::Theme%20Viewer::%7B%7D": {
@@ -616,7 +617,65 @@
       "name": "Settings",
       "pinned": true,
       "icon": "adjustments-horizontal",
-      "layout": [],
+      "layout": {
+        "settings": {
+          "hasHeaders": true,
+          "constrainDragToContainer": true,
+          "reorderEnabled": true,
+          "selectionEnabled": false,
+          "popoutWholeStack": false,
+          "blockedPopoutsThrowError": true,
+          "closePopoutsOnUnload": true,
+          "showPopoutIcon": false,
+          "showMaximiseIcon": false,
+          "showCloseIcon": false,
+          "responsiveMode": "onload"
+        },
+        "dimensions": {
+          "borderWidth": 8,
+          "minItemHeight": 10,
+          "minItemWidth": 10,
+          "headerHeight": 40,
+          "dragProxyWidth": 300,
+          "dragProxyHeight": 200
+        },
+        "labels": {
+          "close": "close",
+          "maximise": "maximise",
+          "minimise": "minimise",
+          "popout": "open in new window",
+          "popin": "pop in",
+          "tabDropdown": "additional tabs"
+        },
+        "content": [
+          {
+            "type": "stack",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "content": [
+              {
+                "type": "component",
+                "isClosable": true,
+                "reorderEnabled": true,
+                "title": "<div class=\"contents text-base-700\" id=\"header-settings::settings::adjustments-horizontal::settings::%7B%7D\" />",
+                "id": "settings::settings::adjustments-horizontal::settings::%7B%7D",
+                "componentName": "component",
+                "componentState": {
+                  "id": "settings::settings::adjustments-horizontal::settings::%7B%7D"
+                }
+              }
+            ],
+            "width": 100,
+            "activeItemIndex": 0
+          }
+        ],
+        "isClosable": true,
+        "reorderEnabled": true,
+        "title": "",
+        "openPopouts": [],
+        "maximisedItemId": null
+      },
       "tabs": {
         "settings::settings::adjustments-horizontal::settings::%7B%7D": {
           "name": "settings",
@@ -624,16 +683,6 @@
           "render": "function",
           "viewId": "settings",
           "id": "settings::settings::adjustments-horizontal::settings::%7B%7D",
-          "state": {
-            "__signal": null
-          }
-        },
-        "settings::domains::adjustments-horizontal::domains::%7B%7D": {
-          "name": "domains",
-          "icon": "adjustments-horizontal",
-          "render": "function",
-          "viewId": "domains",
-          "id": "settings::domains::adjustments-horizontal::domains::%7B%7D",
           "state": {
             "__signal": null
           }
