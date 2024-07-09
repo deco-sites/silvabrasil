@@ -18,14 +18,12 @@ export interface Props {
    * @format rich-text
    * @default This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.
    */
-  description?: string;
   image?: ImageWidget;
   cta?: CTA;
 }
 
 export default function HeroFlats({
   title = "Click here to tweak this text however you want.",
-  description = "Description text",
   image,
   cta,
 }: Props) {
@@ -44,34 +42,24 @@ export default function HeroFlats({
             fetchPriority="high"
           />
         )}
-        <div class="container px-3 lg:px-0 lg:max-w-7xl xl:max-w-[70%] mx-auto lg:gap-12 gap-4 flex flex-col items-center justify-center">
+        <div class="container font-['Rufina'] px-3 lg:px-0 lg:max-w-7xl xl:max-w-[70%] mx-auto lg:gap-12 gap-4 flex flex-col items-center justify-center">
           <div
-            class="text-green-900 lg:leading-[5rem] font-bold lg:text-[70px] text-2xl max-w-[1360px]"
+            class="text-[#CEE1B6] lg:leading-[5rem] font-bold lg:text-[64px] text-2xl max-w-[1360px]"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
           <TextAnimation />
 
-          <div
-            class="text-green-900 text-base lg:text-[32px] leading-normal max-w-[1124px]"
-            dangerouslySetInnerHTML={{
-              __html: description,
-            }}
-          >
-          </div>
-
           <a
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class="font-bold text-2xl bg-green-900 text-white
+            class="block lg:hidden font-bold text-2xl bg-green-900 text-white
 			px-[25px] py-[14px] lg:px-[42px] lg:py-6 flex justify-center items-center w-fit rounded-xl transform
 			transition duration-700
 			hover:scale-105"
           >
-            <span>
-              {cta?.text}
-            </span>
+            <span>{cta?.text}</span>
           </a>
         </div>
       </div>

@@ -50,7 +50,7 @@ export default function Header({
   social,
 }: Nav) {
   return (
-    <nav class="drawer drawer-end bg-green-900 flex justify-center fixed z-10 lg:relative">
+    <nav class="drawer drawer-end bg-transparent flex justify-center fixed z-10 lg:absolute">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}

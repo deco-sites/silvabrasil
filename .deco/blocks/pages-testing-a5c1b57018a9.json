@@ -29,44 +29,6 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/638f938f-e891-4ca3-b0cb-7d9da2d42905"
     },
     {
-      "__resolveType": "site/sections/ImagesSection.tsx",
-      "image1": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/8e4b376d-921f-4bb4-ba50-2d2dee39c714",
-      "image2": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/63069836-b60c-4078-84f8-2c2d26acbe5f",
-      "button1": {
-        "text": "Quero VENDER mudas",
-        "href": "/",
-        "id": "viveirista"
-      },
-      "button2": {
-        "href": "/",
-        "text": "Quero COMPRAR mudas",
-        "id": "comprador"
-      },
-      "cards": [
-        {
-          "type": "Viveirista",
-          "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/13b2900b-8524-4db9-9540-43b39515e6e5",
-          "description": "Prosperidade e crescimento sustentável para seu viveiro, com receitas previsíveis e apoio técnico.",
-          "topics": "<li>Proporcionamos estabilidade de receita</li>\n<li>Expandimos suas vendas</li>\n<li>Organizamos sua gestão financeira</li>\n<li>Melhoramos a produtividade do seu viveiro</li>",
-          "button": {
-            "href": "/",
-            "text": "Quero VENDER mudas",
-            "id": "viveirista"
-          }
-        },
-        {
-          "type": "Comprador",
-          "topics": "<li>Descomplicamos o processo de compras</li>\n<li>Cuidamos da seleção de fornecedores</li>\n<li>Proporcionamos transparência e rastreabilidade</li>\n<li>Acompanhamos a produção de mudas compradas</li>",
-          "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/ac59749d-749b-459d-91e4-954689b181f4",
-          "description": "<p><span>Projetos de </span><strong><span>ARR, SAFs, compensação e regularização ambiental</span></strong><span>: mudas e sementes entregues no prazo e com qualidade.</span></p>",
-          "button": {
-            "href": "/",
-            "text": "Quero COMPRAR mudas"
-          }
-        }
-      ]
-    },
-    {
       "__resolveType": "site/sections/AboutUs.tsx",
       "title": "Sobre a Silva",
       "description": "<p><strong>Já fomos viveiristas. </strong></p><p><strong>Já fomos coletores de sementes. </strong></p><p><strong>Já fomos compradores de mudas.</strong><br><br>Nossa equipe é composta por <strong>profissionais com experiências práticas em viveiros</strong>, coleta de sementes e compra de mudas. Comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz <strong>eficácia e sustentabilidade à cadeia da restauração florestal</strong>.</p>",
@@ -84,29 +46,8 @@
       "mapImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/8f3e18a0-b091-443a-98cc-89c5fa7e6c0e"
     },
     {
-      "__resolveType": "site/sections/TalkWithUs.tsx",
-      "title": "Fale com a gente",
-      "description": "<p><span style=\"color: rgb(0, 77, 61)\">Vamos marcar uma conversa!</span></p><p>Queremos entender sua </p><p>situação para te apoiar da </p><p>melhor forma.<br></p>",
-      "cta": {
-        "text": "Falar no WhatsApp",
-        "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21"
-      },
-      "form": {
-        "title": "Preencha os dados abaixo e  receba nosso contato",
-        "buttonLabel": "Enviar",
-        "placeholder": {
-          "name": "Nome*",
-          "organization": "Nome da empresa / organização*",
-          "phone": "Telefone (WhatsApp)*",
-          "email": "Email",
-          "message": "Sua mensagem aqui"
-        }
-      }
-    },
-    {
       "__resolveType": "site/sections/Faq.tsx",
-      "title": "Dúvidas e respostas",
-      "description": "Encontre aqui a resposta para suas dúvidas mais comuns e descubra como podemos te ajudar",
+      "title": "Perguntas e respostas",
       "questions": [
         {
           "title": "Como posso começar a comprar mudas na Silva?",

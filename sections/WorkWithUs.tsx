@@ -19,9 +19,9 @@ export default function Section(
       id="work-with-us"
       class="py-16 lg:container lg:max-w-[70%] lg:mx-auto px-3"
     >
-      <div class="py-10 lg:py-16 px-4 lg:px-28 bg-green-900 rounded-2xl text-slate flex flex-col items-center">
-        <div class="border-2 border-slate rounded-[106px] px-7 py-2 mb-10 whitespace-nowrap">
-          <h2 class="text-2xl lg:text-4xl">{title}</h2>
+      <div class="py-10 lg:py-16 px-4 lg:px-28 bg-slate rounded-2xl text-green-900 flex flex-col items-center">
+        <div class="mb-10 whitespace-nowrap">
+          <h2 class="text-2xl lg:text-4xl font-['Rufina']">{title}</h2>
         </div>
         <div
           class="mb-8 lg:mb-16 text-center font-regular text-xl lg:text-2xl"
@@ -33,7 +33,7 @@ export default function Section(
           <a
             href={cta?.href}
             target="_blank"
-            class="font-bold text-xl lg:text-2xl bg-green-500 text-white px-7 py-2 lg:py-5 lg:px-12 flex justify-center items-center h-auto rounded-xl transform
+            class="font-bold text-xl lg:text-2xl bg-green-900 text-white px-7 py-2 lg:py-5 lg:px-12 flex justify-center items-center h-auto rounded-xl transform
 			transition duration-700
 			hover:scale-105"
           >
