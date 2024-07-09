@@ -25,8 +25,8 @@
         "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21",
         "outline": false
       },
-      "description": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala,</span></strong><span> organizando a cadeia de suprimentos da restauração florestal</span></p>",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f275e742-333f-4a37-bf91-548592406955"
+      "description": "<p></p>",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/638f938f-e891-4ca3-b0cb-7d9da2d42905"
     },
     {
       "__resolveType": "site/sections/ImagesSection.tsx",
@@ -76,12 +76,12 @@
     {
       "__resolveType": "site/sections/MapSection.tsx",
       "title": "Presente onde a restauracão acontece no Brasil",
-      "description": "<p><span>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada<br><br>Os principais viveiros e projetos já estão com a Silva. </span><span style=\"color: #004d3d\">Faça parte você também!</span></p>",
+      "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada<br><br>Os principais viveiros e projetos já estão com a Silva. <span style=\"color: rgb(0, 77, 61)\">Faça parte você também!</span></p>",
       "cta": {
         "text": "Quero fazer parte",
         "href": "#work-with-us"
       },
-      "mapImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/89de9045-5163-42b7-b823-b868bf897bf4"
+      "mapImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/8f3e18a0-b091-443a-98cc-89c5fa7e6c0e"
     },
     {
       "__resolveType": "site/sections/TalkWithUs.tsx",
@@ -102,16 +102,6 @@
           "message": "Sua mensagem aqui"
         }
       }
-    },
-    {
-      "__resolveType": "site/sections/WorkWithUs.tsx",
-      "title": "Trabalhe conosco",
-      "description": "<p>Transforme a restauração florestal aqui<br><br>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável. Se você deseja fazer parte de uma equipe que está na vanguarda da restauração florestal no Brasil, venha crescer conosco.</p>",
-      "cta": {
-        "text": "Junte-se à Silva",
-        "href": "mailto:carreiras@silvabrasil.bio"
-      },
-      "subTitle": "Transforme a restauração florestal aqui"
     },
     {
       "__resolveType": "site/sections/Faq.tsx",
@@ -137,23 +127,14 @@
       ]
     },
     {
-      "__resolveType": "site/sections/MadeInBrazil.tsx",
-      "text": "",
-      "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/e4a2bf0a-00cd-49a3-8e92-efed2ebe9acd",
-      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/4fd594b9-a0f5-4446-ade7-59cf1510622b",
-      "socialButtons": [
-        {
-          "network": "Instagram",
-          "href": "https://www.instagram.com/mudasdasilva"
-        },
-        {
-          "network": "Linkedin",
-          "href": "https://www.linkedin.com/company/mudasdasilva/"
-        }
-      ],
-      "firstText": "Feita no Brasil",
-      "secondText": "para o Planeta Terra",
-      "hashtags": "#clima  #comunidade  #biodiversidade"
+      "__resolveType": "site/sections/WorkWithUs.tsx",
+      "title": "Trabalhe conosco",
+      "description": "<p>Transforme a restauração florestal aqui<br><br>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável. Se você deseja fazer parte de uma equipe que está na vanguarda da restauração florestal no Brasil, venha crescer conosco.</p>",
+      "cta": {
+        "text": "Junte-se à Silva",
+        "href": "mailto:carreiras@silvabrasil.bio"
+      },
+      "subTitle": "Transforme a restauração florestal aqui"
     },
     {
       "__resolveType": "Footer"

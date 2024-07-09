@@ -26,7 +26,12 @@
     "info": "#2e72d2"
   },
   "font": {
-    "family": "Palatino Linotype",
-    "styleSheet": "static/palatinolinotype.ttf"
+    "__resolveType": "website/loaders/fonts/googleFonts.ts",
+    "fonts": [
+      {
+        "variations": [],
+        "family": "Inter"
+      }
+    ]
   }
 }
