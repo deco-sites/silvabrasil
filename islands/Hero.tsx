@@ -28,8 +28,8 @@ export default function HeroFlats({
   cta,
 }: Props) {
   return (
-    <div class="flex flex-col items-center gap-8">
-      <div class="relative flex w-full xl:mx-auto py-24 flex-col items-center justify-center text-center lg:py-36 gap-12 lg:gap-20">
+    <div class="flex flex-col items-center">
+      <div class="relative flex w-full xl:mx-auto py-24 flex-col items-center justify-center text-center ">
         {image && (
           <Image
             width={1079}
@@ -42,26 +42,25 @@ export default function HeroFlats({
             fetchPriority="high"
           />
         )}
-        <div class="container font-['Rufina'] px-3 lg:px-0 lg:max-w-7xl xl:max-w-[70%] mx-auto lg:gap-12 gap-4 flex flex-col items-center justify-center">
+        <div class="container font-serif flex flex-col items-center justify-center mt-16 mb-8 px-6 lg:px-0">
           <div
-            class="text-[#CEE1B6] lg:leading-[5rem] font-bold lg:text-[64px] text-2xl max-w-[1360px]"
+            class="text-green-100 text-4xl font-bold lg:text-7xl"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
           <TextAnimation />
-
-          <a
-            href={cta?.href}
-            target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class="block lg:hidden font-bold text-2xl bg-green-900 text-white
-			px-[25px] py-[14px] lg:px-[42px] lg:py-6 flex justify-center items-center w-fit rounded-xl transform
-			transition duration-700
-			hover:scale-105"
-          >
-            <span>{cta?.text}</span>
-          </a>
         </div>
+        <a
+          href={cta?.href}
+          target={cta?.href.includes("http") ? "_blank" : "_self"}
+          class="cursor-pointer lg:hidden font-sans font-bold text-base bg-slate text-dark
+			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
+			transition duration-700
+			opacity-90 hover:opacity-100"
+        >
+          <span>{cta?.text}</span>
+        </a>
       </div>
     </div>
   );

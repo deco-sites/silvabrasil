@@ -19,9 +19,10 @@ const Button = forwardRef<HTMLButtonElement, Props>(({
 }, ref) => (
   <button
     {...props}
-    className={`cursor-pointer rounded-[10px] bg-green-500 border-0 text-white transform
-	transition duration-700
-	hover:scale-105 px-7 py-2 lg:py-5 lg:px-12 w-fit ${_class}`}
+    className={`cursor-pointer font-sans font-bold text-base bg-slate text-dark
+			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
+			transition duration-700
+			opacity-90 hover:opacity-100 ${_class}`}
     disabled={disabled || loading}
     aria-label={ariaLabel}
     type={type}

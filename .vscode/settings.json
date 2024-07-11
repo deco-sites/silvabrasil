@@ -9,5 +9,8 @@
     "typescript": "typescript",
     "css": "css"
 },
-  "editor.defaultFormatter": "denoland.vscode-deno"
+"editor.defaultFormatter": "denoland.vscode-deno",
+"[typescript]": {
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
+}
 }

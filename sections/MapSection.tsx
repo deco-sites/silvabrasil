@@ -21,8 +21,8 @@ export default function MapSection({
   cta,
 }: Props) {
   return (
-    <div class="pt-0 pb-14 lg:py-14 lg:container lg:max-w-[70%] lg:mx-auto px-3 flex gap-16 flex-col lg:flex-row items-center">
-      <div class="border-none bg-slate rounded-lg flex items-center justify-between px-28 py-6">
+    <div class="w-full pb-14 px-3 lg:py-14 lg:container lg:max-w-[70%] lg:mx-auto flex gap-16 flex-col lg:flex-row items-center">
+      <div class="border-none bg-slate rounded-lg flex items-center justify-between py-6">
         <div class="w-full lg:w-1/2">
           <div class="lg:pt-32 lg:pb-12 text-center lg:text-start">
             <h1 class="text-xl lg:text-3xl font-bold text-green-900 mb-12">

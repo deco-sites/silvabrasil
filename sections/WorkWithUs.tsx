@@ -21,7 +21,7 @@ export default function Section(
     >
       <div class="py-10 lg:py-16 px-4 lg:px-28 bg-slate rounded-2xl text-green-900 flex flex-col items-center">
         <div class="mb-10 whitespace-nowrap">
-          <h2 class="text-2xl lg:text-4xl font-['Rufina']">{title}</h2>
+          <h2 class="text-2xl lg:text-4xl font-serif">{title}</h2>
         </div>
         <div
           class="mb-8 lg:mb-16 text-center font-regular text-xl lg:text-2xl"

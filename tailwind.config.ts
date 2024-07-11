@@ -9,24 +9,21 @@ export default {
     extend: {
       animation: {
         sliding: "sliding 30s linear infinite",
+        blink: "blink 1s forwards",
       },
+    },
       colors: {
+        "green-100": "#CEE1B6",
         "green-500": "#85B549",
         "green-600": "#6B8E23",
         "green-900": "#004D3D",
-        "slate": "#FEF5E6",
-        "white": "#FDFDFD",
+        dark: "#001A14",
+        slate: "#FEF5E6",
+        white: "#FDFDFD",
       },
-      screens: {
-        "sm": "470px",
-
-        "md": "768px",
-
-        "lg": "1151px",
-
-        "xl": "1530px",
-
-        "2xl": "1600px",
+      fontFamily: {
+        sans: ["Open Sans", "sans-serif"],
+        serif: ["Rufina"],
       },
       maxWidth: {
         "6xl": "81rem",
@@ -38,5 +35,4 @@ export default {
         },
       },
     },
-  },
-};
+  }

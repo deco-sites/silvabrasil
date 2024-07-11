@@ -32,8 +32,7 @@ export interface Nav {
 
 export default function Header({
   logo = {
-    src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
+    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
     alt: "Logo",
   },
   navigation = {
@@ -50,18 +49,18 @@ export default function Header({
   social,
 }: Nav) {
   return (
-    <nav class="drawer drawer-end bg-transparent flex justify-center fixed z-10 lg:absolute">
+    <nav class="drawer drawer-end bg-transparent flex justify-center z-10 absolute">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content w-full py-3 lg:py-8 px-3 lg:px-4 xl:px-0 flex items-center justify-between lg:container lg:max-w-6xl xl:max-w-[70%] xl:mx-32 xl:gap-8">
+      <div class="grid-cols-12	drawer-content w-full p-6 lg:px-16 flex items-center justify-between">
         <a href="/">
-		<Image
+          <Image
             width={146}
             height={61}
             class="max-w-[80px] lg:max-w-[142px]"
-            src={logo.src}
-            alt='Logo'
+            src={logo.src || ""}
+            alt="Logo"
             preload
             loading="eager"
             fetchPriority="high"
@@ -70,17 +69,13 @@ export default function Header({
 
         <ul class="hidden lg:flex items-center lg:mt-[10px] lg:max-w-4xl xl:gap-8">
           {navigation.links.map((link) => (
-            <li class="transform
-			transition-all duration-700
-			hover:scale-105">
+            <li>
               <a
                 href={link.url}
                 aria-label={link.label}
-                class="text-white whitespace-nowrap font-semibold text-base lg:text-lg cursor-pointer px-4 hover:underline underline-offset-4"
+                class="text-white whitespace-nowrap font-semibold text-base cursor-pointer px-4 hover:underline underline-offset-4"
               >
-                <span>
-                  {link.label}
-                </span>
+                <span>{link.label}</span>
               </a>
             </li>
           ))}
@@ -92,9 +87,10 @@ export default function Header({
               id={button?.id}
               href={button?.href ?? "#"}
               target={button?.href.includes("http") ? "_blank" : "_self"}
-              class="font-bold text-lg lg:text-xl whitespace-nowrap cursor-pointer bg-slate rounded-lg transform
-			  transition duration-700
-			  hover:scale-105 px-9 py-5 text-green-900"
+              class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
+			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
+			transition duration-700
+			opacity-90 hover:opacity-100"
             >
               {button?.text}
             </a>
@@ -124,7 +120,7 @@ export default function Header({
           class="drawer-overlay"
         />
 
-        <div class="flex flex-col gap-8 min-h-full w-[90%] rounded-l-2xl px-10 py-6 bg-green-900 text-white">
+        <div class="flex flex-col gap-8 min-h-full w-[90%] rounded-l-2xl px-6 py-6 bg-green-900 text-white">
           <div class="w-full flex items-center justify-between">
             <a href="/">
               <Image
@@ -136,19 +132,15 @@ export default function Header({
             </a>
             <label
               htmlFor="mobile-drawer-nav"
-              class="btn btn-ghost drawer-button"
+              class="btn btn-ghost drawer-button pr-0"
             >
-              <Icon
-                size={24}
-                stroke-width={2}
-                id="XMark"
-              />
+              <Icon size={24} stroke-width={2} id="XMark" />
             </label>
           </div>
 
-          <ul class="mt-8 mb-16">
+          <ul class="mt-14 mb-16">
             {navigation?.links.map((link) => (
-              <li class="mb-6">
+              <li class="mb-6 font-bold text-base">
                 <a href={link.url} aria-label={link.label}>
                   {link.label}
                 </a>
@@ -163,9 +155,10 @@ export default function Header({
                 id={button?.id}
                 href={button?.href ?? "#"}
                 target={button?.href.includes("http") ? "_blank" : "_self"}
-                class="font-bold text-xl cursor-pointer bg-slate rounded-xl transform
-				transition duration-700
-				hover:scale-105 px-[35px] py-5 text-green-900"
+                class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
+			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
+			transition duration-700
+			opacity-90 hover:opacity-100"
               >
                 {button?.text}
               </a>

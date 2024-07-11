@@ -1,7 +1,5 @@
-import { animate, stagger } from "motion";
-import { useEffect, useRef } from "preact/hooks";
+import { useEffect, useRef, useState } from 'preact/hooks';
 
-// Words array
 const words = [
   "implementadores",
   "viveiristas",
@@ -12,47 +10,42 @@ const words = [
   "viveiristas",
 ];
 
-// Animation Component
 const TextAnimation = () => {
-  const currentWord = 0;
-  const wordRef = useRef<HTMLElement | null>(null);
+  const [displayText, setDisplayText] = useState('');
   const indexRef = useRef(0);
+  const isDeletingRef = useRef(false);
 
   useEffect(() => {
-    const animateWord = () => {
-      if (wordRef.current) {
-        animate(wordRef.current, { opacity: [0, 1], y: [20, 0] }, {
-          duration: 1,
-        })
-          .finished.then(() => {
-            return animate(wordRef.current!, { opacity: [1, 0], y: [0, -20] }, {
-              duration: 1,
-              delay: stagger(0.2),
-            }).finished;
-          })
-          .then(() => {
-            indexRef.current = (indexRef.current + 1) % words.length;
-            if (wordRef.current) {
-              wordRef.current.textContent = words[indexRef.current];
-            }
-            animateWord();
-          });
+    const typeWriterEffect = () => {
+      const word = words[indexRef.current];
+      const isDeleting = isDeletingRef.current;
+
+      if (isDeleting) {
+        setDisplayText(prev => prev.slice(0, -1));
+        if (displayText.length === 0) {
+          isDeletingRef.current = false;
+          indexRef.current = (indexRef.current + 1) % words.length;
+        }
+      } else {
+        setDisplayText(prev => word.slice(0, prev.length + 1));
+        if (displayText === word) {
+          isDeletingRef.current = true;
+        }
       }
     };
 
-    animateWord();
-  }, []);
+    const intervalId = setInterval(typeWriterEffect, 150);
+
+    return () => clearInterval(intervalId);
+  }, [displayText]);
 
   return (
-    <>
-      <span
-        ref={wordRef}
-        class="lg:text-[64px] text-2xl font-bold text-white p-[14px] lg:p-6 -mt-2
-		 lg:-mt-8"
-      >
-        {words[currentWord]}.
+    <div class="h-20">
+      {/* <style>{blinkKeyframes}</style> */}
+      <span class="blink text-4xl font-bold lg:text-7xl text-white">
+        {displayText}
       </span>
-    </>
+    </div>
   );
 };
 

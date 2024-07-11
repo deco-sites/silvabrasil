@@ -23,7 +23,7 @@ export default function FAQ({
     <div class="lg:container lg:max-w-[70%] lg:mx-auto px-3 text-sm py-12 lg:py-28">
       <div class="flex flex-col gap-10">
         <div class="flex flex-col lg:flex-row justify-between items-center text-center lg:text-start text-green-900">
-          <p class="font-['Rufina'] text-2xl lg:text-5xl font-bold mb-4 lg:mb-0">
+          <p class="font-serif text-2xl lg:text-5xl font-bold mb-4 lg:mb-0">
             {title}
           </p>
         </div>
