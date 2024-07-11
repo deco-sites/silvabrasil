@@ -79,6 +79,31 @@
     },
     {
       "__resolveType": "Footer"
+    },
+    {
+      "__resolveType": "site/sections/ImagesSection.tsx",
+      "cards": [
+        {
+          "type": "Viveirista",
+          "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/6682cecf-1d28-4444-b327-537fd1566cb4",
+          "description": "<p><span>Prosperidade e crescimento sustentável para seu viveiro, com receitas previsíveis e nosso apoio técnico.</span></p>",
+          "topics": "<ul><li><p><span>Proporcionamos estabilidade de receita</span></p></li><li><p><span>Expandimos suas vendas</span></p></li><li><p><span>Organizamos sua gestão financeira</span></p></li><li><p><span>Melhoramos a produtividade do seu viveiro</span></p></li></ul>",
+          "button": {
+            "text": "Quero VENDER mudas",
+            "href": "#"
+          }
+        },
+        {
+          "type": "Viveirista",
+          "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/364613f9-89fa-4d2e-a053-3611967ba6cd",
+          "description": "<p><span>Projetos de ARR, SAFs, compensação e regularização ambiental: mudas e sementes entregues no prazo e com qualidade.</span></p>",
+          "topics": "<ul><li><p><span>Descomplicamos o processo de compras</span></p></li><li><p><span>Cuidamos da seleção de fornecedores</span></p></li><li><p><span>Proporcionamos transparência e rastreabilidade</span></p></li><li><p><span>Acompanhamos a produção de mudas compradas</span></p></li></ul>",
+          "button": {
+            "text": "Quero VENDER mudas",
+            "href": "#"
+          }
+        }
+      ]
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
