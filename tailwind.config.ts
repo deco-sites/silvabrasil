@@ -6,6 +6,9 @@ export default {
   content: ["./**/*.tsx"],
   theme: {
     container: { center: true },
+	screens: {
+		'lg': '1048px',
+	},
     extend: {
       animation: {
         sliding: "sliding 30s linear infinite",

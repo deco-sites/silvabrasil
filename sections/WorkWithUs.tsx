@@ -34,7 +34,7 @@ export default function Section(
             href={cta?.href}
             target="_blank"
             class="font-bold text-xl lg:text-2xl bg-green-900 text-white px-7 py-2 lg:py-5 lg:px-12 flex justify-center items-center h-auto rounded-xl transform
-			transition duration-700
+			transition duration-400
 			hover:scale-105"
           >
             {cta?.text}

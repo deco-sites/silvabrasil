@@ -72,7 +72,7 @@ export default function ImagesSection({
               href={card.button?.href}
               target={card.button?.href.includes("http") ? "_blank" : "_self"}
               class="font-bold text-xl lg:text-2xl max-w-fit bg-slate text-green-900 p-4 lg:p-6 flex justify-center items-center h-auto rounded-xl transform
-				  transition duration-700
+				  transition duration-400
 				  hover:scale-105"
             >
               {card.button?.text}

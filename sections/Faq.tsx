@@ -33,7 +33,7 @@ export default function FAQ({
             <details class="[&:not(:last-child)]:border-b-2 group border-green-900 text-green-900">
               <summary class="text-lg cursor-pointer py-6 px-8 lg:px-12 flex items-center">
                 <span class="flex-auto ">{question.title}</span>
-                <span class="flex-none transition group-open:rotate-180 duration-700">
+                <span class="flex-none transition group-open:rotate-180 duration-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="44"

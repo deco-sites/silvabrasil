@@ -40,7 +40,7 @@ export default function MapSection({
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
             class="hidden lg:flex font-bold text-xl bg-green-900 text-white w-fit py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
-			transition duration-700
+			transition duration-400
 			hover:scale-105"
           >
             <span>{cta?.text}</span>
@@ -61,7 +61,7 @@ export default function MapSection({
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
             class="flex lg:hidden mt-8 font-bold text-xl bg-green-900 text-white w-full lg:w-fit py-3 lg:py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
-			transition duration-700
+			transition duration-400
 			hover:scale-105"
           >
             <span class="text-base lg:text-xl">{cta?.text}</span>

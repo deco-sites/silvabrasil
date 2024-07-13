@@ -53,7 +53,7 @@ export default function Header({
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="grid-cols-12	drawer-content w-full p-6 lg:px-16 flex items-center justify-between">
+      <div class="grid-cols-12	drawer-content w-full p-6 flex items-center justify-between">
         <a href="/">
           <Image
             width={146}
@@ -73,7 +73,7 @@ export default function Header({
               <a
                 href={link.url}
                 aria-label={link.label}
-                class="text-white whitespace-nowrap font-semibold text-base cursor-pointer px-4 hover:underline underline-offset-4"
+                class="text-slate whitespace-nowrap font-sans font-semibold text-base cursor-pointer px-4 hover:underline underline-offset-4"
               >
                 <span>{link.label}</span>
               </a>
@@ -89,7 +89,7 @@ export default function Header({
               target={button?.href.includes("http") ? "_blank" : "_self"}
               class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
 			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
-			transition duration-700
+			transition duration-400
 			opacity-90 hover:opacity-100"
             >
               {button?.text}
@@ -140,7 +140,7 @@ export default function Header({
 
           <ul class="mt-14 mb-16">
             {navigation?.links.map((link) => (
-              <li class="mb-6 font-bold text-base">
+              <li class="mb-6 font-bold font-sans text-base text-slate">
                 <a href={link.url} aria-label={link.label}>
                   {link.label}
                 </a>
@@ -157,7 +157,7 @@ export default function Header({
                 target={button?.href.includes("http") ? "_blank" : "_self"}
                 class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
 			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
-			transition duration-700
+			transition duration-400
 			opacity-90 hover:opacity-100"
               >
                 {button?.text}

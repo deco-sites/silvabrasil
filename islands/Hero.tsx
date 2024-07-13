@@ -56,7 +56,7 @@ export default function HeroFlats({
           target={cta?.href.includes("http") ? "_blank" : "_self"}
           class="cursor-pointer lg:hidden font-sans font-bold text-base bg-slate text-dark
 			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
-			transition duration-700
+			transition duration-400
 			opacity-90 hover:opacity-100"
         >
           <span>{cta?.text}</span>
