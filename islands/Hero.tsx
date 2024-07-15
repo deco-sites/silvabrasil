@@ -29,7 +29,7 @@ export default function HeroFlats({
 }: Props) {
   return (
     <div class="flex flex-col items-center">
-      <div class="relative flex w-full xl:mx-auto py-24 flex-col items-center justify-center text-center ">
+      <div class="relative flex w-full xl:mx-auto h-screen flex-col items-center justify-center text-center ">
         {image && (
           <Image
             width={1079}
@@ -42,7 +42,7 @@ export default function HeroFlats({
             fetchPriority="high"
           />
         )}
-        <div class="container font-serif flex flex-col items-center justify-center mt-16 mb-8 px-6 lg:px-16">
+        <div class="container font-serif flex flex-col items-center justify-center mt-16 mb-8 px-6 lg:px-16 xl:px-0">
           <div
             class="text-green-100 text-4xl font-bold lg:text-7xl"
             dangerouslySetInnerHTML={{
