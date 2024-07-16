@@ -18,6 +18,7 @@ interface Card {
 }
 
 export interface Props {
+  /** @format rich-text  */
   title: string;
   cards: Card[];
 }
@@ -28,11 +29,13 @@ export default function ImagesSection({
 }: Props) {
   return (
     <div id="viveiros" class="w-full h-auto container">
-      <div class="bg-green-900 rounded-2xl py-16  px-16	flex flex-col -mt-16 gap-12">
-        <div class="w-full flex justify-center items-center">
-          <h1 class="text-white font-sans text-xl">{title}</h1>
-        </div>
-        <div class="flex">
+      <div class="bg-green-900 rounded-2xl py-16  px-16	flex items-center flex-col -mt-48 gap-12">
+        <div
+          class="w-full flex justify-center items-center text-white font-sans text-xl text-center max-w-[772px]"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
+
+        <div class="w-full flex">
           {cards?.map((card) => (
             <div
               key={card.type}
@@ -50,7 +53,7 @@ export default function ImagesSection({
 
               <div class="absolute inset-0 object-cover rounded-2xl bg-gradient-to-r from-slate via-slate to-transparent opacity-80 z-20 size-full" />
 
-              <div class="w-full flex flex-col z-30">
+              <div class="w-full flex flex-col z-30 max-w-[300px]">
                 <div class="flex flex-col mb-8 font-serif text-green-900">
                   <span class="text-2xl lg:text-2xl">Para</span>
                   <b class="text-5xl">{card.type}</b>
@@ -67,7 +70,7 @@ export default function ImagesSection({
 
                 {card?.topics && (
                   <ul
-                    class="list-disc list-inside mb-8 text-base max-h-[152px] text-dark"
+                    class="list-disc list-inside mb-10 text-base text-dark"
                     dangerouslySetInnerHTML={{
                       __html: card.topics,
                     }}
@@ -80,7 +83,7 @@ export default function ImagesSection({
                     card.button?.href.includes("http") ? "_blank" : "_self"
                   }
                   class="font-bold text-base w-fit text-slate bg-green-900 px-6 py-4 flex  rounded-lg transform
-				transition duration-400	opacity-90 hover:opacity-100"
+				transition duration-400	opacity-90 hover:opacity-100 mt-auto"
                 >
                   {card.button?.text}
                 </a>

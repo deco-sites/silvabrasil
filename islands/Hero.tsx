@@ -42,7 +42,7 @@ export default function HeroFlats({
             fetchPriority="high"
           />
         )}
-        <div class="container font-serif flex flex-col items-center justify-center mt-16 mb-8 px-6 lg:px-16 xl:px-0">
+        <div class="container font-serif flex flex-col items-center justify-center px-6 lg:px-16 xl:px-0 mb-12">
           <div
             class="text-green-100 text-4xl font-bold lg:text-7xl"
             dangerouslySetInnerHTML={{

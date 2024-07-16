@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 
 const words = [
-  "implementadores",
-  "viveiristas",
-  "sistemas agroflorestais",
-  "desenvolvedores",
-  "compensação ambiental",
-  "implementadores",
-  "viveiristas",
+  "implementadores.",
+  "viveiristas.",
+  "sistemas agroflorestais.",
+  "desenvolvedores.",
+  "compensação ambiental.",
+  "implementadores.",
+  "viveiristas.",
 ];
 
 const TextAnimation = () => {
