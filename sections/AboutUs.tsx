@@ -18,13 +18,9 @@ export default function AboutUsSection({
   image,
 }: Props) {
   return (
-    <div
-      id="about-us"
-      class="py-16 flex w-full justify-between pr-10"
-    >
+    <div id="about-us" class="py-16 flex w-full justify-between pr-44">
       <div
         class="scale-x-[-1]
-
 		  max-sm:w-[65%] max-md:w-[67%] md:w-[33%]"
       >
         <Picture>
@@ -45,10 +41,10 @@ export default function AboutUsSection({
       </div>
 
       <div class="flex flex-col justify-center lg:justify-between mb-8 max-w-[422px]">
-        <h2 class="text-xl lg:text-2xl font-bold text-green-900 mb-4 whitespace-nowrap w-fit">
+        <h2 class="text-xl lg:text-5xl font-bold text-green-900 mb-2 whitespace-nowrap w-fit font-serif">
           {title}
         </h2>
-        <span class="text-black text-lg">{subTitle}</span>
+        <span class="text-xl text-dark mb-9">{subTitle}</span>
 
         <div
           class="relative font-regular text-base lg:text-xl w-full md:max-w-[60%] lg:max-w-[600px] xl:max-w-[680px]"

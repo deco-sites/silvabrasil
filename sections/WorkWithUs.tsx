@@ -1,9 +1,12 @@
+import type { ImageWidget } from "apps/admin/widgets.ts";
+import Image from "apps/website/components/Image.tsx";
 interface CTA {
   href: string;
   text: string;
 }
 interface Props {
   title: string;
+  image: ImageWidget;
   /**
    * @format rich-text
    */
@@ -11,14 +14,26 @@ interface Props {
   cta: CTA;
 }
 
-export default function Section(
-  { title = "Work with us", description = "Description text", cta }: Props,
-) {
+export default function Section({
+  title = "Work with us",
+  image,
+  description = "Description text",
+  cta,
+}: Props) {
   return (
     <div
       id="work-with-us"
       class="py-16 lg:container lg:max-w-[70%] lg:mx-auto px-3"
     >
+      <Image
+        class="absolute size-full inset-0 object-cover z-10 rounded-2xl"
+        width={533}
+        height={400}
+        src={image}
+        alt={image}
+        decoding="async"
+        loading="lazy"
+      />
       <div class="py-10 lg:py-16 px-4 lg:px-28 bg-slate rounded-2xl text-green-900 flex flex-col items-center">
         <div class="mb-10 whitespace-nowrap">
           <h2 class="text-2xl lg:text-4xl font-serif">{title}</h2>

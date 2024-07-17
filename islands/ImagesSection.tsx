@@ -1,6 +1,5 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import { IS_BROWSER } from "$fresh/runtime.ts";
 
 export interface CTA {
   id?: string;
@@ -86,11 +85,11 @@ export default function ImagesSection({
         </div>
 
         {/* Desktop */}
-        <div class="hidden md:flex w-full flex-row gap-6 flex-wrap">
+        <div class="hidden md:flex w-full flex-row gap-6 max-lg:flex-wrap">
           {cards?.map((card) => (
             <div
               key={card.type}
-              class="columns-5 w-full relative p-12 pt-6 mb-3"
+              class="columns-5 w-full relative p-12 pt-6 mb-3 flex flex-col"
             >
               <Image
                 class="absolute size-full inset-0 object-cover z-10 rounded-2xl"
