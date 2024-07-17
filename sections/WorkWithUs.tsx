@@ -23,23 +23,24 @@ export default function Section({
   return (
     <div
       id="work-with-us"
-      class="w-full p-6 flex flex-row"
+      class="w-full p-6 flex flex-row items-center container bg-slate rounded-2xl gap-10 mb-32"
     >
-      <Image
-        class="rounded-2xl"
-        width={533}
-        height={400}
-        src={image || ''}
-        alt={image}
-        decoding="async"
-        loading="lazy"
-      />
-      <div class="py-10 lg:py-16 px-4 lg:px-28 bg-slate rounded-2xl text-green-900 flex flex-col items-center">
-        <div class="mb-10 whitespace-nowrap">
-          <h2 class="text-2xl lg:text-4xl font-serif">{title}</h2>
-        </div>
+      <div class="size-full flex max-w-[50%]">
+        <Image
+          class="rounded-2xl"
+          width={533}
+          height={400}
+          src={image || ""}
+          alt={image}
+          decoding="async"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex flex-col items-start max-w-[50%]">
+        <h2 class="text-5xl font-serif text-green-900 mb-2">{title}</h2>
         <div
-          class="mb-8 lg:mb-16 text-center font-regular text-xl lg:text-2xl"
+          class="mb-5 font-regular text-xl text-dark font-sans"
           dangerouslySetInnerHTML={{
             __html: description,
           }}
@@ -48,7 +49,7 @@ export default function Section({
           <a
             href={cta?.href}
             target="_blank"
-            class="font-bold text-xl lg:text-2xl bg-green-900 text-white px-7 py-2 lg:py-5 lg:px-12 flex justify-center items-center h-auto rounded-xl transform
+            class="font-bold text-base bg-green-900 text-white px-7 py-2 lg:py-5 lg:px-12 flex justify-center items-center h-auto rounded-xl transform
 			transition duration-400
 			hover:scale-105"
           >
