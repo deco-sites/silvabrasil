@@ -6,7 +6,7 @@ interface CTA {
 }
 interface Props {
   title: string;
-  image: ImageWidget;
+  image?: ImageWidget;
   /**
    * @format rich-text
    */
@@ -23,13 +23,13 @@ export default function Section({
   return (
     <div
       id="work-with-us"
-      class="py-16 lg:container lg:max-w-[70%] lg:mx-auto px-3"
+      class="w-full p-6 flex flex-row"
     >
       <Image
-        class="absolute size-full inset-0 object-cover z-10 rounded-2xl"
+        class="rounded-2xl"
         width={533}
         height={400}
-        src={image}
+        src={image || ''}
         alt={image}
         decoding="async"
         loading="lazy"
