@@ -9,7 +9,7 @@ export interface CTA {
 }
 
 interface Card {
-  type: "Viveirista" | "Comprador";
+  type: "Viveiristas" | "Compradores de mudas";
   imageBg: ImageWidget;
   /** @format rich-text  */
   description?: string;
