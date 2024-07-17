@@ -32,32 +32,32 @@
       "__resolveType": "site/sections/ImagesSection.tsx",
       "cards": [
         {
-          "type": "Viveirista",
+          "type": "Viveiristas",
           "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/6682cecf-1d28-4444-b327-537fd1566cb4",
           "description": "<p><span>Prosperidade e crescimento sustentável para seu viveiro, com receitas previsíveis e nosso apoio técnico.</span></p>",
-          "topics": "  <li>\n    Proporcionamos estabilidade de receita\n  </li>\n  <li>\n    Expandimos suas vendas\n  </li>\n  <li>\n    Organizamos sua gestão financeira\n  </li>\n  <li>\n    Melhoramos a produtividade do seu viveiro\n  </li>\n",
+          "topics": "<ul><li><p><span>Proporcionamos estabilidade de receita</span></p></li><li><p><span>Expandimos suas vendas</span></p></li><li><p><span>Organizamos sua gestão financeira</span></p></li><li><p><span>Melhoramos a produtividade do seu viveiro</span></p></li></ul>",
           "button": {
             "text": "Quero VENDER mudas",
             "href": "#"
           }
         },
         {
-          "type": "Viveirista",
+          "type": "Compradores de mudas",
           "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/364613f9-89fa-4d2e-a053-3611967ba6cd",
           "description": "<p><span>Projetos de ARR, SAFs, compensação e regularização ambiental: mudas e sementes entregues no prazo e com qualidade.</span></p>",
-          "topics": "<li>\n  Descomplicamos o processo de compras\n</li>\n<li>\n  Cuidamos da seleção de fornecedores\n</li>\n<li>\n  Proporcionamos transparência e rastreabilidade\n</li>\n<li>\n  Acompanhamos a produção de mudas compradas\n</li>",
+          "topics": "<ul><li><p><span>Descomplicamos o processo de compras</span></p></li><li><p><span>Cuidamos da seleção de fornecedores</span></p></li><li><p><span>Proporcionamos transparência e rastreabilidade</span></p></li><li><p><span>Acompanhamos a produção de mudas compradas</span></p></li></ul>",
           "button": {
-            "text": "Quero COMPRAR mudas",
+            "text": "Quero VENDER mudas",
             "href": "#"
           }
         }
       ],
-      "title": "<p>Somos uma plataforma que comercializa <strong>mudas e sementes nativas em escala</strong>, organizando a cadeia de suprimentos da restauração florestal.</p>"
+      "title": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala</span></strong><span>, organizando a cadeia de suprimentos da restauração florestal.</span></p>"
     },
     {
       "__resolveType": "site/sections/AboutUs.tsx",
       "title": "Sobre a Silva",
-      "description": "<p><strong>Já fomos viveiristas. </strong></p><p><strong>Já fomos coletores de sementes. </strong></p><p><strong>Já fomos compradores de mudas.</strong><br><br>Nossa equipe é composta por <strong>profissionais com experiências práticas em viveiros</strong>, coleta de sementes e compra de mudas. Comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz <strong>eficácia e sustentabilidade à cadeia da restauração florestal</strong>.</p>",
+      "description": "<p>Já fomos <strong class=\"text-green-900\">viveiristas</strong>.</p>\n<p>Já fomos <strong class=\"text-green-900\">coletores de sementes</strong>.</p>\n<p>Já fomos\n  <strong class=\"text-green-900\">compradores de mudas.</strong><br><br><span>Nossa equipe é composta por profissionais com </span><strong><span>experiência prática</span></strong><span> em viveiros, coleta de sementes e compra de mudas.<br>Comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz eficácia e sustentabilidade à cadeia da restauração florestal.</span>\n</p>",
       "subTitle": "Criamos cadeias de suprimentos para a restauração florestal",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/d629b96a-247d-4864-ac5d-96e0bd187c99"
     },
