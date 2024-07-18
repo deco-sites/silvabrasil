@@ -29,7 +29,7 @@ export default function HeroFlats({
 }: Props) {
   return (
     <div class="flex flex-col items-center">
-      <div class="relative flex w-full xl:mx-auto h-screen flex-col items-center justify-center text-center ">
+      <div class="relative flex w-full xl:mx-auto h-[83vh] md:h-screen flex-col items-center justify-center text-center ">
         {image && (
           <Image
             width={1079}

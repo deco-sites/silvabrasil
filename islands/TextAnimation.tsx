@@ -44,7 +44,7 @@ const TextAnimation = () => {
       return () => clearTimeout(delayTimeout);
     }
 
-    const intervalId = setInterval(typeWriterEffect, 200);
+    const intervalId = setInterval(typeWriterEffect, 100);
 
     return () => clearInterval(intervalId);
   }, [displayText, delayActive]);

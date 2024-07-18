@@ -18,30 +18,28 @@ export default function AboutUsSection({
   image,
 }: Props) {
   return (
-    <div id="about-us" class="py-16 flex w-full justify-between pr-44">
-      <div
-        class="scale-x-[-1]
-		  max-sm:w-[65%] max-md:w-[67%] md:w-[33%]"
-      >
-        <Picture>
-          <Source
-            media="(max-width: 768px)"
-            src={image || ""}
-            width={332}
-            height={240}
-          />
-          <Source
-            media="(min-width: 768px)"
-            src={image || ""}
-            width={714}
-            height={705}
-          />
-          <img src={image || ""} alt="Muda Silva" />
-        </Picture>
-      </div>
+    <div
+      id="about-us"
+      class="lg:mt-32 lg:mb-16 my-12 w-full flex items-center flex-col lg:flex-row left-0"
+    >
+      <Picture class="-ml-48">
+        <Source
+          media="(max-width: 768px)"
+          src={image || ""}
+          width={245}
+          height={213}
+        />
+        <Source
+          media="(min-width: 768px)"
+          src={image || ""}
+          width={667}
+          height={581}
+        />
+        <img src={image || ""} alt="Muda Silva" />
+      </Picture>
 
-      <div class="flex flex-col justify-center lg:justify-between mb-8 max-w-[422px]">
-        <h2 class="text-xl lg:text-5xl font-bold text-green-900 mb-2 whitespace-nowrap w-fit font-serif">
+      <div class="flex flex-col max-w-[422px] container p-6 lg:p-0">
+        <h2 class="text-4xl lg:text-5xl font-bold text-green-900 mb-2 whitespace-nowrap w-fit font-serif">
           {title}
         </h2>
         <span class="text-xl text-dark mb-9">{subTitle}</span>
