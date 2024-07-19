@@ -38,7 +38,7 @@ export default function AboutUsSection({
         <img src={image || ""} alt="Muda Silva" />
       </Picture>
 
-      <div class="flex flex-col max-w-[422px] container p-6 lg:p-0">
+      <div class="flex flex-col lg:max-w-[422px] container p-6 lg:p-0">
         <h2 class="text-4xl lg:text-5xl font-bold text-green-900 mb-2 whitespace-nowrap w-fit font-serif">
           {title}
         </h2>

@@ -21,34 +21,36 @@ export default function MapSection({
   cta,
 }: Props) {
   return (
-    <div class="w-full pb-14 px-3 lg:py-14 lg:container lg:max-w-[70%] lg:mx-auto flex gap-16 flex-col lg:flex-row items-center">
-      <div class="border-none bg-slate rounded-lg flex flex-col items-center justify-between py-6">
+    <div class="w-full flex flex-col lg:flex-row items-center">
+      <div class="bg-slate lg:rounded-lg flex flex-col justify-between px-6 py-12 gap-4 items-start">
         <div class="w-full lg:w-1/2">
-          <div class="lg:pt-32 lg:pb-12 text-center lg:text-start">
-            <h1 class="text-xl lg:text-3xl font-bold text-green-900 mb-12">
-              {title}
+          <div class="lg:pt-32 lg:pb-12">
+            <h1 class="text-4xl font-bold text-green-900 font-serif">
+              Presente onde a restauração acontece no Brasil
             </h1>
+            {mapImage && (
+              <Image
+                class="block lg:hidden"
+                width={810}
+                height={806}
+                src={mapImage}
+                alt={mapImage}
+                decoding="async"
+                loading="lazy"
+              />
+            )}
             <div
-              class="text-lg lg:text-xl font-bold text-green-600"
+              class="text-base lg:text-xl text-dark text-start"
               dangerouslySetInnerHTML={{
                 __html: description,
               }}
             />
           </div>
-
-          <a
-            href={cta?.href}
-            target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class="hidden lg:flex font-bold text-xl bg-green-900 text-white w-fit py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
-			transition duration-400
-			hover:scale-105"
-          >
-            <span>{cta?.text}</span>
-          </a>
         </div>
-        <div class="w-full lg:w-1/2 flex flex-col items-center">
+        <div class="w-full lg:w-1/2 flex flex-col">
           {mapImage && (
             <Image
+              class="hidden lg:block"
               width={810}
               height={806}
               src={mapImage}
@@ -60,11 +62,11 @@ export default function MapSection({
           <a
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class="flex lg:hidden mt-8 font-bold text-xl bg-green-900 text-white w-full lg:w-fit py-3 lg:py-6 px-[42px] justify-center items-center h-auto rounded-xl transform
+            class="flex font-bold text-base bg-green-900 text-white w-fit px-6 py-[14px] justify-center items-center h-auto rounded-xl transform
 			transition duration-400
-			hover:scale-105"
+			opacity-90 hover:opacity-100 "
           >
-            <span class="text-base lg:text-xl">{cta?.text}</span>
+            <span>{cta?.text}</span>
           </a>
         </div>
       </div>

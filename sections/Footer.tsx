@@ -27,6 +27,7 @@ export interface Props {
     src?: ImageWidget;
     alt?: string;
   };
+  imageBg: ImageWidget;
   links?: Column[];
   copyright?: string;
   contact?: Contact;
@@ -36,8 +37,7 @@ export interface Props {
 
 export default function Footer({
   logo = {
-    src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
+    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
     alt: "Logo",
   },
   links = [
@@ -63,6 +63,7 @@ export default function Footer({
     },
   ],
   copyright = "® Silva 2024. Todos os direitos reservados.",
+  imageBg,
   contact,
   socialTitle,
   social = [
@@ -72,7 +73,18 @@ export default function Footer({
   ],
 }: Props) {
   return (
-    <div class="w-full text-sm text-slate bg-green-900 rounded-t-[20px]">
+    <div class="relative w-full text-sm text-slate  lg:rounded-t-[20px]">
+      {imageBg && (
+        <Image
+          width={1280}
+          height={600}
+          class="absolute inset-0 w-full h-full object-cover -z-10 rounded-xl"
+          src={imageBg}
+          alt={imageBg}
+          decoding="async"
+          loading="lazy"
+        />
+      )}
       <div class="pt-14 lg:container lg:max-w-[70%] lg:mx-auto px-3">
         <div class="flex flex-col items-center gap-6 justify-between lg:flex-row mb-14">
           <div class="hidden lg:inline-block">
@@ -86,15 +98,11 @@ export default function Footer({
             <div class="flex flex-col max-w-[300px]">
               <span class="mt-6 mb-4">
                 Somos uma plataforma que comercializa{" "}
-                <b>mudas e sementes nativas em escala</b>{" "}
-                organizando a cadeia de suprimentos
+                <b>mudas e sementes nativas em escala</b> organizando a cadeia
+                de suprimentos
               </span>
-              <span class="mb-4">
-                Feita no Brasil 🇧🇷 para o Planeta Terra
-              </span>
-              <span class="mb-4">
-                #clima #comunidade #biodiversidade
-              </span>
+              <span class="mb-4">Feita no Brasil 🇧🇷 para o Planeta Terra</span>
+              <span class="mb-4">#clima #comunidade #biodiversidade</span>
             </div>
           </div>
           <div class="flex flex-col text-slate text-center lg:text-start">
@@ -215,15 +223,11 @@ export default function Footer({
             <div class="flex flex-col max-w-[300px]">
               <span class="mt-6 mb-4">
                 Somos uma plataforma que comercializa{" "}
-                <b>mudas e sementes nativas em escala</b>{" "}
-                organizando a cadeia de suprimentos
+                <b>mudas e sementes nativas em escala</b> organizando a cadeia
+                de suprimentos
               </span>
-              <span class="mb-4">
-                Feita no Brasil 🇧🇷 para o Planeta Terra
-              </span>
-              <span class="mb-4">
-                #clima #comunidade #biodiversidade
-              </span>
+              <span class="mb-4">Feita no Brasil 🇧🇷 para o Planeta Terra</span>
+              <span class="mb-4">#clima #comunidade #biodiversidade</span>
             </div>
           </div>
         </div>

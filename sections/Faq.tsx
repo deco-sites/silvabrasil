@@ -15,23 +15,21 @@ export default function FAQ({
     {
       title: "Question #1 text goes here",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat.",
     },
   ],
 }: Props) {
   return (
-    <div class="lg:container lg:max-w-[70%] lg:mx-auto px-3 text-sm py-12 lg:py-28">
-      <div class="flex flex-col gap-10">
-        <div class="flex flex-col lg:flex-row justify-between items-center text-center lg:text-start text-green-900">
-          <p class="font-serif text-2xl lg:text-5xl font-bold mb-4 lg:mb-0">
-            {title}
-          </p>
+    <div class="lg:container lg:max-w-[70%] lg:mx-auto text-sm py-12 lg:py-28">
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col lg:flex-row text-green-900 max-lg:max-w-[312px] px-6">
+          <p class="font-serif text-4xl font-bold mb-4">{title}</p>
         </div>
 
-        <div class="flex-auto border-2 rounded-lg border-green-900">
+        <div class="flex-auto border rounded-lg border-[#99B8B1]">
           {questions?.map((question) => (
-            <details class="[&:not(:last-child)]:border-b-2 group border-green-900 text-green-900">
-              <summary class="text-lg cursor-pointer py-6 px-8 lg:px-12 flex items-center">
+            <details class="[&:not(:last-child)]:border-b group border-[#99B8B1] text-dark">
+              <summary class="text-lg cursor-pointer py-9 px-6 flex items-center">
                 <span class="flex-auto ">{question.title}</span>
                 <span class="flex-none transition group-open:rotate-180 duration-400">
                   <svg
@@ -48,9 +46,9 @@ export default function FAQ({
                   </svg>
                 </span>
               </summary>
-              <div class="group-open:animate-fadeIn transition duration-300 bg-green-900 text-slate py-6 px-8 lg:px-12  font-bold text-base">
+              <div class="group-open:animate-fadeIn transition duration-300  border-t border-[#99B8B1] bg-[#E7F0DB] py-9 px-6">
                 <p
-                  class="leading-relaxed select-none"
+                  class="leading-relaxed select-none text-base text-dark"
                   dangerouslySetInnerHTML={{ __html: question.answer }}
                 ></p>
               </div>

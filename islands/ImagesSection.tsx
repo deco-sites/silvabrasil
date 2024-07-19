@@ -29,7 +29,7 @@ export default function ImagesSection({
 }: Props) {
   return (
     <div id="viveiros" class="w-full h-auto lg:container">
-      <div class="bg-green-900 md:rounded-2xl md:p-16 flex items-center flex-col md:-mt-48 md:gap-12">
+      <div class="bg-green-900 md:rounded-2xl md:p-16 flex items-center flex-col -mt-48 md:gap-12">
         <div
           class="w-full flex justify-center items-center text-white font-sans text-xl text-center max-w-[772px] px-6 py-9"
           dangerouslySetInnerHTML={{ __html: title }}
@@ -51,7 +51,7 @@ export default function ImagesSection({
                 <div class="absolute inset-0 object-cover rounded-t-2xl bg-gradient-to-r from-slate via-slate to-transparent opacity-80 z-20 size-full" />
                 <div class="flex z-30 flex-col text-green-900  p-6">
                   <span class="text-2xl font-serif">Para</span>
-                  <b class="text-4xl mb-4 font-serif">{card.type}</b>
+                  <b class="text-4xl mb-4 font-serif max-w-[260px]">{card.type}</b>
                   <div
                     class="font-sans text-base text-dark"
                     dangerouslySetInnerHTML={{
