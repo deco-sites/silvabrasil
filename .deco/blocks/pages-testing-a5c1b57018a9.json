@@ -72,6 +72,27 @@
       "mapImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/8f3e18a0-b091-443a-98cc-89c5fa7e6c0e"
     },
     {
+      "__resolveType": "site/sections/TalkWithUs.tsx",
+      "title": "Vamos marcar uma conversa?",
+      "description": "<p><span style=\"color: #ffffff; font-size: 20pt\">Queremos entender sua situação para te apoiar da melhor forma.</span></p><p></p><p><span style=\"color: #ffffff; font-size: 16pt\">Manda um WhatsApp pra gente ou preencha o formulário. Vamos entrar em contato.</span></p>",
+      "cta": {
+        "text": "Falar no WhatsApp",
+        "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21"
+      },
+      "form": {
+        "title": "teste",
+        "placeholder": {
+          "name": "Nome",
+          "organization": "Nome da organização",
+          "phone": "Telefone (WhatsApp)",
+          "email": "E-mail (opcional)",
+          "message": "Sua mensagem aqui (opcional)"
+        },
+        "buttonLabel": "Enviar"
+      },
+      "inputs": {}
+    },
+    {
       "__resolveType": "site/sections/Faq.tsx",
       "title": "Perguntas e respostas",
       "questions": [
