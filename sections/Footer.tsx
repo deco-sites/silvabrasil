@@ -1,11 +1,6 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 
-export interface Column {
-  title: string;
-  items: Items[];
-}
-
 export interface Items {
   label: string;
   href: string;
@@ -14,6 +9,11 @@ export interface Items {
 export interface Social {
   network: "Facebook" | "Instagram" | "Linkedin";
   href: string;
+}
+
+export interface Organization {
+  title: string;
+  links: [Items];
 }
 
 export interface Contact {
@@ -27,12 +27,12 @@ export interface Props {
     src?: ImageWidget;
     alt?: string;
   };
-  imageBg: ImageWidget;
-  links?: Column[];
-  copyright?: string;
+  imageBg?: ImageWidget;
+  organization?: Organization;
   contact?: Contact;
   socialTitle: string;
   social?: Social[];
+  copyright?: string;
 }
 
 export default function Footer({
@@ -40,30 +40,9 @@ export default function Footer({
     src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
     alt: "Logo",
   },
-  links = [
-    {
-      title: "Column One",
-      items: [
-        { label: "Link One", href: "/" },
-        { label: "Link Two", href: "/" },
-        { label: "Link Three", href: "/" },
-        { label: "Link Four", href: "/" },
-        { label: "Link Five", href: "/" },
-      ],
-    },
-    {
-      title: "Column Two",
-      items: [
-        { label: "Link Six", href: "/" },
-        { label: "Link Seven", href: "/" },
-        { label: "Link Eight", href: "/" },
-        { label: "Link Nine", href: "/" },
-        { label: "Link Ten", href: "/" },
-      ],
-    },
-  ],
-  copyright = "® Silva 2024. Todos os direitos reservados.",
   imageBg,
+  organization,
+  copyright = "® Silva 2024. Todos os direitos reservados.",
   contact,
   socialTitle,
   social = [
@@ -73,12 +52,12 @@ export default function Footer({
   ],
 }: Props) {
   return (
-    <div class="relative w-full text-sm text-slate  lg:rounded-t-[20px]">
+    <div class="relative w-full text-sm text-slate  rounded-t-[20px]">
       {imageBg && (
         <Image
           width={1280}
           height={600}
-          class="absolute inset-0 w-full h-full object-cover -z-10 rounded-xl"
+          class="absolute inset-0 w-full h-full object-cover -z-10 rounded-t-[20px]"
           src={imageBg}
           alt={imageBg}
           decoding="async"
@@ -87,8 +66,9 @@ export default function Footer({
       )}
       <div class="pt-14 lg:container lg:max-w-[70%] lg:mx-auto px-3">
         <div class="flex flex-col items-center gap-6 justify-between lg:flex-row mb-14">
-          <div class="hidden lg:inline-block">
+          <div class="visible lg:hidden flex flex-col items-center text-center mt-6">
             <Image
+              class="mb-9"
               src={logo.src || ""}
               width={144}
               height={58}
@@ -96,33 +76,34 @@ export default function Footer({
             />
 
             <div class="flex flex-col max-w-[300px]">
-              <span class="mt-6 mb-4">
+              <span class="mb-12 text-2xl font-serif text-center">
+                Feita no Brasil <br />
+                🇧🇷
+                <br />
+                para o Planeta Terra
+              </span>
+              <span class="mb-9 text-xl font-sans text-start">
                 Somos uma plataforma que comercializa{" "}
                 <b>mudas e sementes nativas em escala</b> organizando a cadeia
                 de suprimentos
               </span>
-              <span class="mb-4">Feita no Brasil 🇧🇷 para o Planeta Terra</span>
-              <span class="mb-4">#clima #comunidade #biodiversidade</span>
             </div>
           </div>
           <div class="flex flex-col text-slate text-center lg:text-start">
-            {links?.map((link) => (
-              <>
-                <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
-                  {link.title}
-                </h4>
-                {link.items?.map((item) => (
-                  <a
-                    class="block hover:underline link no-underline py-1 font-regular text-sm lg:text-lg"
-                    href={item.href}
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </>
+            <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
+              {organization?.title}
+            </h4>
+            {organization?.links?.map((item) => (
+              <a
+                class="block hover:underline link no-underline py-1 font-regular text-sm lg:text-lg"
+                href={item.href}
+              >
+                {item.label}
+              </a>
             ))}
           </div>
           <div class="flex flex-col gap-2 lg:flex items-center lg:items-start">
+            {/* Atendimento */}
             <div class="list-none flex flex-col items-center lg:items-start">
               <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
                 {contact?.title}
@@ -132,19 +113,6 @@ export default function Footer({
                 href="https://wa.me/5511964769833?text=Ol%C3%A1%21"
                 class="flex items-center cursor-pointer mb-2"
               >
-                <svg
-                  class="max-w-[10px] lg:max-w-6"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4.02222 8.65556C5.62222 11.8 8.2 14.3667 11.3444 15.9778L13.7889 13.5333C14.0889 13.2333 14.5333 13.1333 14.9222 13.2667C16.1667 13.6778 17.5111 13.9 18.8889 13.9C19.5 13.9 20 14.4 20 15.0111V18.8889C20 19.5 19.5 20 18.8889 20C8.45556 20 0 11.5444 0 1.11111C0 0.5 0.5 0 1.11111 0H5C5.61111 0 6.11111 0.5 6.11111 1.11111C6.11111 2.5 6.33333 3.83333 6.74444 5.07778C6.86667 5.46667 6.77778 5.9 6.46667 6.21111L4.02222 8.65556Z"
-                    fill="#FEF5E6"
-                  />
-                </svg>
                 <span class="ml-4">{contact?.phone}</span>
               </a>
               <a
@@ -152,22 +120,10 @@ export default function Footer({
                 href="mailto:carreiras@silvabrasil.bio"
                 class="flex items-center cursor-pointer"
               >
-                <svg
-                  class="max-w-[10px] lg:max-w-6"
-                  width="20"
-                  height="16"
-                  viewBox="0 0 20 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
-                    fill="#FEF5E6"
-                  />
-                </svg>
                 <span class="ml-4">{contact?.email}</span>
               </a>
             </div>
+            {/* Redes Sociais */}
             <div>
               <h4 class="hidden lg:inline-block font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
                 {socialTitle}
@@ -212,30 +168,10 @@ export default function Footer({
               </div>
             </div>
           </div>
-          <div class="visible lg:hidden flex flex-col items-center text-center mt-6">
-            <Image
-              src={logo.src || ""}
-              width={144}
-              height={58}
-              alt={logo.alt}
-            />
-
-            <div class="flex flex-col max-w-[300px]">
-              <span class="mt-6 mb-4">
-                Somos uma plataforma que comercializa{" "}
-                <b>mudas e sementes nativas em escala</b> organizando a cadeia
-                de suprimentos
-              </span>
-              <span class="mb-4">Feita no Brasil 🇧🇷 para o Planeta Terra</span>
-              <span class="mb-4">#clima #comunidade #biodiversidade</span>
-            </div>
-          </div>
         </div>
 
-        <div class="border-white border-t py-8 border-opacity-5">
-          <div class="flex items-center justify-center">
-            <p class="font-regular text-slate text-sm">{copyright}</p>
-          </div>
+        <div class="flex items-start justify-center pb-12">
+          <p class="font-regular text-slate text-sm">{copyright}</p>
         </div>
       </div>
     </div>

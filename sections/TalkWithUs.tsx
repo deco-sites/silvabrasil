@@ -41,9 +41,13 @@ interface Props {
   inputs?: Inputs;
 }
 
-export default function TalkWithUsSection(
-  { title, description = "my description", cta, form, inputs }: Props,
-) {
+export default function TalkWithUsSection({
+  title,
+  description = "my description",
+  cta,
+  form,
+  inputs,
+}: Props) {
   const handleSubmit: JSX.GenericEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     const email = (e.currentTarget.elements.namedItem("email") as RadioNodeList)
@@ -59,10 +63,13 @@ export default function TalkWithUsSection(
   };
 
   return (
-    <div id="talk-with-us" class="lg:pt-28 pb-14 lg:container lg:max-w-[70%] lg:mx-auto px-3 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+    <div
+      id="talk-with-us"
+      class="lg:pt-28 pb-14 lg:container lg:max-w-[70%] lg:mx-auto px-3 flex flex-col lg:flex-row items-center gap-8 lg:gap-16"
+    >
       <div class="w-full lg:w-1/2">
         <div class="lg:pb-12 flex flex-col items-center text-center  lg:items-start lg:text-start">
-          <div class="rounded-[191px] px-7 py-2 w-fit border-2 border-green-900 mb-6 lg:mb-20">
+          <div class="px-7 py-2 w-fit  mb-6 lg:mb-20">
             <span class="text-2xl lg:text-4xl font-bold text-green-900 mb-12">
               {title}
             </span>
@@ -78,7 +85,7 @@ export default function TalkWithUsSection(
         <div class="hidden lg:flex items-center justify-between">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-			class="hidden xl:block"
+            class="hidden xl:block"
             width="190"
             height="75"
             viewBox="0 0 190 75"
@@ -129,9 +136,7 @@ export default function TalkWithUsSection(
 			transition duration-400
 			hover:scale-105"
           >
-            <span>
-              {cta?.text}
-            </span>
+            <span>{cta?.text}</span>
           </a>
         </div>
       </div>
@@ -159,8 +164,9 @@ export default function TalkWithUsSection(
                 />
                 <Input
                   id="organization"
-                  placeholder={form?.placeholder?.organization &&
-                    PLACEHOLDER_ORGANIZATION}
+                  placeholder={
+                    form?.placeholder?.organization && PLACEHOLDER_ORGANIZATION
+                  }
                   required
                 />
                 <div class="w-full flex flex-col lg:flex-row">
@@ -168,23 +174,20 @@ export default function TalkWithUsSection(
                     id="phone"
                     type="tel"
                     class="mr-3"
-                    placeholder={form?.placeholder?.phone &&
-                      PLACEHOLDER_PHONE}
+                    placeholder={form?.placeholder?.phone && PLACEHOLDER_PHONE}
                     required
                   />
                   <Input
                     id="email"
                     type="email"
-                    placeholder={form?.placeholder?.email &&
-                      PLACEHOLDER_EMAIL}
+                    placeholder={form?.placeholder?.email && PLACEHOLDER_EMAIL}
                     required
                   />
                 </div>
                 <textarea
                   id="message"
                   class="h-32 w-full flex flex-grow input mb-7 placeholder-green-900 text-green-900 text-lg rounded-[10px] py-[18px] !outline-green-500 focus:border-0"
-                  placeholder={form.placeholder?.message &&
-                    PLACEHOLDER_MESSAGE}
+                  placeholder={form.placeholder?.message && PLACEHOLDER_MESSAGE}
                 />
                 <Button
                   type="submit"
