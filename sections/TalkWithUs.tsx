@@ -34,6 +34,7 @@ interface Form {
 
 interface Props {
   title: string;
+  subTitle: string;
   /** @format rich-text */
   description?: string;
   cta: CTA;
@@ -43,6 +44,7 @@ interface Props {
 
 export default function TalkWithUsSection({
   title,
+  subTitle,
   description = "my description",
   cta,
   form,
@@ -65,14 +67,15 @@ export default function TalkWithUsSection({
   return (
     <div
       id="talk-with-us"
-      class="lg:pt-28 pb-14 lg:container lg:max-w-[70%] lg:mx-auto px-3 flex flex-col lg:flex-row items-center gap-8 lg:gap-16"
+      class="lg:pt-28 pb-14 lg:container lg:max-w-[70%] lg:mx-auto px-3 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-green-900"
     >
       <div class="w-full lg:w-1/2">
         <div class="lg:pb-12 flex flex-col items-center text-center  lg:items-start lg:text-start">
           <div class="px-7 py-2 w-fit  mb-6 lg:mb-20">
-            <span class="text-2xl lg:text-4xl font-bold text-green-900 mb-12">
+            <h2 class="text-2xl lg:text-4xl font-bold text-green-900 mb-12">
               {title}
-            </span>
+            </h2>
+            <h3>{subTitle}</h3>
           </div>
           <div
             class="text-xl lg:text-5xl font-bold text-green-600"
@@ -141,7 +144,7 @@ export default function TalkWithUsSection({
         </div>
       </div>
       <div class="w-full lg:w-1/2">
-        <div class="flex flex-col items-center bg-green-900 rounded-[20px] px-4 lg:px-12 py-9">
+        <div class="flex flex-col items-center px-4 lg:px-12 py-9">
           {form && (
             <>
               <h2 class="text-white font-bold text-2xl lg:text-2xl mb-6 max-w-[500px] text-center">
