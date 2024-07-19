@@ -117,7 +117,7 @@
     {
       "__resolveType": "site/sections/WorkWithUs.tsx",
       "title": "Trabalhe conosco",
-      "description": "<p>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável.<br>Se você deseja fazer parte de uma equipe que está na <strong>vanguarda da restauração florestal no Brasil</strong>, venha crescer conosco.</p>",
+      "description": "<p>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável.</p><p><br>Se você deseja fazer parte de uma equipe que está na <strong>vanguarda da restauração florestal no Brasil</strong>, venha crescer conosco.</p>",
       "cta": {
         "text": "Junte-se à Silva",
         "href": "mailto:carreiras@silvabrasil.bio"
