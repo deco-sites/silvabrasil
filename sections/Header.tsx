@@ -1,6 +1,5 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import { Picture, Source } from "apps/website/components/Picture.tsx";
 import Icon from "../components/ui/Icon.tsx";
 
 export interface CTA {
@@ -14,13 +13,17 @@ export interface Social {
   network: "Facebook" | "Instagram" | "Linkedin";
   href: string;
 }
-
+export interface Items {
+  label: string;
+  href: string;
+}
 export interface Nav {
   logo?: {
     src?: ImageWidget;
     alt?: string;
   };
-  social?: Social[];
+  contact?: { title: string; links: Items[] };
+  social?: { title: string; links: Social[] };
   navigation?: {
     links: {
       label?: string;
@@ -46,6 +49,7 @@ export default function Header({
       { id: "change-me-1", href: "/", text: "Change me", outline: false },
     ],
   },
+  contact,
   social,
 }: Nav) {
   return (
@@ -120,8 +124,8 @@ export default function Header({
           class="drawer-overlay"
         />
 
-        <div class="flex flex-col gap-8 min-h-full w-[90%] rounded-l-2xl px-6 py-6 bg-green-900 text-white">
-          <div class="w-full flex items-center justify-between">
+        <div class="flex flex-col gap-8 min-h-full w-[90%] rounded-l-2xl p-6 bg-green-900 text-white">
+          <div class="w-full flex items-center justify-between pb-6">
             <a href="/">
               <Image
                 src={logo.src || ""}
@@ -138,9 +142,9 @@ export default function Header({
             </label>
           </div>
 
-          <ul class="mt-14 mb-16">
+          <ul class="">
             {navigation?.links.map((link) => (
-              <li class="mb-6 font-bold font-sans text-base text-slate">
+              <li class="mb-4 font-bold font-sans text-base text-white">
                 <a href={link.url} aria-label={link.label}>
                   {link.label}
                 </a>
@@ -148,7 +152,11 @@ export default function Header({
             ))}
           </ul>
 
-          <ul class="flex items-center gap-3">
+          <div class="flex flex-col items-center gap-4">
+            <div>
+              <h3> {contact?.title} </h3>
+              {contact?.links.map(() => {})}
+            </div>
             {navigation.buttons?.map((button) => (
               <a
                 key={button?.id}
@@ -163,10 +171,22 @@ export default function Header({
                 {button?.text}
               </a>
             ))}
-          </ul>
+
+            <a
+              href="#"
+              target="_blank"
+              class="cursor-pointer font-bold text-base bg-green-500 text-white w-fit h-fit flex justify-center items-center rounded-lg transform
+			transition duration-400
+			opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
+            >
+              <Icon size={16} id="WhatsApp" />
+              <span>Conversar no WhatsApp</span>
+            </a>
+          </div>
         </div>
         <div class="flex gap-6 items-center">
-          {social?.map((item) => (
+          <h3>{social?.title}</h3>
+          {social?.links?.map((item) => (
             <a class="block" href={item.href} target="_blank">
               {item.network == "Instagram" && (
                 <svg

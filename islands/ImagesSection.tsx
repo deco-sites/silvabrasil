@@ -29,7 +29,7 @@ export default function ImagesSection({
 }: Props) {
   return (
     <div id="viveiros" class="w-full h-auto lg:container">
-      <div class="bg-green-900 md:rounded-2xl md:p-16 flex items-center flex-col -mt-48 md:gap-12">
+      <div class="bg-green-900 md:rounded-2xl md:p-16 flex items-center flex-col md:-mt-48 md:gap-12">
         <div
           class="w-full flex justify-center items-center text-white font-sans text-xl text-center max-w-[772px] px-6 py-9"
           dangerouslySetInnerHTML={{ __html: title }}

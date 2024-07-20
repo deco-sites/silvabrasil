@@ -13,7 +13,7 @@ export interface Social {
 
 export interface Organization {
   title: string;
-  links: [Items];
+  links: Items[];
 }
 
 export interface Contact {

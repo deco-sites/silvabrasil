@@ -23,29 +23,27 @@ export default function MapSection({
   return (
     <div class="w-full flex flex-col lg:flex-row items-center">
       <div class="bg-slate lg:rounded-lg flex flex-col justify-between px-6 py-12 gap-4 items-start">
-        <div class="w-full lg:w-1/2">
-          <div class="lg:pt-32 lg:pb-12">
-            <h1 class="text-4xl font-bold text-green-900 font-serif">
-              Presente onde a restauração acontece no Brasil
-            </h1>
-            {mapImage && (
-              <Image
-                class="block lg:hidden"
-                width={810}
-                height={806}
-                src={mapImage}
-                alt={mapImage}
-                decoding="async"
-                loading="lazy"
-              />
-            )}
-            <div
-              class="text-base lg:text-xl text-dark text-start"
-              dangerouslySetInnerHTML={{
-                __html: description,
-              }}
+        <div class="w-full lg:w-1/2 flex flex-col gap-4">
+          <h1 class="text-4xl font-bold text-green-900 font-serif">
+            Presente onde a restauração acontece no Brasil
+          </h1>
+          {mapImage && (
+            <Image
+              class="block lg:hidden"
+              width={810}
+              height={806}
+              src={mapImage}
+              alt={mapImage}
+              decoding="async"
+              loading="lazy"
             />
-          </div>
+          )}
+          <div
+            class="text-base lg:text-xl text-dark text-start"
+            dangerouslySetInnerHTML={{
+              __html: description,
+            }}
+          />
         </div>
         <div class="w-full lg:w-1/2 flex flex-col">
           {mapImage && (
