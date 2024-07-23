@@ -152,25 +152,11 @@ export default function Header({
             ))}
           </ul>
 
-          <div class="flex flex-col items-center gap-4">
+          <div class="flex flex-col items-start gap-4">
             <div>
               <h3> {contact?.title} </h3>
               {contact?.links.map(() => {})}
             </div>
-            {navigation.buttons?.map((button) => (
-              <a
-                key={button?.id}
-                id={button?.id}
-                href={button?.href ?? "#"}
-                target={button?.href.includes("http") ? "_blank" : "_self"}
-                class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
-			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
-			transition duration-400
-			opacity-90 hover:opacity-100"
-              >
-                {button?.text}
-              </a>
-            ))}
 
             <a
               href="#"

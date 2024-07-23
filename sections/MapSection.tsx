@@ -25,7 +25,10 @@ export default function MapSection({
       <div class="bg-slate lg:rounded-lg flex flex-col justify-between px-6 py-12 gap-4 items-start">
         <div class="w-full lg:w-1/2 flex flex-col gap-4">
           <h1 class="text-4xl font-bold text-green-900 font-serif">
-            Presente onde a restauração acontece no Brasil
+            <span class="after:content-leafIcon after:inline-block after:w-8">
+              Presente
+            </span>{" "}
+            onde a restauração acontece no Brasil
           </h1>
           {mapImage && (
             <Image
