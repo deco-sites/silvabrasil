@@ -20,32 +20,34 @@ export default function AboutUsSection({
   return (
     <div
       id="about-us"
-      class="lg:mt-32 lg:mb-16 my-12 w-full flex items-center flex-col lg:flex-row left-0"
+      class="lg:mt-32 lg:mb-16 my-12 w-full flex flex-col lg:flex-row items-center justify-center"
     >
-      <Picture class="-ml-48">
-        <Source
-          media="(max-width: 768px)"
-          src={image || ""}
-          width={245}
-          height={213}
-        />
-        <Source
-          media="(min-width: 768px)"
-          src={image || ""}
-          width={667}
-          height={581}
-        />
-        <img src={image || ""} alt="Muda Silva" />
-      </Picture>
+      <div class="flex justify-center lg:justify-end lg:w-1/2 mb-8 lg:mb-0">
+        <Picture class="w-full max-w-xs lg:max-w-lg">
+          <Source
+            media="(max-width: 768px)"
+            src={image || ""}
+            width={245}
+            height={213}
+          />
+          <Source
+            media="(min-width: 768px)"
+            src={image || ""}
+            width={667}
+            height={581}
+          />
+          <img src={image || ""} alt="Muda Silva" class="w-full" />
+        </Picture>
+      </div>
 
-      <div class="flex flex-col lg:max-w-[422px] container p-6 lg:p-0">
-        <h2 class="text-4xl lg:text-5xl font-bold text-green-900 mb-2 whitespace-nowrap w-fit font-serif">
+      <div class="flex flex-col items-center lg:items-start lg:w-1/2 p-6 lg:p-0 lg:pl-12">
+        <h2 class="text-4xl lg:text-5xl font-bold text-green-900 mb-2 font-serif">
           {title}
         </h2>
         <span class="text-xl text-dark mb-9">{subTitle}</span>
 
         <div
-          class="relative font-regular text-base lg:text-xl w-full md:max-w-[60%] lg:max-w-[600px] xl:max-w-[680px]"
+          class="font-regular text-base lg:text-xl w-full max-w-lg"
           dangerouslySetInnerHTML={{
             __html: description,
           }}

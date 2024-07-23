@@ -42,7 +42,7 @@ export default function Header({
     links: [
       { label: "Home", url: "/" },
       { label: "About us", url: "/" },
-      { label: "Princing", url: "/" },
+      { label: "Pricing", url: "/" },
       { label: "Contact", url: "/" },
     ],
     buttons: [
@@ -57,7 +57,7 @@ export default function Header({
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="grid-cols-12	drawer-content w-full p-6 lg:container flex items-center justify-between">
+      <div class="drawer-content w-full p-6 lg:container flex items-center justify-between">
         <a href="/">
           <Image
             width={146}
@@ -73,7 +73,7 @@ export default function Header({
 
         <ul class="hidden lg:flex items-center lg:mt-[10px] lg:max-w-4xl xl:gap-8">
           {navigation.links.map((link) => (
-            <li>
+            <li key={link.label}>
               <a
                 href={link.url}
                 aria-label={link.label}
@@ -116,7 +116,7 @@ export default function Header({
       </div>
 
       {/* sidebar */}
-      <aside class="drawer-side z-50">
+      <aside class="drawer-side z-50 lg:hidden">
         {/* Close when clicking on overlay */}
         <label
           htmlFor="mobile-drawer-nav"
@@ -144,7 +144,7 @@ export default function Header({
 
           <ul class="">
             {navigation?.links.map((link) => (
-              <li class="mb-4 font-bold font-sans text-base text-white">
+              <li key={link.label} class="mb-4 font-bold font-sans text-base text-white">
                 <a href={link.url} aria-label={link.label}>
                   {link.label}
                 </a>
@@ -155,7 +155,11 @@ export default function Header({
           <div class="flex flex-col items-start gap-4">
             <div>
               <h3> {contact?.title} </h3>
-              {contact?.links.map(() => {})}
+              {contact?.links.map((link) => (
+                <a key={link.label} href={link.href} aria-label={link.label}>
+                  {link.label}
+                </a>
+              ))}
             </div>
 
             <a
@@ -173,7 +177,7 @@ export default function Header({
         <div class="flex gap-6 items-center">
           <h3>{social?.title}</h3>
           {social?.links?.map((item) => (
-            <a class="block" href={item.href} target="_blank">
+            <a key={item.network} class="block" href={item.href} target="_blank">
               {item.network == "Instagram" && (
                 <svg
                   width="24"
