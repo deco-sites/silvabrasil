@@ -34,5 +34,21 @@
   "logo": {
     "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/4227f8af-1451-4518-acd0-ec15de7763e2"
   },
-  "social": []
+  "social": {
+    "links": [],
+    "title": "Redes Sociais"
+  },
+  "contact": {
+    "links": [
+      {
+        "label": "(19) 3061 0061",
+        "href": "#"
+      },
+      {
+        "label": "contato@silvabrasil.bio",
+        "href": "mailto:contato@silvabrasil.bio"
+      }
+    ],
+    "title": "Atendimento"
+  }
 }
