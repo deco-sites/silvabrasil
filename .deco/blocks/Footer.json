@@ -47,5 +47,26 @@
     "email": "contato@silvabrasil.bio"
   },
   "socialTitle": "Redes sociais",
-  "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f65fd9af-816f-4500-afad-32fb4cd8b985"
+  "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/f65fd9af-816f-4500-afad-32fb4cd8b985",
+  "organization": {
+    "links": [
+      {
+        "label": "Para viveiros",
+        "href": "#viveiros"
+      },
+      {
+        "label": "Para compradores de mudas",
+        "href": "#compradores"
+      },
+      {
+        "label": "Sobre a Silva",
+        "href": "#about"
+      },
+      {
+        "label": "Trabalhe conosco",
+        "href": "#work-with-us"
+      }
+    ],
+    "title": "Empresa"
+  }
 }
