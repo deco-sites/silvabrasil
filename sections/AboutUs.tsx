@@ -20,10 +20,10 @@ export default function AboutUsSection({
   return (
     <div
       id="about-us"
-      class="lg:mt-32 lg:mb-16 my-12 w-full flex flex-col lg:flex-row items-center justify-center"
+      class="lg:mt-32 lg:mb-16 my-12 w-full flex flex-col lg:flex-row items-center justify-between"
     >
-      <div class="flex justify-center lg:justify-end lg:w-1/2 mb-8 lg:mb-0">
-        <Picture class="w-full max-w-xs lg:max-w-lg">
+      <div class="w-full  lg:w-2/3 mb-9 lg:mb-0">
+        <Picture>
           <Source
             media="(max-width: 768px)"
             src={image || ""}
@@ -36,22 +36,24 @@ export default function AboutUsSection({
             width={667}
             height={581}
           />
-          <img src={image || ""} alt="Muda Silva" class="w-full" />
+          <img src={image || ""} alt="Muda Silva" class="max-w-[667px]" />
         </Picture>
       </div>
 
-      <div class="flex flex-col items-center lg:items-start lg:w-1/2 p-6 lg:p-0 lg:pl-12">
-        <h2 class="text-4xl lg:text-5xl font-bold text-green-900 mb-2 font-serif">
-          {title}
-        </h2>
-        <span class="text-xl text-dark mb-9">{subTitle}</span>
+      <div class="w-full flex justify-end lg:mr-72">
+        <div class="w-full  px-6 lg:px-0 lg:max-w-[422px] flex flex-col items-start">
+          <h2 class="text-4xl lg:text-5xl font-bold text-green-900 mb-2 font-serif">
+            {title}
+          </h2>
+          <span class="text-xl text-dark mb-9">{subTitle}</span>
 
-        <div
-          class="font-regular text-base lg:text-xl w-full max-w-lg"
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        />
+          <div
+            class="font-regular text-base lg:text-xl w-full max-w-lg"
+            dangerouslySetInnerHTML={{
+              __html: description,
+            }}
+          />
+        </div>
       </div>
     </div>
   );
