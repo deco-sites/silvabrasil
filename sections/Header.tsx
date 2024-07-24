@@ -144,7 +144,10 @@ export default function Header({
 
           <ul class="">
             {navigation?.links.map((link) => (
-              <li key={link.label} class="mb-4 font-bold font-sans text-base text-white">
+              <li
+                key={link.label}
+                class="mb-4 font-bold font-sans text-base text-white"
+              >
                 <a href={link.url} aria-label={link.label}>
                   {link.label}
                 </a>
@@ -153,14 +156,14 @@ export default function Header({
           </ul>
 
           <div class="flex flex-col items-start gap-4">
-            <div>
+            {/* <div>
               <h3> {contact?.title} </h3>
               {contact?.links.map((link) => (
                 <a key={link.label} href={link.href} aria-label={link.label}>
                   {link.label}
                 </a>
               ))}
-            </div>
+            */}
 
             <a
               href="#"
@@ -177,7 +180,12 @@ export default function Header({
         <div class="flex gap-6 items-center">
           <h3>{social?.title}</h3>
           {social?.links?.map((item) => (
-            <a key={item.network} class="block" href={item.href} target="_blank">
+            <a
+              key={item.network}
+              class="block"
+              href={item.href}
+              target="_blank"
+            >
               {item.network == "Instagram" && (
                 <svg
                   width="24"

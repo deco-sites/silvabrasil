@@ -15,9 +15,6 @@ export default {
         sliding: "sliding 30s linear infinite",
         blink: "blink 1s forwards",
       },
-      content: {
-        'leafIcon': 'url("/static/leaf.svg")',
-      },
     },
     colors: {
       "green-100": "#CEE1B6",

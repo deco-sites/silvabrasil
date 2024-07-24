@@ -1,5 +1,6 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import Icon from "../components/ui/Icon.tsx";
 
 interface CTA {
   href: string;
@@ -28,6 +29,7 @@ export default function MapSection({
             <span class="after:content-leafIcon after:inline-block after:w-8">
               Presente
             </span>{" "}
+            <Icon id="LeafIcon" />
             onde a restauração acontece no Brasil
           </h1>
           <div class="text-base lg:text-lg text-dark" dangerouslySetInnerHTML={{ __html: description }} />
