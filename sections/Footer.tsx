@@ -64,9 +64,10 @@ export default function Footer({
           loading="lazy"
         />
       )}
-      <div class="pt-14 lg:container lg:max-w-[70%] lg:mx-auto px-3">
-        <div class="flex flex-col items-center gap-6 justify-between lg:flex-row mb-14">
-          <div class="visible lg:hidden flex flex-col items-center text-center mt-6">
+      <div class="container py-12">
+        <div class="w-full flex flex-col items-start lg:flex-row mb-16">
+			{/* Mobile */}
+          <div class="visible lg:hidden w-full flex flex-col items-center text-center">
             <Image
               class="mb-9"
               src={logo.src || ""}
@@ -75,8 +76,8 @@ export default function Footer({
               alt={logo.alt}
             />
 
-            <div class="flex flex-col max-w-[300px]">
-              <span class="mb-12 text-2xl font-serif text-center">
+            <div class="flex flex-col itmes-center max-w-[300px]">
+              <span class="mb-12 text-2xl font-serif">
                 Feita no Brasil <br />
                 🇧🇷
                 <br />
@@ -89,7 +90,8 @@ export default function Footer({
               </span>
             </div>
           </div>
-          <div class="flex flex-col text-slate text-center lg:text-start">
+		  {/* Empresa */}
+          <div class="w-full flex flex-col items-start">
             <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
               {organization?.title}
             </h4>
@@ -102,9 +104,8 @@ export default function Footer({
               </a>
             ))}
           </div>
-          <div class="flex flex-col gap-2 lg:flex items-center lg:items-start">
             {/* Atendimento */}
-            <div class="list-none flex flex-col items-center lg:items-start">
+            <div class="list-none flex flex-col items-start">
               <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
                 {contact?.title}
               </h4>
@@ -113,19 +114,19 @@ export default function Footer({
                 href="https://wa.me/5511964769833?text=Ol%C3%A1%21"
                 class="flex items-center cursor-pointer mb-2"
               >
-                <span class="ml-4">{contact?.phone}</span>
+                <span>{contact?.phone}</span>
               </a>
               <a
                 target="_blank"
                 href="mailto:carreiras@silvabrasil.bio"
                 class="flex items-center cursor-pointer"
               >
-                <span class="ml-4">{contact?.email}</span>
+                <span>{contact?.email}</span>
               </a>
             </div>
             {/* Redes Sociais */}
             <div>
-              <h4 class="hidden lg:inline-block font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
+              <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
                 {socialTitle}
               </h4>
               <div class="flex gap-6">
@@ -170,10 +171,9 @@ export default function Footer({
           </div>
         </div>
 
-        <div class="flex items-start justify-center pb-12">
+        <div class="flex items-start">
           <p class="font-regular text-slate text-sm">{copyright}</p>
         </div>
       </div>
-    </div>
   );
 }

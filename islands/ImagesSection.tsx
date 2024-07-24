@@ -51,7 +51,7 @@ export default function ImagesSection({
                 <div class="absolute inset-0 object-cover rounded-t-2xl bg-gradient-to-r from-slate via-slate to-transparent opacity-80 z-20 size-full" />
                 <div class="flex z-30 flex-col text-green-900  p-6">
                   <span class="text-2xl font-serif">Para</span>
-                  <b class="text-4xl mb-4 font-serif max-w-[260px]">{card.type}</b>
+                  <b class="text-4xl mb-4 font-serif max-w-[256px]">{card.type}</b>
                   <div
                     class="font-sans text-base text-dark"
                     dangerouslySetInnerHTML={{
