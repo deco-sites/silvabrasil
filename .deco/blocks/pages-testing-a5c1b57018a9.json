@@ -64,7 +64,7 @@
     {
       "__resolveType": "site/sections/MapSection.tsx",
       "title": "Presente onde a restauracão acontece no Brasil",
-      "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada<br><br>Os principais viveiros e projetos já estão com a Silva. <span style=\"color: rgb(0, 77, 61)\">Faça parte você também!</span></p>",
+      "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada.<br>Os principais viveiros e projetos já estão com a Silva. Faça parte você</p>",
       "cta": {
         "text": "Quero fazer parte",
         "href": "#work-with-us"
