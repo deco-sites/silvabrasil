@@ -64,9 +64,9 @@ export default function Footer({
           loading="lazy"
         />
       )}
-      <div class="container py-12">
+      <div class="container py-12 px-6">
         <div class="w-full flex flex-col items-start lg:flex-row mb-16">
-			{/* Mobile */}
+          {/* Mobile */}
           <div class="visible lg:hidden w-full flex flex-col items-center text-center">
             <Image
               class="mb-9"
@@ -76,7 +76,7 @@ export default function Footer({
               alt={logo.alt}
             />
 
-            <div class="flex flex-col itmes-center max-w-[300px]">
+            <div class="flex flex-col itmes-center">
               <span class="mb-12 text-2xl font-serif">
                 Feita no Brasil <br />
                 🇧🇷
@@ -90,53 +90,57 @@ export default function Footer({
               </span>
             </div>
           </div>
-		  {/* Empresa */}
-          <div class="w-full flex flex-col items-start">
-            <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
+          {/* Empresa */}
+          <div class="mb-9">
+            <h4 class="text-2xl lg:text-xl font-regular mb-4">
               {organization?.title}
             </h4>
-            {organization?.links?.map((item) => (
-              <a
-                class="block hover:underline link no-underline py-1 font-regular text-sm lg:text-lg"
-                href={item.href}
-              >
-                {item.label}
-              </a>
-            ))}
+            <div class="flex flex-col gap-2">
+              {organization?.links?.map((item) => (
+                <a
+                  class="block hover:underline link no-underline text-base font-bold lg:text-lg"
+                  href={item.href}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
           </div>
-            {/* Atendimento */}
-            <div class="list-none flex flex-col items-start">
-              <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
-                {contact?.title}
-              </h4>
+          {/* Atendimento */}
+          <div class="mb-9">
+            <h4 class="text-2xl lg:text-xl font-regular mb-4">
+              {contact?.title}
+            </h4>
+            <div class="flex flex-col gap-2">
               <a
                 target="_blank"
                 href="https://wa.me/5511964769833?text=Ol%C3%A1%21"
                 class="flex items-center cursor-pointer mb-2"
               >
-                <span>{contact?.phone}</span>
+                <span class="font-bold">{contact?.phone}</span>
               </a>
               <a
                 target="_blank"
                 href="mailto:carreiras@silvabrasil.bio"
                 class="flex items-center cursor-pointer"
               >
-                <span>{contact?.email}</span>
+                <span class="font-bold">{contact?.email}</span>
               </a>
             </div>
-            {/* Redes Sociais */}
-            <div>
-              <h4 class="font-bold text-2xl lg:text-xl lg:mt-4 mb-2">
-                {socialTitle}
-              </h4>
-              <div class="flex gap-6">
-                {social?.map((item) => (
-                  <a class="block" href={item.href} target="_blank">
-                    {item.network == "Instagram" && (
+          </div>
+          {/* Redes Sociais */}
+          <div class="mb-9">
+            <h4 class="text-2xl lg:text-xl font-regular mb-4">{socialTitle}</h4>
+            <div class="flex flex-col gap-4 text-base font-bold">
+              {social?.map((item) => (
+                <a class="block" href={item.href} target="_blank">
+                  {item.network == "Instagram" && (
+                    <span class="flex">
                       <svg
+                        class="mr-3"
                         width="24"
-                        height="25"
-                        viewBox="0 0 24 25"
+                        height="24"
+                        viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -147,9 +151,13 @@ export default function Footer({
                           fill="#FEF5E6"
                         />
                       </svg>
-                    )}
-                    {item.network == "Linkedin" && (
+                      Instagram
+                    </span>
+                  )}
+                  {item.network == "Linkedin" && (
+                    <span class="flex">
                       <svg
+                        class="mr-3"
                         width="24"
                         height="25"
                         viewBox="0 0 24 25"
@@ -163,17 +171,18 @@ export default function Footer({
                           fill="#FEF5E6"
                         />
                       </svg>
-                    )}
-                  </a>
-                ))}
-              </div>
+                      Linkedin
+                    </span>
+                  )}
+                </a>
+              ))}
             </div>
           </div>
         </div>
-
-        <div class="flex items-start">
-          <p class="font-regular text-slate text-sm">{copyright}</p>
-        </div>
+      <div class="flex items-start">
+        <p class="font-regular text-slate text-sm">{copyright}</p>
       </div>
+      </div>
+    </div>
   );
 }
