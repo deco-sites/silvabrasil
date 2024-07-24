@@ -74,7 +74,7 @@
     {
       "__resolveType": "site/sections/TalkWithUs.tsx",
       "title": "Vamos marcar uma conversa?",
-      "description": "<p style=\"text-align: center\"><span style=\"color: #ffffff\">Manda um WhatsApp pra gente ou preencha o formulário. Vamos entrar em contato.</span></p>",
+      "description": "<p><span style=\"color: rgb(255, 255, 255)\">Manda um WhatsApp pra gente ou preencha o formulário. Vamos entrar em contato.</span></p>",
       "cta": {
         "text": "Falar no WhatsApp",
         "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21"
