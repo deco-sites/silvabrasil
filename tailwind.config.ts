@@ -18,6 +18,7 @@ export default {
     },
     colors: {
       "green-100": "#CEE1B6",
+      "green-200": "#99B8B1",
       "green-500": "#85B549",
       "green-600": "#6B8E23",
       "green-900": "#004D3D",

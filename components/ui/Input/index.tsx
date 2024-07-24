@@ -26,7 +26,7 @@ function Input(
 ) {
   return (
     <input
-      class={`w-full flex flex-grow ${_class} mb-2  input w-full placeholder-green-900 text-green-900 text-lg rounded-[10px] py-[18px] !outline-green-500 focus:border-0`}
+      class={`w-full flex flex-grow ${_class} mb-2  input w-full placeholder-dark text-dark text-lg rounded-[10px] py-[18px] border border-green-200 !outline-green-500 focus:border-0`}
       type={type}
       id={id}
       name={name ?? id}
