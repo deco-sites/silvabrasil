@@ -57,7 +57,7 @@ export default function Header({
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content w-full p-6  lg:p-0 lg:container flex items-center justify-between">
+      <div class="drawer-content w-full p-6  lg:px-0 lg:py-6 lg:container flex items-center justify-between">
         <a href="/">
           <Image
             width={146}
