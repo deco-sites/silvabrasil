@@ -38,7 +38,8 @@
           "topics": "<ul><li><p><span>Proporcionamos estabilidade de receita</span></p></li><li><p><span>Expandimos suas vendas</span></p></li><li><p><span>Organizamos sua gestão financeira</span></p></li><li><p><span>Melhoramos a produtividade do seu viveiro</span></p></li></ul>",
           "button": {
             "text": "Quero VENDER mudas",
-            "href": "#"
+            "href": "#",
+            "id": "viveiros"
           }
         },
         {
@@ -48,7 +49,8 @@
           "topics": "<ul><li><p><span>Descomplicamos o processo de compras</span></p></li><li><p><span>Cuidamos da seleção de fornecedores</span></p></li><li><p><span>Proporcionamos transparência e rastreabilidade</span></p></li><li><p><span>Acompanhamos a produção de mudas compradas</span></p></li></ul>",
           "button": {
             "text": "Quero COMPRAR mudas",
-            "href": "#"
+            "href": "#",
+            "id": "compradores"
           }
         }
       ],

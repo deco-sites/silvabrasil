@@ -8,7 +8,7 @@
       },
       {
         "label": "Para compradores de mudas",
-        "url": "#viveiros"
+        "url": "#compradores"
       },
       {
         "label": "Sobre a Silva",
@@ -22,7 +22,7 @@
     "buttons": [
       {
         "text": "Fale com a gente",
-        "href": "talk-with-us"
+        "href": "#talk-with-us"
       }
     ]
   },
