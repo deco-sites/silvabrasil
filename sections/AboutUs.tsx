@@ -40,7 +40,7 @@ export default function AboutUsSection({
         </Picture>
       </div>
 
-      <div class="w-full flex justify-end lg:mr-48 2xl:mr-96">
+      <div class="w-full flex justify-end">
         <div class="w-full  px-6 lg:px-0 lg:max-w-[422px] flex flex-col items-start">
           <h2 class="text-4xl lg:text-5xl text-green-900 mb-2 font-serif">
             {title}
