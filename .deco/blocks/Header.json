@@ -30,7 +30,16 @@
     "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/4227f8af-1451-4518-acd0-ec15de7763e2"
   },
   "social": {
-    "links": [],
+    "links": [
+      {
+        "network": "Instagram",
+        "href": "https://www.instagram.com/mudasdasilva/"
+      },
+      {
+        "network": "Linkedin",
+        "href": "https://www.linkedin.com/company/mudasdasilva/"
+      }
+    ],
     "title": "Redes Sociais"
   },
   "contact": {
