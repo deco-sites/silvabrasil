@@ -34,7 +34,6 @@ interface Props {
   description?: string;
   cta: CTA;
   form?: Form;
-  inputs?: Inputs;
 }
 
 export default function TalkWithUsSection({
@@ -43,7 +42,6 @@ export default function TalkWithUsSection({
   description = "my description",
   cta,
   form,
-  inputs,
 }: Props) {
   const handleSubmit: JSX.GenericEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
@@ -69,7 +67,7 @@ export default function TalkWithUsSection({
       <div class="w-full h-auto lg:w-2/3 lg:px-28 pt-9 lg:py-[92px] bg-green-900 lg:rounded-xl px-6 mb-9 lg:mb-0">
         <div class="h-full justify-between flex flex-col items-start text-left">
           <div class="mb-6 lg:max-w-[407px]">
-            <h2 class="text-4xl lg:text-5xl font-bold text-slate mb-2 font-serif">
+            <h2 class="text-4xl lg:text-5xl font-bold max-w-[398px] text-slate mb-2 font-serif">
               {title}
             </h2>
             <h3 class="text-xl text-white mb-6">{subTitle}</h3>
@@ -89,7 +87,7 @@ export default function TalkWithUsSection({
           </a>
         </div>
       </div>
-      <div class="w-full h-auto lg:w-1/3 lg:rounded-xl px-6 lg:px-[88px] pb-12  lg:py-24">
+      <div class="w-full h-auto lg:w-1/3 lg:rounded-xl px-6 lg:px-8 pb-12  lg:py-24">
         {form && (
           <form onSubmit={handleSubmit} class="flex flex-col gap-6">
             <div class="w-full gap-2">

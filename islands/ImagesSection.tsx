@@ -49,7 +49,7 @@ export default function ImagesSection({
         {/* Mobile */}
 
         <div class="flex w-full flex-col lg:flex-row pb-6 gap-3 lg:gap-6">
-          {cards?.map((card, index) => (
+          {cards?.map((card) => (
             <div
               id={`${card.button?.id}`}
               key={card.type}
@@ -70,11 +70,9 @@ export default function ImagesSection({
 
                 <div class="flex z-30 flex-col text-green-900 p-6 h-full">
                   <div class={`max-w-[256px] mb-auto flex flex-col`}>
-                    <span class="text-2xl font-serif font-bold">Para</span>
+                    <span class="text-2xl font-serif">Para</span>
 
-                    <b class="text-4xl font-serif font-bold leading-9">
-                      {card.type}
-                    </b>
+                    <b class="text-4xl font-serif leading-9">{card.type}</b>
                   </div>
 
                   <div
