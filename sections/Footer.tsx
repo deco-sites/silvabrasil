@@ -88,7 +88,7 @@ export default function Footer({
               </span>
             </div>
           </div>
-          <div class="w-full flex flex-col lg:flex-row lg:justify-between xl:justify-evenly">
+          <div class="w-full flex flex-col lg:flex-row lg:justify-between xl:justify-evenly container">
             <div class="w-[310px] hidden lg:flex flex-col">
               <span class="mb-9 text-xl font-sans text-start">
                 Somos uma plataforma que comercializa{" "}

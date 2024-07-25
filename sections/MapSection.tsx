@@ -8,7 +8,6 @@ interface CTA {
 }
 
 interface Props {
-  title: string;
   /** @format rich-text */
   description?: string;
   mapImage: ImageWidget;
@@ -16,7 +15,6 @@ interface Props {
 }
 
 export default function MapSection({
-  title,
   description = "my description",
   mapImage,
   cta,
@@ -28,9 +26,10 @@ export default function MapSection({
           <div class="text-4xl font-bold text-green-900 font-serif max-w-[312px] lg:max-w-[422px]">
             <span class="inline-flex">
               Presente
-              <Icon width={39} height={54} id="LeafIcon" class="-mt-5 -ml-2 -mr-4" />
-            </span>{" "}
-            <span>onde a restauração acontece no Brasil</span>
+              <Icon width={39} height={54} id="LeafIcon" class="-mt-5 -ml-2 -mr-2" />
+			  onde a
+            </span>
+            <span> restauração <br/> acontece no Brasil</span>
           </div>
 
           {/* Mobile Map */}

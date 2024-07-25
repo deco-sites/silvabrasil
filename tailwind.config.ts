@@ -8,7 +8,7 @@ export default {
     container: { center: true },
     screens: {
       md: "768px",
-      lg: "1312px",
+      lg: "1024px",
       "2xl": "1538px",
     },
     extend: {
