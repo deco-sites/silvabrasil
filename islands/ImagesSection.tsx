@@ -58,8 +58,8 @@ export default function ImagesSection({
               <div class="relative flex flex-col h-[260px]">
                 <Image
                   class="absolute size-full inset-0 object-cover z-10 rounded-t-2xl"
-                  width={960}
-                  height={824}
+                  width={800}
+                  height={500}
                   src={card.imageBg}
                   alt={card.imageBg}
                   decoding="async"

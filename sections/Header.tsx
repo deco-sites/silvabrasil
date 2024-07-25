@@ -57,7 +57,7 @@ export default function Header({
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content w-full p-6 lg:container flex items-center justify-between">
+      <div class="drawer-content w-full p-6  lg:p-0 lg:container flex items-center justify-between">
         <a href="/">
           <Image
             width={146}
@@ -94,7 +94,7 @@ export default function Header({
               class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
 			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
 			transition duration-400
-			opacity-90 hover:opacity-100"
+			opacity-90 hover:opacity-100 whitespace-nowrap"
             >
               {button?.text}
             </a>
