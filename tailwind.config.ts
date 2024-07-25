@@ -9,6 +9,7 @@ export default {
     screens: {
       md: "768px",
       lg: "1312px",
+      "2xl": "1538px",
     },
     extend: {
       animation: {
