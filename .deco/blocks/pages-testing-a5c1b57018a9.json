@@ -34,8 +34,8 @@
         {
           "type": "Viveiristas",
           "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/72717c82-854d-4df7-9a80-f2c82cf6be3d",
-          "description": "<p><span>Prosperidade e crescimento sustentável para seu viveiro, com receitas previsíveis e nosso apoio técnico.</span></p>",
-          "topics": "<ul><li><p><span>Proporcionamos estabilidade de receita</span></p></li><li><p><span>Expandimos suas vendas</span></p></li><li><p><span>Organizamos sua gestão financeira</span></p></li><li><p><span>Melhoramos a produtividade do seu viveiro</span></p></li></ul>",
+          "description": "<p>Prosperidade e crescimento sustentável para seu viveiro, com <strong>receitas previsíveis</strong> e nosso <strong>apoio técnico</strong>.</p>",
+          "topics": "<li>Proporcionamos estabilidade de receita</li>\n<li>Expandimos suas vendas</li>\n<li>Organizamos sua gestão financeira</li>\n<li>Melhoramos a produtividade do seu viveiro</li>",
           "button": {
             "text": "Quero VENDER mudas",
             "href": "#talk-with-us",
@@ -45,8 +45,8 @@
         {
           "type": "Compradores de mudas",
           "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/b516d8a4-860d-439c-a976-4170f22d6560",
-          "description": "<p><span>Projetos de ARR, SAFs, compensação e regularização ambiental: mudas e sementes entregues no prazo e com qualidade.</span></p>",
-          "topics": "<ul><li><p><span>Descomplicamos o processo de compras</span></p></li><li><p><span>Cuidamos da seleção de fornecedores</span></p></li><li><p><span>Proporcionamos transparência e rastreabilidade</span></p></li><li><p><span>Acompanhamos a produção de mudas compradas</span></p></li></ul>",
+          "description": "<p>Projetos de ARR, SAFs, compensação e regularização ambiental: mudas e sementes <strong>entregues no prazo</strong> e <strong>com qualidade</strong>.</p>",
+          "topics": "<li>Descomplicamos o processo de compras</li>\n<li>Cuidamos da seleção de fornecedores</li>\n<li>Proporcionamos transparência e rastreabilidade</li>\n<li>Acompanhamos a produção de mudas compradas</li>",
           "button": {
             "text": "Quero COMPRAR mudas",
             "id": "compradores",
