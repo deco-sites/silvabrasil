@@ -65,7 +65,7 @@
     },
     {
       "__resolveType": "site/sections/MapSection.tsx",
-      "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada.</p>\n  <p>Os principais viveiros e projetos já estão com a Silva. Faça parte você também!</p>",
+      "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada.</p><p></p><p>Os principais viveiros e projetos já estão com a Silva. Faça parte você também!</p>",
       "cta": {
         "text": "Quero fazer parte",
         "href": "#work-with-us"
@@ -119,7 +119,7 @@
     {
       "__resolveType": "site/sections/WorkWithUs.tsx",
       "title": "Trabalhe conosco",
-      "description": "<p>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável.</p><p><br>Se você deseja fazer parte de uma equipe que está na <strong>vanguarda da restauração florestal no Brasil</strong>, venha crescer conosco.</p>",
+      "description": "<p>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável.<br>Se você deseja fazer parte de uma equipe que está na <strong>vanguarda da restauração florestal no Brasil</strong>, venha crescer conosco.</p>",
       "cta": {
         "text": "Junte-se à Silva",
         "href": "mailto:carreiras@silvabrasil.bio"
