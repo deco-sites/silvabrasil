@@ -48,12 +48,12 @@ export default function ImagesSection({
 
         {/* Mobile */}
 
-        <div class="flex w-full flex-col lg:flex-row pb-6 gap-3 lg:gap-6">
+        <div class="flex w-full flex-col lg:flex-row justify-center pb-6 gap-3 lg:gap-6">
           {cards?.map((card) => (
             <div
               id={`${card.button?.id}`}
               key={card.type}
-              class="flex flex-col w-full"
+              class="flex flex-col w-full lg:max-w-[542px]"
             >
               <div class="relative flex flex-col h-[260px]">
                 <Image
