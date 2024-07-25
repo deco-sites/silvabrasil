@@ -65,7 +65,7 @@
     },
     {
       "__resolveType": "site/sections/MapSection.tsx",
-      "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada.</p><p></p><p>Os principais viveiros e projetos já estão com a Silva. Faça parte você também!</p>",
+      "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada.</p><br/><p>Os principais viveiros e projetos já estão com a Silva. Faça parte você também!</p>",
       "cta": {
         "text": "Quero fazer parte",
         "href": "#work-with-us"
