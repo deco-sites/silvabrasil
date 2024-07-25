@@ -38,7 +38,7 @@ export default function ImagesSection({
         <div class="flex md:hidden w-full flex-col pb-6">
           {cards?.map((card) => (
             <div
-              id={`#${card.button?.id}`}
+              id={`${card.button?.id}`}
               key={card.type}
               class="flex flex-col w-full mb-3"
             >
@@ -94,7 +94,7 @@ export default function ImagesSection({
         <div class="hidden md:flex w-full flex-row gap-6 max-lg:flex-wrap">
           {cards?.map((card) => (
             <div
-			id={`#${card.button?.id}`}
+			id={`${card.button?.id}`}
               key={card.type}
               class="columns-5 w-full relative p-12 pt-6 mb-3 flex flex-col"
             >
