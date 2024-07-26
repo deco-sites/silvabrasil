@@ -20,7 +20,7 @@ export default function MapSection({
   cta,
 }: Props) {
   return (
-    <div class="w-full lg:container flex justify-center lg:mb-16">
+    <div class="w-full container flex justify-center lg:mb-16">
       <div class="bg-[#FEF5E6] lg:rounded-xl flex flex-col lg:flex-row  items-center px-6 lg:px-28 py-12 gap-6 w-full">
         <div class="w-full lg:w-1/2 flex flex-col gap-4 lg:gap-6 items-start">
           <div class="text-4xl text-green-900 font-serif max-w-[312px] lg:max-w-[422px]">
