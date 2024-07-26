@@ -1,0 +1,14 @@
+{
+  "__resolveType": "site/apps/deco/resend.ts",
+  "apiWrite": {},
+  "emailTo": [],
+  "apiKey": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "64fc1dc74c35685519215aaec21dfb5d119a4095f310d75f8ae55d6f3aff264fe1a1ba9b9a658a80abe19ded1d16bfa9",
+    "name": "api secret key"
+  },
+  "emailFrom": {
+    "domain": "silvabrasil ",
+    "name": "Silva Brasil"
+  }
+}
