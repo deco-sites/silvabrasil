@@ -40,9 +40,9 @@ export default function ImagesSection({
 }: Props) {
   return (
     <div class="w-full h-auto container">
-      <div class="bg-green-900 md:rounded-2xl md:p-16 flex items-center flex-col lg:-mt-48 md:gap-12">
+      <div class="bg-green-900 md:rounded-2xl md:p-16 flex items-center flex-col lg:-mt-24 xl:-mt-48 md:gap-12">
         <div
-          class="w-full flex justify-center items-center text-white font-sans text-xl text-center max-w-[772px] px-6 py-9"
+          class="w-full flex justify-center items-center text-white font-sans text-xl text-center max-w-[772px] px-6 py-9 lg:py-0"
           dangerouslySetInnerHTML={{ __html: title }}
         />
 
