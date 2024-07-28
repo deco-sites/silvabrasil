@@ -20,7 +20,7 @@ export default function FAQ({
   ],
 }: Props) {
   return (
-    <div class="container py-12 lg:py-28">
+    <div class="container lg:px-16 xl:px-0 py-12 lg:py-28">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col lg:flex-row text-green-900 max-lg:max-w-[312px] px-6 lg:px-0">
           <p class="font-serif text-4xl mb-4">{title}</p>

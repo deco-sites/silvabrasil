@@ -99,7 +99,7 @@ export default function Footer({
             </div>
 
               {/* Empresa */}
-            <div class="flex flex-col lg:flex-row gap-11">
+            <div class="flex flex-col md:flex-row gap-11">
               <div class="mb-9">
                 <h4 class="text-2xl lg:text-xl font-regular mb-4">
                   {organization?.title}

@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $Header from "./islands/Header.tsx";
 import * as $Hero from "./islands/Hero.tsx";
 import * as $ImagesSection from "./islands/ImagesSection.tsx";
 import * as $TextAnimation from "./islands/TextAnimation.tsx";
@@ -13,6 +14,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
+    "./islands/Header.tsx": $Header,
     "./islands/Hero.tsx": $Hero,
     "./islands/ImagesSection.tsx": $ImagesSection,
     "./islands/TextAnimation.tsx": $TextAnimation,

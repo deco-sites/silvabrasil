@@ -39,16 +39,16 @@ export default function ImagesSection({
   cards,
 }: Props) {
   return (
-    <div class="w-full h-auto container">
-      <div class="bg-green-900 md:rounded-2xl md:p-16 flex items-center flex-col lg:-mt-24 xl:-mt-48 md:gap-12">
+    <div class="w-full h-auto container lg:px-16 xl:px-0">
+      <div class="bg-green-900 md:rounded-2xl md:p-16 flex items-center flex-col md:-mt-28 lg:-mt-36 xl:-mt-48 md:gap-12">
         <div
-          class="w-full flex justify-center items-center text-white font-sans text-xl text-center max-w-[772px] px-6 py-9 lg:py-0"
+          class="w-full flex justify-center items-center text-white font-sans text-xl text-center max-w-[772px] px-6 py-9 md:py-0"
           dangerouslySetInnerHTML={{ __html: title }}
         />
 
         {/* Mobile */}
 
-        <div class="flex w-full flex-col lg:flex-row justify-center pb-6 gap-3 lg:gap-6">
+        <div class="flex w-full flex-col lg:flex-row justify-center pb-6 gap-3 md:gap-6">
           {cards?.map((card) => (
             <div
               id={`${card.button?.id}`}
