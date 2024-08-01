@@ -2,12 +2,15 @@
   "__resolveType": "site/apps/deco/resend.ts",
   "apiWrite": {},
   "emailTo": [
+    "igorcantelmo@gmail.com",
     "contato@silvabrasil.bio"
   ],
   "apiKey": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "fbfe83fd398e2b6940127508edd13c1646cec854455e495b9fe20bcc6b8f75351d42ef7df1d374897059940297a78be8",
+    "encrypted": "e579608f829c83a1f229be8a2fcc1666f8802ab3b5742d7a3847367ce81dc1d87e685bb59007cfed82974601f573b412",
     "name": "RESEND_DEV_KEY"
   },
-  "emailFrom": {}
+  "emailFrom": {
+    "name": "Silva Brasil"
+  }
 }
