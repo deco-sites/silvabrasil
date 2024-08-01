@@ -41,7 +41,7 @@ export default function Section({
         </div>
 
         <div class="flex flex-col items-start lg:max-w-[50%]">
-          <h2 class="text-4xl lg:text-5xl font-serif text-green-900 mb-2">
+          <h2 class="text-4xl lg:text-5xl font-serif text-green-900 mb-[18px]">
             {title}
           </h2>
           <h3 class="text-xl font-sans text-dark mb-9">{subTitle}</h3>

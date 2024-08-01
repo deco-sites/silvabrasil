@@ -141,6 +141,7 @@ export default function TalkWithUsSection({
         }),
         subject: `Novo Lead - ${lead.organization}`,
       });
+	  hasError = false;
       setAlert({ alertText: "Email enviado com sucesso!", type: "success" });
     } catch (error) {
       console.error(error);
@@ -160,7 +161,7 @@ export default function TalkWithUsSection({
         <div class="w-full h-auto lg:w-3/5 lg:px-28 pt-9 lg:py-[92px] bg-green-900 md:rounded-xl px-6 mb-9 lg:mb-0">
           <div class="h-full justify-between flex flex-col items-start text-left">
             <div class="mb-6 lg:max-w-[407px]">
-              <h2 class="text-4xl lg:text-5xl font-bold max-w-[398px] text-slate mb-2 font-serif">
+              <h2 class="text-4xl lg:text-5xl font-bold text-slate mb-5 font-serif">
                 {title}
               </h2>
               <h3 class="text-xl text-white mb-6">{subTitle}</h3>

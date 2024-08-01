@@ -52,14 +52,19 @@ export default function Header({
   contact,
   social,
 }: Nav) {
-	function toggleScrollBody() {
-		const body = document.body;
-		body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
-	  }
+  function toggleScrollBody() {
+    const body = document.body;
+    body.style.overflow = body.style.overflow === "hidden" ? "" : "hidden";
+  }
 
   return (
     <nav class="drawer drawer-end bg-transparent flex justify-center z-10 absolute">
-      <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" onChange={toggleScrollBody} />
+      <input
+        id="mobile-drawer-nav"
+        type="checkbox"
+        class="drawer-toggle"
+        onChange={toggleScrollBody}
+      />
 
       {/* main content */}
       <div class="drawer-content w-full p-6 lg:container flex items-center justify-between">
@@ -153,9 +158,14 @@ export default function Header({
                 key={link.label}
                 class="mb-4 font-bold font-sans text-base text-white"
               >
-                <a href={link.url} aria-label={link.label}>
-                  {link.label}
-                </a>
+                <label
+                  htmlFor="mobile-drawer-nav"
+                  class="  drawer-button p-0"
+                >
+                  <a href={link.url} aria-label={link.label}>
+                    {link.label}
+                  </a>
+                </label>
               </li>
             ))}
           </ul>
@@ -170,17 +180,22 @@ export default function Header({
               ))}
             </div>
 
-            <a
-              href="#talk-with-us"
-              class="cursor-pointer font-bold text-base bg-slate text-dark w-fit h-fit flex justify-center items-center rounded-lg transform
-		  transition duration-400
-		  opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
+            <label
+              htmlFor="mobile-drawer-nav"
+              class="  drawer-button p-0"
             >
-              Fale com a gente
-            </a>
+              <a
+                href="#talk-with-us"
+                class="cursor-pointer font-bold text-base bg-slate text-dark w-fit h-fit flex justify-center items-center rounded-lg transform
+			  transition duration-400
+			  opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
+              >
+                Fale com a gente
+              </a>
+            </label>
 
             <a
-              href="#"
+              href="https://wa.me/5511964769833?text=Ol%C3%A1%21"
               target="_blank"
               class="cursor-pointer font-bold text-base bg-green-500 text-white w-fit h-fit flex justify-center items-center rounded-lg transform
 			transition duration-400

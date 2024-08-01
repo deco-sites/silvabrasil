@@ -71,8 +71,9 @@ export default function ImagesSection({
                 <div class="flex z-30 flex-col text-green-900 p-6 h-full">
                   <div class={`max-w-[256px] mb-auto flex flex-col`}>
                     <span class="text-2xl font-serif">Para</span>
-
-                    <b class="text-4xl font-serif leading-9">{card.type}</b>
+                    <span class="text-4xl font-serif leading-9">
+                      {card.type}
+                    </span>
                   </div>
 
                   <div
@@ -108,104 +109,6 @@ transition duration-400 opacity-90 hover:opacity-100 mt-auto"
             </div>
           ))}
         </div>
-
-        {/* Desktop */}
-
-        {/* <div class="hidden md:flex w-full flex-row gap-6 max-lg:flex-wrap">
-
-{cards?.map((card) => (
-
-<div
-
-id={`${card.button?.id}`}
-
-key={card.type}
-
-class="columns-5 w-full relative p-12 pt-6 mb-3 flex flex-col"
-
->
-
-<Image
-
-class="absolute size-full inset-0 object-cover z-10 rounded-2xl"
-
-width={960}
-
-height={824}
-
-src={card.imageBg}
-
-alt={card.imageBg}
-
-decoding="async"
-
-loading="lazy"
-
-/>
-
-<div class="absolute inset-0 object-cover rounded-2xl bg-gradient-to-r from-slate via-slate to-transparent opacity-80 z-20 size-full" />
-
-<div class="w-full flex flex-col z-30 max-w-[300px]">
-
-<div class="flex flex-col mb-8 font-serif text-green-900">
-
-<span class="text-2xl">Para</span>
-
-<b class="text-5xl">{card.type}</b>
-
-</div>
-
-{card?.description && (
-
-<div
-
-class="mb-6 text-base h-24 text-dark"
-
-dangerouslySetInnerHTML={{ __html: card.description }}
-
-/>
-
-)}
-
-{card?.topics && (
-
-<ul
-
-class="list-disc list-inside mb-10 text-base text-dark"
-
-dangerouslySetInnerHTML={{ __html: card.topics }}
-
-/>
-
-)}
-
-<a
-
-id={card.button?.id}
-
-href={card.button?.href}
-
-target={
-
-card.button?.href.includes("http") ? "_blank" : "_self"
-
-}
-
-class="font-bold text-base w-fit text-slate bg-green-900 px-6 py-4 flex rounded-lg transform transition duration-400 opacity-90 hover:opacity-100 mt-auto"
-
->
-
-{card.button?.text}
-
-</a>
-
-</div>
-
-</div>
-
-))}
-
-</div> */}
       </div>
     </div>
   );
