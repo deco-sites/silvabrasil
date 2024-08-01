@@ -1,14 +1,13 @@
 {
   "__resolveType": "site/apps/deco/resend.ts",
   "apiWrite": {},
-  "emailTo": [],
+  "emailTo": [
+    "contato@silvabrasil.bio"
+  ],
   "apiKey": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "64fc1dc74c35685519215aaec21dfb5d119a4095f310d75f8ae55d6f3aff264fe1a1ba9b9a658a80abe19ded1d16bfa9",
+    "encrypted": "e579608f829c83a1f229be8a2fcc1666f8802ab3b5742d7a3847367ce81dc1d87e685bb59007cfed82974601f573b412",
     "name": "api secret key"
   },
-  "emailFrom": {
-    "domain": "silvabrasil ",
-    "name": "Silva Brasil"
-  }
+  "emailFrom": {}
 }
