@@ -14,6 +14,8 @@ interface CTA {
 export interface Inputs {
   /** @title Nome */
   name?: string;
+  /** @title Perfil */
+  profile?: string;
   /** @title Nome da empresa */
   organization?: string;
   /** @title Telefone */
@@ -48,6 +50,7 @@ const EmailTemplate = ({ lead }: { lead: Inputs }) => (
     <p><strong>Nome da organização:</strong> {lead.organization}</p>
     <p><strong>Telefone:</strong> {lead.phone}</p>
     <p><strong>E-mail:</strong> {lead.email}</p>
+    <p><strong>Perfil:</strong> {lead.profile}</p>
     <p><strong>Mensagem:</strong> {lead.message}</p>
   </div>
 );
@@ -68,12 +71,13 @@ export default function TalkWithUsSection({
       organization: formData.get('organization') as string,
       phone: formData.get('phone') as string,
       email: formData.get('email') as string,
+	  profile: formData.get('profile') as string,
       message: formData.get('message') as string,
     };
 
     try {
       await invoke.resend.actions.emails.send({
-        to: 'contato@silvabrasil.bio',
+        to: 'igorcantelmo@gmail.com',
         html: render(<EmailTemplate lead={lead} />, {
           pretty: true,
         }),
