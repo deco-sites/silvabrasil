@@ -107,7 +107,7 @@ export default function Footer({
                 <div class="flex flex-col gap-2 w-[310px]">
                   {organization?.links?.map((item) => (
                     <a
-                      class="block hover:underline link no-underline text-base font-bold lg:text-lg"
+                      class="block hover:underline link no-underline text-base font-bold lg:text-base"
                       href={item.href}
                     >
                       {item.label}
