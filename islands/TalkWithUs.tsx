@@ -210,11 +210,13 @@ export default function TalkWithUsSection({
                     placeholder={
                       form?.placeholder?.phone ?? "Telefone (WhatsApp)"
                     }
-                    class="w-full p-4 rounded-lg"
+                    class={`w-full p-4 rounded-lg ${
+                      errors.phone ? "bg-error-50 !border-4 !border-error-100" : ""
+                    }`}
                     required
                   />
                   {errors.phone && (
-                    <p class="text-[#F5D5D5] mb-2">{errors.phone}</p>
+                    <p class="text-error-50 mb-2">{errors.phone}</p>
                   )}
                 </div>
                 <div>
@@ -223,17 +225,19 @@ export default function TalkWithUsSection({
                     name="email"
                     type="email"
                     placeholder={form?.placeholder?.email ?? "E-mail"}
-                    class="w-full p-4 rounded-lg"
+                    class={`w-full p-4 rounded-lg ${
+						errors.email ? "bg-error-50 !border-4 !border-error-100" : ""
+					  }`}
                     required
                   />
                   {errors.email && (
-                    <p class="text-[#F5D5D5] mb-2">{errors.email}</p>
+                    <p class="text-error-50 mb-2">{errors.email}</p>
                   )}
                 </div>
                 <textarea
                   id="message"
                   name="message"
-                  class="w-full p-4 rounded-lg"
+                  class="w-full p-4 placeholder-dark text-dark text-lg rounded-[10px] py-[18px] border border-green-200 !outline-green-500 focus:border-"
                   placeholder={
                     form?.placeholder?.message ?? "Sua mensagem aqui (opcional)"
                   }
@@ -275,7 +279,7 @@ export default function TalkWithUsSection({
                     Outro
                   </label>
                   {errors.profile && (
-                    <p class="text-[#F5D5D5]">{errors.profile}</p>
+                    <p class="text-error-50">{errors.profile}</p>
                   )}
                 </div>
               </div>
@@ -291,7 +295,7 @@ export default function TalkWithUsSection({
                   class={` ${
                     alert.type === "success"
                       ? "text-[#CEE1B6]"
-                      : "text-[#F5D5D5]"
+                      : "text-error-50"
                   }`}
                 >
                   {alert.alertText}

@@ -18,6 +18,8 @@ export default {
       },
     },
     colors: {
+      "error-100": "#EAABAB",
+      "error-50": "#F5D5D5",
       "green-100": "#CEE1B6",
       "green-200": "#99B8B1",
       "green-500": "#85B549",
