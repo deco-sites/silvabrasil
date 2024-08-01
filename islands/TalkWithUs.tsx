@@ -43,8 +43,7 @@ interface Props {
 
 const EmailTemplate = ({ lead }: { lead: Inputs }) => (
   <div>
-    <h2>Assunto: Novo Lead - {lead.organization}</h2>
-    <p>Novo lead recebido em silvabrasil.bio</p>
+    <h3>Novo lead recebido em silvabrasil.bio</h3>
     <p><strong>Timestamp:</strong> {new Date().toLocaleString()}</p>
     <p><strong>Nome:</strong> {lead.name}</p>
     <p><strong>Nome da organização:</strong> {lead.organization}</p>
