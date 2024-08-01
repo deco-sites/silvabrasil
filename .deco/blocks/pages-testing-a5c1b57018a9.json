@@ -15,7 +15,7 @@
     },
     {
       "__resolveType": "site/sections/Hero.tsx",
-      "title": "<p>Organizamos a cadeia de suprimentos de mudas e sementes para</p>",
+      "title": "<h2>Organizamos a cadeia de suprimentos de mudas e sementes para</h2>",
       "cta": {
         "0": {
           "text": "Fale com a gente",
