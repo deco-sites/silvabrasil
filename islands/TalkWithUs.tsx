@@ -286,7 +286,7 @@ export default function TalkWithUsSection({
               </div>
               <Button
                 type="submit"
-                class="w-fit font-bold text-lg text-dark py-3 rounded-lg"
+                class="w-fit font-bold text-base text-dark py-3 rounded-lg"
               >
                 {form.buttonLabel ?? "Enviar"}
               </Button>

@@ -23,14 +23,14 @@ export default function FAQ({
     <div class="container lg:px-16 xl:px-0 py-12 lg:py-28">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col lg:flex-row text-green-900 max-lg:max-w-[312px] px-6 lg:px-0">
-          <p class="font-serif text-4xl mb-4 pl-6">{title}</p>
+          <p class="font-serif text-4xl lg:text-5xl mb-4 pl-6">{title}</p>
         </div>
 
         <div class="flex-auto border rounded-lg border-[#99B8B1]">
           {questions?.map((question) => (
             <details class="[&:not(:last-child)]:border-b group border-[#99B8B1] text-dark">
-              <summary class="text-lg cursor-pointer py-9 px-6 flex items-center">
-                <span class="flex-auto ">{question.title}</span>
+              <summary class="cursor-pointer py-9 px-6 flex items-center">
+                <span class="flex-auto text-base">{question.title}</span>
                 <span class="flex-none transition group-open:rotate-180 duration-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

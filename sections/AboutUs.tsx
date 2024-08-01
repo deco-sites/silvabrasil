@@ -49,7 +49,7 @@ export default function AboutUsSection({
             </h2>
             <span class="text-xl text-dark mb-9">{subTitle}</span>
             <div
-              class="font-regular text-base lg:text-xl w-full"
+              class="font-regular text-base w-full"
               dangerouslySetInnerHTML={{ __html: description }}
             />
           </div>

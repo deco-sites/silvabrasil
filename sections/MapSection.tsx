@@ -47,7 +47,7 @@ export default function MapSection({
             )}
           </div>
           <div
-            class="text-base lg:text-lg text-dark lg:max-w-[410px] mb-9"
+            class="text-base text-dark lg:max-w-[410px] mb-9"
             dangerouslySetInnerHTML={{ __html: description }}
           />
           <a

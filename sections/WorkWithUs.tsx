@@ -57,7 +57,7 @@ export default function Section({
             />
           </div>
           <div
-            class="mb-5 font-regular text-xl text-dark font-sans"
+            class="mb-5 font-regular text-base text-dark font-sans"
             dangerouslySetInnerHTML={{
               __html: description,
             }}
