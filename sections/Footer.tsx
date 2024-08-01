@@ -89,13 +89,13 @@ export default function Footer({
             </div>
           </div>
           <div class="w-full flex flex-col lg:flex-row lg:justify-between xl:justify-evenly container">
-            <div class="w-[310px] hidden lg:flex flex-col">
+            <div class="lg:w-[310px] flex flex-col">
               <span class="mb-9 text-xl font-sans text-start">
                 Somos uma plataforma que comercializa{" "}
                 <b>mudas e sementes nativas em escala</b> organizando a cadeia
                 de suprimentos
               </span>
-              <p class="font-regular text-slate text-sm">{copyright}</p>
+              <p class="hidden lg:inline-block font-regular text-slate text-sm">{copyright}</p>
             </div>
 
               {/* Empresa */}

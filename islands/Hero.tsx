@@ -44,7 +44,7 @@ export default function HeroFlats({
         )}
         <div class="container mt-14 lg:mt-0 font-serif flex flex-col items-center justify-center px-6 lg:px-16 xl:px-0 mb-9 lg:mb-28">
           <div
-            class="text-green-100 text-4xl lg:text-[64px]"
+            class="text-green-100 text-4xl lg:text-[64px] font-bold leading-10 lg:leading-[72px] mb-2"
             dangerouslySetInnerHTML={{
               __html: title,
             }}

@@ -1,4 +1,5 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import { useEffect } from "preact/hooks";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "../components/ui/Icon.tsx";
 
@@ -56,6 +57,28 @@ export default function Header({
     const body = document.body;
     body.style.overflow = body.style.overflow === "hidden" ? "" : "hidden";
   }
+
+  useEffect(() => {
+    const anchors = document.querySelectorAll("aside a");
+    const drawerCheckbox = document.getElementById("mobile-drawer-nav");
+
+    const handleClick = () => {
+      if (drawerCheckbox) {
+        (drawerCheckbox as HTMLInputElement).checked = false;
+        toggleScrollBody();
+      }
+    };
+
+    anchors.forEach((anchor) => {
+      anchor.addEventListener("click", handleClick);
+    });
+
+    return () => {
+      anchors.forEach((anchor) => {
+        anchor.removeEventListener("click", handleClick);
+      });
+    };
+  }, []);
 
   return (
     <nav class="drawer drawer-end bg-transparent flex justify-center z-10 absolute">
@@ -133,7 +156,6 @@ export default function Header({
           aria-label="close sidebar"
           class="drawer-overlay"
         />
-
         <div class="flex flex-col gap-4 w-full h-full rounded-l-2xl p-6 bg-green-900 text-white">
           <div class="w-full flex items-center justify-between pb-6">
             <a href="/">
@@ -158,10 +180,7 @@ export default function Header({
                 key={link.label}
                 class="mb-4 font-bold font-sans text-base text-white"
               >
-                <label
-                  htmlFor="mobile-drawer-nav"
-                  class="  drawer-button p-0"
-                >
+                <label htmlFor="mobile-drawer-nav" class="  drawer-button p-0">
                   <a href={link.url} aria-label={link.label}>
                     {link.label}
                   </a>
@@ -179,21 +198,14 @@ export default function Header({
                 </a>
               ))}
             </div>
-
-            <label
-              htmlFor="mobile-drawer-nav"
-              class="  drawer-button p-0"
-            >
-              <a
-                href="#talk-with-us"
-                class="cursor-pointer font-bold text-base bg-slate text-dark w-fit h-fit flex justify-center items-center rounded-lg transform
+            <a
+              href="#talk-with-us"
+              class="cursor-pointer font-bold text-base bg-slate text-dark w-fit h-fit flex justify-center items-center rounded-lg transform
 			  transition duration-400
 			  opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
-              >
-                Fale com a gente
-              </a>
-            </label>
-
+            >
+              Fale com a gente
+            </a>
             <a
               href="https://wa.me/5511964769833?text=Ol%C3%A1%21"
               target="_blank"

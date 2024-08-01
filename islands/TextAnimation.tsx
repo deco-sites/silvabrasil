@@ -51,7 +51,7 @@ const TextAnimation = () => {
 
   return (
     <div class="h-20">
-      <span class="blink text-4xl font-bold lg:text-7xl text-white">
+      <span class="blink text-4xl font-bold lg:text-7xl text-white leading-10 lg:leading-[72px]">
         {displayText}
       </span>
     </div>
