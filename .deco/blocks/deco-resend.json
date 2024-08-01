@@ -2,8 +2,8 @@
   "__resolveType": "site/apps/deco/resend.ts",
   "apiWrite": {},
   "emailTo": [
-    "igorcantelmo@gmail.com",
-    "contato@silvabrasil.bio"
+    "contato@silvabrasil.bio",
+    "igorcantelmo@gmail.com"
   ],
   "apiKey": {
     "__resolveType": "website/loaders/secret.ts",
@@ -11,6 +11,7 @@
     "name": "RESEND_DEV_KEY"
   },
   "emailFrom": {
-    "name": "Silva Brasil"
+    "name": "Silva Brasil",
+    "domain": "silvabrasil.bio"
   }
 }

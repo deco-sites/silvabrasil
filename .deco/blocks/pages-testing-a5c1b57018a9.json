@@ -86,7 +86,7 @@
           "name": "Nome",
           "organization": "Nome da organização",
           "phone": "Telefone (WhatsApp)",
-          "email": "E-mail (opcional)",
+          "email": "E-mail",
           "message": "Sua mensagem aqui (opcional)"
         },
         "buttonLabel": "Enviar"
