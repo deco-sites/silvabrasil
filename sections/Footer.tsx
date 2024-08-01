@@ -77,7 +77,7 @@ export default function Footer({
             />
 
             <div class="flex flex-col items-center">
-              <span class="mb-12 text-2xl font-serif lg:hidden">
+              <span class="mb-12 text-2xl lg:text-4xl font-bold font-serif lg:hidden">
                 Feita no Brasil <br />
                 🇧🇷
                 <br />
