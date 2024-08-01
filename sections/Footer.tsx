@@ -107,7 +107,7 @@ export default function Footer({
                 <div class="flex flex-col gap-2 w-[310px]">
                   {organization?.links?.map((item) => (
                     <a
-                      class="block hover:underline link no-underline text-base font-bold lg:text-base"
+                      class="block hover:underline link no-underline text-base font-sans font-bold"
                       href={item.href}
                     >
                       {item.label}
@@ -124,14 +124,14 @@ export default function Footer({
                   <a
                     target="_blank"
                     href="https://wa.me/5511964769833?text=Ol%C3%A1%21"
-                    class="flex items-center cursor-pointer mb-6"
+                    class="flex items-center cursor-pointer mb-6 hover:underline"
                   >
                     <span class="font-bold">{contact?.phone}</span>
                   </a>
                   <a
                     target="_blank"
                     href="mailto:carreiras@silvabrasil.bio"
-                    class="flex items-center cursor-pointer"
+                    class="flex items-center cursor-pointer hover:underline"
                   >
                     <span class="font-bold">{contact?.email}</span>
                   </a>
@@ -142,9 +142,9 @@ export default function Footer({
                 <h4 class="text-2xl lg:text-xl font-regular mb-4">
                   {socialTitle}
                 </h4>
-                <div class="text-base font-bold flex flex-col gap-4">
+                <div class="text-base font-sans font-bold flex flex-col gap-4">
                   {social?.map((item) => (
-                    <a class="block" href={item.href} target="_blank">
+                    <a class="block hover:underline" href={item.href} target="_blank">
                       {item.network == "Instagram" && (
                         <span class="flex items-center">
                           <svg

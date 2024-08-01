@@ -6,6 +6,7 @@
 
   /* Allow changing font family via CMS */
   html {
+	@apply font-sans;
     font-family: var(--font-family);
 	@apply scroll-smooth;
   }
