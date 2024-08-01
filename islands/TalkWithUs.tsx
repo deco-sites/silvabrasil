@@ -110,7 +110,7 @@ export default function TalkWithUsSection({
       hasError = true;
     }
 
-    if (lead.phone && !/^\(\d{2}\)\d{9}$/.test(lead.phone)) {
+    if (lead.phone && !/^\d+$/.test(lead.phone)) {
       newErrors.phone =
         "Opa, o telefone digitado não parece correto. Confira e tente novamente.";
       hasError = true;
