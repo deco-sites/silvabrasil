@@ -123,7 +123,7 @@ export default function Footer({
                 <div class="flex flex-col">
                   <a
                     target="_blank"
-                    href="https://wa.me/5511964769833?text=Ol%C3%A1%21"
+                    href="https://wa.me/5511964769833?text=Olá%2C%20vim%20do%20site%20da%20Silva%20e%20quero%20falar%20com%20vocês."
                     class="flex items-center cursor-pointer mb-6 hover:underline"
                   >
                     <span class="font-bold">{contact?.phone}</span>

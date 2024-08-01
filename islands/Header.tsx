@@ -207,7 +207,7 @@ export default function Header({
               Fale com a gente
             </a>
             <a
-              href="https://wa.me/5511964769833?text=Ol%C3%A1%21"
+              href="https://wa.me/5511964769833?text=Olá%2C%20vim%20do%20site%20da%20Silva%20e%20quero%20falar%20com%20vocês."
               target="_blank"
               class="cursor-pointer font-bold text-base bg-green-500 text-white w-fit h-fit flex justify-center items-center rounded-lg transform
 			transition duration-400

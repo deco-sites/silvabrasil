@@ -174,7 +174,8 @@ export default function TalkWithUsSection({
             <a
               href={cta?.href}
               target={cta?.href.includes("http") ? "_blank" : "_self"}
-              class="inline-flex items-center justify-center font-bold text-base bg-green-500 text-white py-4 px-6 rounded-lg transform transition duration-400 hover:scale-105"
+              class="inline-flex items-center justify-center font-bold text-base bg-green-500 text-white py-4 px-6 rounded-lg transform transition duration-400
+			opacity-90 hover:opacity-100"
             >
               <Icon id="WhatsApp" width={14} height={16} class="mr-2" />
               {cta?.text}

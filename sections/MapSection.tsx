@@ -53,7 +53,8 @@ export default function MapSection({
           <a
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class="flex font-bold text-base bg-green-900 text-white w-fit px-6 py-[14px] justify-center items-center h-auto rounded-xl transform transition duration-400 opacity-90 hover:opacity-100 hover:scale-105"
+            class="flex font-bold text-base bg-green-900 text-white w-fit px-6 py-[14px] justify-center items-center h-auto rounded-xl transform transition duration-400
+			opacity-90 hover:opacity-100"
           >
             <span class="font-bold">{cta?.text}</span>
           </a>

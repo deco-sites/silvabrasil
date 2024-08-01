@@ -68,7 +68,7 @@ export default function Section({
               target="_blank"
               class="font-bold text-base bg-green-900 text-white px-6 py-4 lg:py-5 lg:px-12 flex justify-center items-center h-auto rounded-xl transform
 			transition duration-400
-			hover:scale-105"
+			opacity-90 hover:opacity-100"
             >
               {cta?.text}
             </a>
