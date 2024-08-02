@@ -11,6 +11,7 @@
     "name": "RESEND_DEV_KEY"
   },
   "emailFrom": {
-    "name": "Silva Brasil"
+    "name": "Silva Brasil",
+    "domain": "silvabrasil.bio"
   }
 }
