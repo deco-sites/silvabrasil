@@ -135,7 +135,6 @@ export default function TalkWithUsSection({
 
     try {
       await invoke.resend.actions.emails.send({
-        to: "igorcantelmo@gmail.com",
         html: render(<EmailTemplate lead={lead} />, {
           pretty: true,
         }),

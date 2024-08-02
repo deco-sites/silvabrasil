@@ -10,7 +10,5 @@
     "encrypted": "d3d63a5b7dd36c0adc32b2a7b9b78f2050be105bdfd013abca053e591af213e832272a6bbbd138e85e5eea3eb4d5ae1d",
     "name": "RESEND_DEV_KEY"
   },
-  "emailFrom": {
-    "name": "Silva Brasil"
-  }
+  "emailFrom": {}
 }
