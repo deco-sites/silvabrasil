@@ -80,7 +80,7 @@ export default function TalkWithUsSection({
     email: "",
     profile: "",
   });
-  const [alert, setAlert] = useState({ alertText: "", type: "" });
+  const [alert, setAlert] = useState({isActive: false,  alertText: "", type: "" });
 
   const handleSubmit: JSX.GenericEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
@@ -144,10 +144,11 @@ export default function TalkWithUsSection({
         subject: `Novo Lead - ${lead.organization}`,
       });
 	  hasError = false;
-      setAlert({ alertText: "Email enviado com sucesso!", type: "success" });
+      setAlert({ isActive: false, alertText: "Email enviado com sucesso!", type: "success" });
     } catch (error) {
       console.error(error);
       setAlert({
+        isActive: true,
         alertText: "Ocorreu um erro ao enviar o email.",
         type: "error",
       });
@@ -294,7 +295,7 @@ export default function TalkWithUsSection({
                 {form.buttonLabel ?? "Enviar"}
               </Button>
 
-              {alert && (
+              {alert.isActive && (
                 <span
                   class={` ${
                     alert.type === "success"
