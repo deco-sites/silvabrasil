@@ -7,7 +7,7 @@
   ],
   "apiKey": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "e579608f829c83a1f229be8a2fcc1666f8802ab3b5742d7a3847367ce81dc1d87e685bb59007cfed82974601f573b412",
+    "encrypted": "d3d63a5b7dd36c0adc32b2a7b9b78f2050be105bdfd013abca053e591af213e832272a6bbbd138e85e5eea3eb4d5ae1d",
     "name": "RESEND_DEV_KEY"
   },
   "emailFrom": {
