@@ -135,10 +135,11 @@ export default function TalkWithUsSection({
 
     try {
       await invoke.resend.actions.emails.send({
-        to: "contato@silvabrasil.bio",
+        to: ["contato@silvabrasil.bio"],
         html: render(<EmailTemplate lead={lead} />, {
           pretty: true,
         }),
+        text: "Lead email content",
         subject: `Novo Lead - ${lead.organization}`,
       });
 	  hasError = false;
