@@ -85,7 +85,7 @@ export default function ImagesSection({
                 </div>
               </div>
 
-              <div class="w-full flex flex-col bg-slate rounded-b-2xl px-6 py-7 h-[260px]">
+              <div class="w-full flex flex-col bg-slate rounded-b-2xl px-6 py-7 h-[260px] gap-4">
                 <ul
                   class="list-disc list-inside mb-auto ml-4 text-base text-dark"
                   dangerouslySetInnerHTML={{
