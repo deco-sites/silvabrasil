@@ -1,16 +1,9 @@
 import { useEffect, useRef, useState } from "preact/hooks";
-
-const words = [
-  "implementadores.",
-  "viveiristas.",
-  "sistemas agroflorestais.",
-  "desenvolvedores.",
-  "compensação ambiental.",
-  "implementadores.",
-  "viveiristas.",
-];
+import textContent from "site/content/text-lang.ts";
+import { useUI } from "site/sdk/useUI.ts";
 
 const TextAnimation = () => {
+  const { languageSwitcher } = useUI();
   const [displayText, setDisplayText] = useState("");
   const [delayActive, setDelayActive] = useState(false);
   const indexRef = useRef(0);
@@ -18,14 +11,14 @@ const TextAnimation = () => {
 
   useEffect(() => {
     const typeWriterEffect = () => {
-      const word = words[indexRef.current];
+      const word = textContent[languageSwitcher.value].mainBanner.animate[indexRef.current];
       const isDeleting = isDeletingRef.current;
 
       if (isDeleting) {
         setDisplayText((prev) => prev.slice(0, -1));
         if (displayText.length === 0) {
           isDeletingRef.current = false;
-          indexRef.current = (indexRef.current + 1) % words.length;
+          indexRef.current = (indexRef.current + 1) % textContent[languageSwitcher.value].mainBanner.animate.length;
           setDelayActive(false);
         }
       } else {

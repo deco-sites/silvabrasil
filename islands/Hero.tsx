@@ -1,6 +1,8 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import TextAnimation from "site/islands/TextAnimation.tsx";
+import textContent from "site/content/text-lang.ts";
+import { useUI } from "site/sdk/useUI.ts";
 
 interface CTA {
   id?: string;
@@ -23,10 +25,11 @@ export interface Props {
 }
 
 export default function HeroFlats({
-  title = "Click here to tweak this text however you want.",
   image,
   cta,
 }: Props) {
+  const { languageSwitcher } = useUI();
+
   return (
     <div class="flex flex-col items-center">
       <div class="relative flex w-full xl:mx-auto h-[83vh] md:h-screen flex-col items-center justify-center text-center ">
@@ -45,10 +48,9 @@ export default function HeroFlats({
         <div class="container mt-14 lg:mt-0 font-serif flex flex-col items-center justify-center px-6 lg:px-16 xl:px-0 mb-9 lg:mb-28">
           <div
             class="text-green-100 text-4xl lg:text-[64px] font-bold leading-10 lg:leading-[72px] mb-2"
-            dangerouslySetInnerHTML={{
-              __html: title,
-            }}
-          />
+          >
+            {textContent[languageSwitcher.value].mainBanner.static}
+          </div>
           <TextAnimation />
         </div>
         <a
@@ -59,7 +61,7 @@ export default function HeroFlats({
 			transition duration-400
 			opacity-90 hover:opacity-100"
         >
-          <span>{cta?.text}</span>
+          <span>{textContent[languageSwitcher.value].menu.menuCta}</span>
         </a>
       </div>
     </div>

@@ -2,6 +2,9 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 import { useEffect } from "preact/hooks";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "../components/ui/Icon.tsx";
+import { clx } from "site/sdk/clx.ts";
+import { useUI } from "site/sdk/useUI.ts";
+import textContent from "site/content/text-lang.ts";
 
 export interface CTA {
   id?: string;
@@ -36,7 +39,8 @@ export interface Nav {
 
 export default function Header({
   logo = {
-    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
+    src:
+      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
     alt: "Logo",
   },
   navigation = {
@@ -53,6 +57,18 @@ export default function Header({
   contact,
   social,
 }: Nav) {
+  const { languageSwitcher } = useUI();
+
+  const handleClick = () => {
+    const drawerCheckbox: HTMLInputElement = document!.getElementById("language-switcher")!.checked; 
+
+    if (drawerCheckbox) {
+      languageSwitcher.value = "en";
+    } else {
+      languageSwitcher.value = "pt";
+    }
+  };
+
   function toggleScrollBody() {
     const body = document.body;
     body.style.overflow = body.style.overflow === "hidden" ? "" : "hidden";
@@ -105,14 +121,16 @@ export default function Header({
         </a>
 
         <ul class="hidden lg:flex items-center lg:mt-[10px] lg:max-w-4xl xl:gap-8">
-          {navigation.links.map((link) => (
+          {navigation.links.map((link, index) => (
             <li key={link.label}>
               <a
                 href={link.url}
                 aria-label={link.label}
                 class="text-slate whitespace-nowrap font-sans font-semibold text-base cursor-pointer px-4 hover:underline underline-offset-4"
               >
-                <span>{link.label}</span>
+                <span>
+                  {textContent[languageSwitcher.value].menu.menuItems[index].menuItem}
+                </span>
               </a>
             </li>
           ))}
@@ -125,14 +143,39 @@ export default function Header({
               href={button?.href ?? "#"}
               target={button?.href.includes("http") ? "_blank" : "_self"}
               class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
-			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
-			transition duration-400
-			opacity-90 hover:opacity-100 whitespace-nowrap"
+                px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
+                transition duration-400
+                opacity-90 hover:opacity-100 whitespace-nowrap"
             >
-              {button?.text}
+              {textContent[languageSwitcher.value].menu.menuCta}
             </a>
           ))}
         </ul>
+
+        <label
+          onClick={handleClick}
+          class="inline-flex items-center cursor-pointer bg-slate rounded-lg px-6 py-3.5 gap-2"
+        >
+          <span class="text-sm font-medium text-gray-900 dark:text-gray-300">
+            PT
+          </span>
+          <input
+            id="language-switcher"
+            type="checkbox"
+            value=""
+            class="sr-only
+            peer"
+          />
+          <div class={clx(
+            "relative w-11 h-6 bg-green-900 rounded-full peer-checked:bg-blue-600 ",
+            "peer peer-checked:after:translate-x-full peer-focus:outline-none rtl:peer-checked:after:-translate-x-full peer-checked:after:green-900",
+            "after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white",
+            "after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"
+          )} />
+          <span class="text-sm font-medium text-gray-900 dark:text-gray-300">
+            EN
+          </span>
+        </label>
 
         <label
           htmlFor="mobile-drawer-nav"
@@ -175,14 +218,14 @@ export default function Header({
           </div>
 
           <ul class="">
-            {navigation?.links.map((link) => (
+            {navigation?.links.map((link, index) => (
               <li
                 key={link.label}
                 class="mb-4 font-bold font-sans text-base text-white"
               >
                 <label htmlFor="mobile-drawer-nav" class="  drawer-button p-0">
                   <a href={link.url} aria-label={link.label}>
-                    {link.label}
+                    {textContent[languageSwitcher.value].menu.menuItems[index].menuItem}
                   </a>
                 </label>
               </li>
@@ -191,7 +234,7 @@ export default function Header({
 
           <div class="flex flex-col items-start gap-4">
             <div class="flex flex-col items-start gap-4">
-              <h3> {contact?.title} </h3>
+              <h3>{textContent[languageSwitcher.value].contactSection.title}</h3>
               {contact?.links.map((link) => (
                 <a key={link.label} href={link.href} aria-label={link.label}>
                   {link.label}
@@ -204,21 +247,21 @@ export default function Header({
 			  transition duration-400
 			  opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
             >
-              Fale com a gente
+              {textContent[languageSwitcher.value].menu.menuCta}
             </a>
             <a
               href="https://wa.me/5511964769833?text=Olá%2C%20vim%20do%20site%20da%20Silva%20e%20quero%20falar%20com%20vocês."
               target="_blank"
               class="cursor-pointer font-bold text-base bg-green-500 text-white w-fit h-fit flex justify-center items-center rounded-lg transform
-			transition duration-400
-			opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
+                transition duration-400
+                opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
             >
               <Icon size={16} id="WhatsApp" />
-              <span>Conversar no WhatsApp</span>
+              <span>{textContent[languageSwitcher.value].contactSection.mobileButton}</span>
             </a>
           </div>
           <div class="flex flex-col gap-4 items-start">
-            <h3>{social?.title}</h3>
+            <h3>{textContent[languageSwitcher.value].footerSection.socialMedia}</h3>
             {social?.links?.map((item) => (
               <a
                 key={item.network}

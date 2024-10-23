@@ -1,135 +1,334 @@
 {
   "name": "Home",
   "path": "/",
-  "sections": [
-    {
-      "__resolveType": "website/sections/Seo/SeoV2.tsx",
-      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/425cb986-bc0c-4012-a37b-dfda5dfe597b",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/ec3a29c2-a423-4ad4-859f-84c73968a31a",
-      "title": "Silva | Cadeias de suprimentos para a restauração florestal",
-      "description": "Para viveiros Para compradores de mudas Sobre a Silva Trabalhe Conosco Fale com a gente Organizamos a cadeia de suprimentos de mudas e sementes para Slider viveiristas sistemas agroflorestais desenvolvedores compensação ambiental implementadores Somos uma plataforma que comercializa mudas e sementes nativas em escala, organizando a cadeia de suprimentos da restauração florestal",
-      "type": "website"
-    },
-    {
-      "__resolveType": "Header"
-    },
-    {
-      "__resolveType": "site/sections/Hero.tsx",
-      "title": "<h2>Organizamos a cadeia de suprimentos de mudas e sementes para</h2>",
-      "cta": {
-        "0": {
-          "text": "Fale com a gente",
-          "href": "/"
-        },
-        "text": "Fale com a gente",
-        "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21",
-        "outline": false
-      },
-      "description": "<p></p>",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/638f938f-e891-4ca3-b0cb-7d9da2d42905"
-    },
-    {
-      "__resolveType": "site/sections/ImagesSection.tsx",
-      "cards": [
-        {
-          "type": "Viveiristas",
-          "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/72717c82-854d-4df7-9a80-f2c82cf6be3d",
-          "description": "<p>Prosperidade e crescimento sustentável para seu viveiro, com <strong>receitas previsíveis</strong> e nosso <strong>apoio técnico</strong>.</p>",
-          "topics": "<li>Proporcionamos estabilidade de receita</li>\n<li>Expandimos suas vendas</li>\n<li>Organizamos sua gestão financeira</li>\n<li>Melhoramos a produtividade do seu viveiro</li>",
-          "button": {
-            "text": "Quero VENDER mudas",
-            "href": "#talk-with-us",
-            "id": "viveiros"
+  "sections": {
+    "__resolveType": "website/flags/multivariate.ts",
+    "variants": [
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Seo/SeoV2.tsx",
+            "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/425cb986-bc0c-4012-a37b-dfda5dfe597b",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/ec3a29c2-a423-4ad4-859f-84c73968a31a",
+            "title": "Silva | Cadeias de suprimentos para a restauração florestal",
+            "description": "Para viveiros Para compradores de mudas Sobre a Silva Trabalhe Conosco Fale com a gente Organizamos a cadeia de suprimentos de mudas e sementes para Slider viveiristas sistemas agroflorestais desenvolvedores compensação ambiental implementadores Somos uma plataforma que comercializa mudas e sementes nativas em escala, organizando a cadeia de suprimentos da restauração florestal",
+            "type": "website"
+          },
+          {
+            "__resolveType": "Header"
+          },
+          {
+            "__resolveType": "site/sections/Hero.tsx",
+            "title": "<h2>Organizamos a cadeia de suprimentos de mudas e sementes para</h2>",
+            "cta": {
+              "0": {
+                "text": "Fale com a gente",
+                "href": "/"
+              },
+              "text": "Fale com a gente",
+              "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21",
+              "outline": false
+            },
+            "description": "<p></p>",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/638f938f-e891-4ca3-b0cb-7d9da2d42905"
+          },
+          {
+            "__resolveType": "site/sections/ImagesSection.tsx",
+            "cards": [
+              {
+                "type": "Viveiristas",
+                "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/72717c82-854d-4df7-9a80-f2c82cf6be3d",
+                "description": "<p>Prosperidade e crescimento sustentável para seu viveiro, com <strong>receitas previsíveis</strong> e nosso <strong>apoio técnico</strong>.</p>",
+                "topics": "<li>Proporcionamos estabilidade de receita</li>\n<li>Expandimos suas vendas</li>\n<li>Organizamos sua gestão financeira</li>\n<li>Melhoramos a produtividade do seu viveiro</li>",
+                "button": {
+                  "text": "Quero VENDER mudas",
+                  "href": "#talk-with-us",
+                  "id": "viveiros"
+                }
+              },
+              {
+                "type": "Compradores de mudas",
+                "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/b516d8a4-860d-439c-a976-4170f22d6560",
+                "description": "<p>Projetos de ARR, SAFs, compensação e regularização ambiental: mudas e sementes <strong>entregues no prazo</strong> e <strong>com qualidade</strong>.</p>",
+                "topics": "<li>Descomplicamos o processo de compras</li>\n<li>Cuidamos da seleção de fornecedores</li>\n<li>Proporcionamos transparência e rastreabilidade</li>\n<li>Acompanhamos a produção de mudas compradas</li>",
+                "button": {
+                  "text": "Quero COMPRAR mudas",
+                  "id": "compradores",
+                  "href": "#talk-with-us"
+                }
+              }
+            ],
+            "title": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala</span></strong><span>, organizando a cadeia de suprimentos da restauração florestal.</span></p>"
+          },
+          {
+            "__resolveType": "site/sections/AboutUs.tsx",
+            "title": "Sobre a Silva",
+            "description": "<p>Já fomos <strong class=\"text-green-900\">viveiristas</strong>.</p>\n<p>Já fomos <strong class=\"text-green-900\">coletores de sementes</strong>.</p>\n<p>Já fomos\n  <strong class=\"text-green-900\">compradores de mudas.</strong><br><br><span>Nossa equipe é composta por profissionais com </span><strong><span>experiência prática</span></strong><span> em viveiros, coleta de sementes e compra de mudas.<br>Comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz eficácia e sustentabilidade à cadeia da restauração florestal.</span>\n</p>",
+            "subTitle": "Criamos cadeias de suprimentos para a restauração florestal",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/7bef57fc-f1c4-43a3-b529-5e058e87a2dd"
+          },
+          {
+            "__resolveType": "site/sections/MapSection.tsx",
+            "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada.</p><p>Os principais viveiros e projetos já estão com a Silva. Faça parte você também!</p>",
+            "cta": {
+              "text": "Quero fazer parte",
+              "href": "#talk-with-us"
+            },
+            "mapImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/8f3e18a0-b091-443a-98cc-89c5fa7e6c0e"
+          },
+          {
+            "__resolveType": "site/sections/TalkWithUs.tsx",
+            "title": "Vamos marcar uma conversa?",
+            "description": "<p><span style=\"color: rgb(255, 255, 255)\">Manda um WhatsApp pra gente ou preencha o formulário. Vamos entrar em contato.</span></p>",
+            "cta": {
+              "text": "Falar no WhatsApp",
+              "href": "https://wa.me/5511964769833?text=Olá%2C%20vim%20do%20site%20da%20Silva%20e%20quero%20falar%20com%20vocês."
+            },
+            "form": {
+              "title": "teste",
+              "placeholder": {
+                "name": "Nome",
+                "organization": "Nome da organização",
+                "phone": "Telefone (WhatsApp)",
+                "email": "E-mail",
+                "message": "Sua mensagem aqui (opcional)"
+              },
+              "buttonLabel": "Enviar"
+            },
+            "inputs": {},
+            "subTitle": "Queremos entender sua situação para te apoiar da melhor forma."
+          },
+          {
+            "__resolveType": "site/sections/Faq.tsx",
+            "title": "Perguntas e respostas",
+            "questions": [
+              {
+                "title": "Como posso começar a comprar mudas na Silva?",
+                "answer": "<p>Simples! Cadastre-se em nossa plataforma e explore a diversidade de fornecedores, mudas e sementes. Nossa equipe está pronta para auxiliar em cada etapa do processo.</p>"
+              },
+              {
+                "title": "Como a Silva contribui para a qualidade das mudas?",
+                "answer": "<p>Trabalhamos com viveiros que certificamos e realizamos visitas técnicas regulares para assegurar que as mudas atendam aos padrões de qualidade exigidos.</p>"
+              },
+              {
+                "title": "Quais são as vantagens para viveiros ao trabalhar com a Silva?",
+                "answer": "<p>Oferecemos acesso a um mercado amplo, suporte técnico, equipamentos de ponta e garantia de uma remuneração justa pelo seu trabalho.</p>"
+              },
+              {
+                "title": "Como a Silva ajuda os viveiros?",
+                "answer": "<p>Trazemos para os viveiros pedidos de maior prazo e com melhores condições comerciais, por meio do nosso relacionamento e acesso aos principais compradores de mudas e sementes do Brasil. Além disso, mapeamos as principais necessidades dos viveiros parceiros e promovemos, de forma customizada, as melhorias necessárias nos viveiros, sejam elas comerciais, operacionais, regulatórias ou administrativas.</p>"
+              }
+            ]
+          },
+          {
+            "__resolveType": "site/sections/WorkWithUs.tsx",
+            "title": "Trabalhe conosco",
+            "description": "<p>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável.</p><p>Se você deseja fazer parte de uma equipe que está na <strong>vanguarda da restauração florestal no Brasil</strong>, venha crescer conosco.</p>",
+            "cta": {
+              "text": "Junte-se à Silva",
+              "href": "mailto:carreiras@silvabrasil.bio"
+            },
+            "subTitle": "Transforme a restauração florestal com a gente",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/07e21100-6761-4b5c-975f-966eda491163"
+          },
+          {
+            "__resolveType": "Footer"
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "website/flags/multivariate/section.ts",
+              "variants": [
+                {
+                  "value": {
+                    "__resolveType": "123"
+                  }
+                },
+                {
+                  "value": {
+                    "__resolveType": "123"
+                  },
+                  "rule": {
+                    "__resolveType": "website/matchers/always.ts"
+                  }
+                }
+              ]
+            }
           }
-        },
-        {
-          "type": "Compradores de mudas",
-          "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/b516d8a4-860d-439c-a976-4170f22d6560",
-          "description": "<p>Projetos de ARR, SAFs, compensação e regularização ambiental: mudas e sementes <strong>entregues no prazo</strong> e <strong>com qualidade</strong>.</p>",
-          "topics": "<li>Descomplicamos o processo de compras</li>\n<li>Cuidamos da seleção de fornecedores</li>\n<li>Proporcionamos transparência e rastreabilidade</li>\n<li>Acompanhamos a produção de mudas compradas</li>",
-          "button": {
-            "text": "Quero COMPRAR mudas",
-            "id": "compradores",
-            "href": "#talk-with-us"
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/location.ts",
+          "includeLocations": [
+            {
+              "country": "brazil"
+            }
+          ],
+          "excludeLocations": []
+        }
+      },
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Seo/SeoV2.tsx",
+            "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/425cb986-bc0c-4012-a37b-dfda5dfe597b",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/ec3a29c2-a423-4ad4-859f-84c73968a31a",
+            "title": "Silva | Cadeias de suprimentos para a restauração florestal",
+            "description": "Para viveiros Para compradores de mudas Sobre a Silva Trabalhe Conosco Fale com a gente Organizamos a cadeia de suprimentos de mudas e sementes para Slider viveiristas sistemas agroflorestais desenvolvedores compensação ambiental implementadores Somos uma plataforma que comercializa mudas e sementes nativas em escala, organizando a cadeia de suprimentos da restauração florestal",
+            "type": "website"
+          },
+          {
+            "__resolveType": "Header"
+          },
+          {
+            "__resolveType": "site/sections/Hero.tsx",
+            "title": "<h2>Organizamos a cadeia de suprimentos de mudas e sementes para</h2>",
+            "cta": {
+              "0": {
+                "text": "Fale com a gente",
+                "href": "/"
+              },
+              "text": "Fale com a gente",
+              "href": "https://wa.me/5511964769833?text=Ol%C3%A1%21",
+              "outline": false
+            },
+            "description": "<p></p>",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/638f938f-e891-4ca3-b0cb-7d9da2d42905"
+          },
+          {
+            "__resolveType": "site/sections/ImagesSection.tsx",
+            "cards": [
+              {
+                "type": "Viveiristas",
+                "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/72717c82-854d-4df7-9a80-f2c82cf6be3d",
+                "description": "<p>Prosperidade e crescimento sustentável para seu viveiro, com <strong>receitas previsíveis</strong> e nosso <strong>apoio técnico</strong>.</p>",
+                "topics": "<li>Proporcionamos estabilidade de receita</li>\n<li>Expandimos suas vendas</li>\n<li>Organizamos sua gestão financeira</li>\n<li>Melhoramos a produtividade do seu viveiro</li>",
+                "button": {
+                  "text": "Quero VENDER mudas",
+                  "href": "#talk-with-us",
+                  "id": "viveiros"
+                }
+              },
+              {
+                "type": "Compradores de mudas",
+                "imageBg": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/b516d8a4-860d-439c-a976-4170f22d6560",
+                "description": "<p>Projetos de ARR, SAFs, compensação e regularização ambiental: mudas e sementes <strong>entregues no prazo</strong> e <strong>com qualidade</strong>.</p>",
+                "topics": "<li>Descomplicamos o processo de compras</li>\n<li>Cuidamos da seleção de fornecedores</li>\n<li>Proporcionamos transparência e rastreabilidade</li>\n<li>Acompanhamos a produção de mudas compradas</li>",
+                "button": {
+                  "text": "Quero COMPRAR mudas",
+                  "id": "compradores",
+                  "href": "#talk-with-us"
+                }
+              }
+            ],
+            "title": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala</span></strong><span>, organizando a cadeia de suprimentos da restauração florestal.</span></p>"
+          },
+          {
+            "__resolveType": "site/sections/AboutUs.tsx",
+            "title": "Sobre a Silva",
+            "description": "<p>Já fomos <strong class=\"text-green-900\">viveiristas</strong>.</p>\n<p>Já fomos <strong class=\"text-green-900\">coletores de sementes</strong>.</p>\n<p>Já fomos\n  <strong class=\"text-green-900\">compradores de mudas.</strong><br><br><span>Nossa equipe é composta por profissionais com </span><strong><span>experiência prática</span></strong><span> em viveiros, coleta de sementes e compra de mudas.<br>Comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz eficácia e sustentabilidade à cadeia da restauração florestal.</span>\n</p>",
+            "subTitle": "Criamos cadeias de suprimentos para a restauração florestal",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/7bef57fc-f1c4-43a3-b529-5e058e87a2dd"
+          },
+          {
+            "__resolveType": "site/sections/MapSection.tsx",
+            "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada.</p><p>Os principais viveiros e projetos já estão com a Silva. Faça parte você também!</p>",
+            "cta": {
+              "text": "Quero fazer parte",
+              "href": "#talk-with-us"
+            },
+            "mapImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/8f3e18a0-b091-443a-98cc-89c5fa7e6c0e"
+          },
+          {
+            "__resolveType": "site/sections/TalkWithUs.tsx",
+            "title": "Vamos marcar uma conversa?",
+            "description": "<p><span style=\"color: rgb(255, 255, 255)\">Manda um WhatsApp pra gente ou preencha o formulário. Vamos entrar em contato.</span></p>",
+            "cta": {
+              "text": "Falar no WhatsApp",
+              "href": "https://wa.me/5511964769833?text=Olá%2C%20vim%20do%20site%20da%20Silva%20e%20quero%20falar%20com%20vocês."
+            },
+            "form": {
+              "title": "teste",
+              "placeholder": {
+                "name": "Nome",
+                "organization": "Nome da organização",
+                "phone": "Telefone (WhatsApp)",
+                "email": "E-mail",
+                "message": "Sua mensagem aqui (opcional)"
+              },
+              "buttonLabel": "Enviar"
+            },
+            "inputs": {},
+            "subTitle": "Queremos entender sua situação para te apoiar da melhor forma."
+          },
+          {
+            "__resolveType": "site/sections/Faq.tsx",
+            "title": "Perguntas e respostas",
+            "questions": [
+              {
+                "title": "Como posso começar a comprar mudas na Silva?",
+                "answer": "<p>Simples! Cadastre-se em nossa plataforma e explore a diversidade de fornecedores, mudas e sementes. Nossa equipe está pronta para auxiliar em cada etapa do processo.</p>"
+              },
+              {
+                "title": "Como a Silva contribui para a qualidade das mudas?",
+                "answer": "<p>Trabalhamos com viveiros que certificamos e realizamos visitas técnicas regulares para assegurar que as mudas atendam aos padrões de qualidade exigidos.</p>"
+              },
+              {
+                "title": "Quais são as vantagens para viveiros ao trabalhar com a Silva?",
+                "answer": "<p>Oferecemos acesso a um mercado amplo, suporte técnico, equipamentos de ponta e garantia de uma remuneração justa pelo seu trabalho.</p>"
+              },
+              {
+                "title": "Como a Silva ajuda os viveiros?",
+                "answer": "<p>Trazemos para os viveiros pedidos de maior prazo e com melhores condições comerciais, por meio do nosso relacionamento e acesso aos principais compradores de mudas e sementes do Brasil. Além disso, mapeamos as principais necessidades dos viveiros parceiros e promovemos, de forma customizada, as melhorias necessárias nos viveiros, sejam elas comerciais, operacionais, regulatórias ou administrativas.</p>"
+              }
+            ]
+          },
+          {
+            "__resolveType": "site/sections/WorkWithUs.tsx",
+            "title": "Trabalhe conosco",
+            "description": "<p>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável.</p><p>Se você deseja fazer parte de uma equipe que está na <strong>vanguarda da restauração florestal no Brasil</strong>, venha crescer conosco.</p>",
+            "cta": {
+              "text": "Junte-se à Silva",
+              "href": "mailto:carreiras@silvabrasil.bio"
+            },
+            "subTitle": "Transforme a restauração florestal com a gente",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/07e21100-6761-4b5c-975f-966eda491163"
+          },
+          {
+            "__resolveType": "Footer"
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "website/flags/multivariate/section.ts",
+              "variants": [
+                {
+                  "value": {
+                    "__resolveType": "123"
+                  }
+                },
+                {
+                  "value": {
+                    "__resolveType": "123"
+                  },
+                  "rule": {
+                    "__resolveType": "website/matchers/always.ts"
+                  }
+                }
+              ]
+            }
           }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/location.ts",
+          "includeLocations": [],
+          "excludeLocations": [
+            {
+              "country": "brazil"
+            }
+          ]
         }
-      ],
-      "title": "<p><span>Somos uma plataforma que comercializa </span><strong><span>mudas e sementes nativas em escala</span></strong><span>, organizando a cadeia de suprimentos da restauração florestal.</span></p>"
-    },
-    {
-      "__resolveType": "site/sections/AboutUs.tsx",
-      "title": "Sobre a Silva",
-      "description": "<p>Já fomos <strong class=\"text-green-900\">viveiristas</strong>.</p>\n<p>Já fomos <strong class=\"text-green-900\">coletores de sementes</strong>.</p>\n<p>Já fomos\n  <strong class=\"text-green-900\">compradores de mudas.</strong><br><br><span>Nossa equipe é composta por profissionais com </span><strong><span>experiência prática</span></strong><span> em viveiros, coleta de sementes e compra de mudas.<br>Comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz eficácia e sustentabilidade à cadeia da restauração florestal.</span>\n</p>",
-      "subTitle": "Criamos cadeias de suprimentos para a restauração florestal",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/7bef57fc-f1c4-43a3-b529-5e058e87a2dd"
-    },
-    {
-      "__resolveType": "site/sections/MapSection.tsx",
-      "description": "<p>Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada.</p><p>Os principais viveiros e projetos já estão com a Silva. Faça parte você também!</p>",
-      "cta": {
-        "text": "Quero fazer parte",
-        "href": "#talk-with-us"
-      },
-      "mapImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/8f3e18a0-b091-443a-98cc-89c5fa7e6c0e"
-    },
-    {
-      "__resolveType": "site/sections/TalkWithUs.tsx",
-      "title": "Vamos marcar uma conversa?",
-      "description": "<p><span style=\"color: rgb(255, 255, 255)\">Manda um WhatsApp pra gente ou preencha o formulário. Vamos entrar em contato.</span></p>",
-      "cta": {
-        "text": "Falar no WhatsApp",
-        "href": "https://wa.me/5511964769833?text=Olá%2C%20vim%20do%20site%20da%20Silva%20e%20quero%20falar%20com%20vocês."
-      },
-      "form": {
-        "title": "teste",
-        "placeholder": {
-          "name": "Nome",
-          "organization": "Nome da organização",
-          "phone": "Telefone (WhatsApp)",
-          "email": "E-mail",
-          "message": "Sua mensagem aqui (opcional)"
-        },
-        "buttonLabel": "Enviar"
-      },
-      "inputs": {},
-      "subTitle": "Queremos entender sua situação para te apoiar da melhor forma."
-    },
-    {
-      "__resolveType": "site/sections/Faq.tsx",
-      "title": "Perguntas e respostas",
-      "questions": [
-        {
-          "title": "Como posso começar a comprar mudas na Silva?",
-          "answer": "<p>Simples! Cadastre-se em nossa plataforma e explore a diversidade de fornecedores, mudas e sementes. Nossa equipe está pronta para auxiliar em cada etapa do processo.</p>"
-        },
-        {
-          "title": "Como a Silva contribui para a qualidade das mudas?",
-          "answer": "<p>Trabalhamos com viveiros que certificamos e realizamos visitas técnicas regulares para assegurar que as mudas atendam aos padrões de qualidade exigidos.</p>"
-        },
-        {
-          "title": "Quais são as vantagens para viveiros ao trabalhar com a Silva?",
-          "answer": "<p>Oferecemos acesso a um mercado amplo, suporte técnico, equipamentos de ponta e garantia de uma remuneração justa pelo seu trabalho.</p>"
-        },
-        {
-          "title": "Como a Silva ajuda os viveiros?",
-          "answer": "<p>Trazemos para os viveiros pedidos de maior prazo e com melhores condições comerciais, por meio do nosso relacionamento e acesso aos principais compradores de mudas e sementes do Brasil. Além disso, mapeamos as principais necessidades dos viveiros parceiros e promovemos, de forma customizada, as melhorias necessárias nos viveiros, sejam elas comerciais, operacionais, regulatórias ou administrativas.</p>"
-        }
-      ]
-    },
-    {
-      "__resolveType": "site/sections/WorkWithUs.tsx",
-      "title": "Trabalhe conosco",
-      "description": "<p>Na Silva, estamos sempre buscando talentos apaixonados por soluções baseadas na natureza e pelo desenvolvimento sustentável.</p><p>Se você deseja fazer parte de uma equipe que está na <strong>vanguarda da restauração florestal no Brasil</strong>, venha crescer conosco.</p>",
-      "cta": {
-        "text": "Junte-se à Silva",
-        "href": "mailto:carreiras@silvabrasil.bio"
-      },
-      "subTitle": "Transforme a restauração florestal com a gente",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10436/07e21100-6761-4b5c-975f-966eda491163"
-    },
-    {
-      "__resolveType": "Footer"
-    }
-  ],
+      }
+    ]
+  },
   "__resolveType": "website/pages/Page.tsx"
 }
