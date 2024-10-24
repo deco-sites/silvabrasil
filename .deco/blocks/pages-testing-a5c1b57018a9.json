@@ -133,27 +133,6 @@
           },
           {
             "__resolveType": "Footer"
-          },
-          {
-            "__resolveType": "website/sections/Rendering/Lazy.tsx",
-            "section": {
-              "__resolveType": "website/flags/multivariate/section.ts",
-              "variants": [
-                {
-                  "value": {
-                    "__resolveType": "123"
-                  }
-                },
-                {
-                  "value": {
-                    "__resolveType": "123"
-                  },
-                  "rule": {
-                    "__resolveType": "website/matchers/always.ts"
-                  }
-                }
-              ]
-            }
           }
         ],
         "rule": {
@@ -295,27 +274,6 @@
           },
           {
             "__resolveType": "Footer"
-          },
-          {
-            "__resolveType": "website/sections/Rendering/Lazy.tsx",
-            "section": {
-              "__resolveType": "website/flags/multivariate/section.ts",
-              "variants": [
-                {
-                  "value": {
-                    "__resolveType": "123"
-                  }
-                },
-                {
-                  "value": {
-                    "__resolveType": "123"
-                  },
-                  "rule": {
-                    "__resolveType": "website/matchers/always.ts"
-                  }
-                }
-              ]
-            }
           }
         ],
         "rule": {

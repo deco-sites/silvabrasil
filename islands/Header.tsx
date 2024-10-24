@@ -120,7 +120,7 @@ export default function Header({
           />
         </a>
 
-        <ul class="hidden lg:flex items-center lg:mt-[10px] lg:max-w-4xl xl:gap-8">
+        <ul class="hidden lg:flex items-center lg:max-w-4xl xl:gap-8">
           {navigation.links.map((link, index) => (
             <li key={link.label}>
               <a
@@ -135,60 +135,71 @@ export default function Header({
             </li>
           ))}
         </ul>
-        <ul class="gap-3 hidden items-center lg:flex">
-          {navigation.buttons?.map((button) => (
-            <a
-              key={button?.id}
-              id={button?.id}
-              href={button?.href ?? "#"}
-              target={button?.href.includes("http") ? "_blank" : "_self"}
-              class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
-                px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
-                transition duration-400
-                opacity-90 hover:opacity-100 whitespace-nowrap"
-            >
-              {textContent[languageSwitcher.value].menu.menuCta}
-            </a>
-          ))}
-        </ul>
 
-        <label
-          onClick={handleClick}
-          class="inline-flex items-center cursor-pointer bg-slate rounded-lg px-6 py-3.5 gap-2"
-        >
-          <span class="text-sm font-medium text-gray-900 dark:text-gray-300">
-            PT
-          </span>
-          <input
-            id="language-switcher"
-            type="checkbox"
-            value=""
-            class="sr-only
-            peer"
-          />
-          <div class={clx(
-            "relative w-11 h-6 bg-green-900 rounded-full peer-checked:bg-blue-600 ",
-            "peer peer-checked:after:translate-x-full peer-focus:outline-none rtl:peer-checked:after:-translate-x-full peer-checked:after:green-900",
-            "after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white",
-            "after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"
-          )} />
-          <span class="text-sm font-medium text-gray-900 dark:text-gray-300">
-            EN
-          </span>
-        </label>
+        <div class="flex items-center gap-3.5">
+          <div class="flex items-center relative">
+            <Icon
+              id="world-icon"
+              class="mr-1"
+              size={16}
+            />
+            <details class="dropdown dropdown-end cursor-pointer static">
+              <summary class="font-bold font-sans text-base/6 text-slate list-none">
+                {languageSwitcher.value === "pt" ? "PT-BR" : "EN-US"}
+              </summary>
+              <ul class="menu dropdown-content top-10 z-[1] gap-2 p-2 shadow bg-white rounded-lg py-3.5 px-6">
+                <div
+                  onClick={() => languageSwitcher.value = "pt"}
+                  class="flex w-fit font-bold font-sans text-base/6 text-dark transition-colors hover:underline hover:text-black"
+                >
+                  <span class="block w-max p-0">PT-BR</span> <span class="block w-fit p-0">{languageSwitcher.value === "pt" && <Icon id="checked-icon" size={16} strokeWidth={2} class="ml-6 p-0 rounded-none" />}</span>
+                </div>
+                <div
+                  onClick={() => languageSwitcher.value = "en"}
+                  class="flex w-fit font-bold font-sans text-base/6 text-dark transition-colors hover:underline hover:text-black"
+                >
+                  <span class="block w-max p-0">EN-US</span> <span class="block w-fit p-0">{languageSwitcher.value === "en" && <Icon id="checked-icon" size={16} strokeWidth={2} class="ml-6 p-0 rounded-none" />}</span>
+                </div>
+              </ul>
+            </details>
+            <Icon
+              id="arrow-down"
+              class="ml-2"
+              width={14}
+              height={16}
+            />
+          </div>
 
-        <label
-          htmlFor="mobile-drawer-nav"
-          class="flex lg:hidden btn btn-ghost drawer-button"
-        >
-          <Icon
-            id="Bars3"
-            class="text-slate w-[25px] h-[25px]"
-            width={25}
-            height={25}
-            strokeWidth={2}
-          />
-        </label>
+          <ul class="gap-3 hidden items-center lg:flex">
+            {navigation.buttons?.map((button) => (
+              <a
+                key={button?.id}
+                id={button?.id}
+                href={button?.href ?? "#"}
+                target={button?.href.includes("http") ? "_blank" : "_self"}
+                class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
+                  px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
+                  transition duration-400
+                  opacity-90 hover:opacity-100 whitespace-nowrap"
+              >
+                {textContent[languageSwitcher.value].menu.menuCta}
+              </a>
+            ))}
+          </ul> 
+
+          <label
+            htmlFor="mobile-drawer-nav"
+            class="flex lg:hidden btn btn-ghost drawer-button"
+          >
+            <Icon
+              id="Bars3"
+              class="text-slate w-[25px] h-[25px]"
+              width={25}
+              height={25}
+              strokeWidth={2}
+            />
+          </label>
+        </div>
       </div>
 
       {/* sidebar */}

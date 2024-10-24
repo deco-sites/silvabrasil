@@ -4,12 +4,15 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $AboutUs from "./islands/AboutUs.tsx";
+import * as $Faq from "./islands/Faq.tsx";
+import * as $Footer from "./islands/Footer.tsx";
 import * as $Header from "./islands/Header.tsx";
 import * as $Hero from "./islands/Hero.tsx";
 import * as $ImagesSection from "./islands/ImagesSection.tsx";
 import * as $MapSection from "./islands/MapSection.tsx";
 import * as $TalkWithUs from "./islands/TalkWithUs.tsx";
 import * as $TextAnimation from "./islands/TextAnimation.tsx";
+import * as $WorkWithUs from "./islands/WorkWithUs.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -18,12 +21,15 @@ const manifest = {
   },
   islands: {
     "./islands/AboutUs.tsx": $AboutUs,
+    "./islands/Faq.tsx": $Faq,
+    "./islands/Footer.tsx": $Footer,
     "./islands/Header.tsx": $Header,
     "./islands/Hero.tsx": $Hero,
     "./islands/ImagesSection.tsx": $ImagesSection,
     "./islands/MapSection.tsx": $MapSection,
     "./islands/TalkWithUs.tsx": $TalkWithUs,
     "./islands/TextAnimation.tsx": $TextAnimation,
+    "./islands/WorkWithUs.tsx": $WorkWithUs,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

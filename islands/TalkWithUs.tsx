@@ -5,6 +5,8 @@ import { render } from "apps/resend/utils/reactEmail.ts";
 import Button from "site/components/ui/Button.tsx";
 import Input from "site/components/ui/Input/index.tsx";
 import Icon from "site/components/ui/Icon.tsx";
+import { useUI } from "site/sdk/useUI.ts";
+import textContent from "site/content/text-lang.ts";
 
 interface CTA {
   href: string;
@@ -69,9 +71,6 @@ const EmailTemplate = ({ lead }: { lead: Inputs }) => (
 );
 
 export default function TalkWithUsSection({
-  title,
-  subTitle,
-  description = "my description",
   cta,
   form,
 }: Props) {
@@ -81,6 +80,7 @@ export default function TalkWithUsSection({
     profile: "",
   });
   const [alert, setAlert] = useState({isActive: false,  alertText: "", type: "" });
+  const { languageSwitcher } = useUI();
 
   const handleSubmit: JSX.GenericEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
@@ -99,32 +99,37 @@ export default function TalkWithUsSection({
     const newErrors = { phone: "", email: "", profile: "" };
 
     if (!lead.phone) {
-      newErrors.phone =
-        "Opa, não foi preenchido. Por favor, preencha seu WhatsApp.";
+      newErrors.phone = languageSwitcher.value === "pt" 
+        ? "Opa, não foi preenchido. Por favor, preencha seu WhatsApp."
+        : "Oops, it wasn't filled in. Please provide your WhatsApp number.";
       hasError = true;
     }
 
     if (!lead.email) {
-      newErrors.email =
-        "Opa, não foi preenchido. Por favor, preencha seu e-mail.";
+      newErrors.email = languageSwitcher.value === "pt"
+        ? "Opa, não foi preenchido. Por favor, preencha seu e-mail."
+        : "Oops, it wasn't filled in. Please provide your email.";
       hasError = true;
     }
 
     if (lead.phone && !/^\d+$/.test(lead.phone)) {
-      newErrors.phone =
-        "Opa, o telefone digitado não parece correto. Confira e tente novamente.";
+      newErrors.phone = languageSwitcher.value === "pt"
+        ? "Opa, o telefone digitado não parece correto. Confira e tente novamente."
+        : "Oops, the phone number you entered doesn't seem right. Check it and try again.";
       hasError = true;
     }
 
     if (lead.email && !/\S+@\S+\.\S+/.test(lead.email)) {
-      newErrors.email =
-        "Opa, o e-mail digitado não parece correto. Confira e tente novamente.";
+      newErrors.email = languageSwitcher.value === "pt"
+        ? "Opa, o e-mail digitado não parece correto. Confira e tente novamente."
+        : "Oops, the email you entered doesn't seem right. Check it and try again.";
       hasError = true;
     }
 
     if (!lead.profile) {
-      newErrors.profile =
-        "Opa, não foi preenchido. Por favor, escolha uma das opções.";
+      newErrors.profile = languageSwitcher.value === "pt"
+        ? "Opa, não foi preenchido. Por favor, escolha uma das opções."
+        : "Oops, it wasn't filled in. Please choose one of the options.";
       hasError = true;
     }
 
@@ -144,12 +149,20 @@ export default function TalkWithUsSection({
         subject: `Novo Lead - ${lead.organization}`,
       });
 	  hasError = false;
-      setAlert({ isActive: false, alertText: "Email enviado com sucesso!", type: "success" });
+      setAlert({
+        isActive: false,
+        alertText: languageSwitcher.value === "pt"
+          ? "Email enviado com sucesso!"
+          : "Email sent successfully!",
+        type: "success"
+      });
     } catch (error) {
       console.error(error);
       setAlert({
         isActive: true,
-        alertText: "Ocorreu um erro ao enviar o email.",
+        alertText: languageSwitcher.value === "pt"
+          ? "Ocorreu um erro ao enviar o email."
+          : "An error occurred while sending the email.",
         type: "error",
       });
     }
@@ -165,12 +178,12 @@ export default function TalkWithUsSection({
           <div class="h-full justify-between flex flex-col items-start text-left">
             <div class="mb-6 lg:max-w-[407px]">
               <h2 class="text-4xl lg:text-5xl font-bold text-slate mb-5 font-serif">
-                {title}
+                {textContent[languageSwitcher.value].contactSection.title}
               </h2>
-              <h3 class="text-xl text-white mb-6">{subTitle}</h3>
+              <h3 class="text-xl text-white mb-6">{textContent[languageSwitcher.value].contactSection.subtitle}</h3>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: `<span class="text-white text-left text-base">${description}</span>`,
+                  __html: `<span class="text-white text-left text-base">${textContent[languageSwitcher.value].contactSection.text}</span>`,
                 }}
               ></p>
             </div>
@@ -181,7 +194,7 @@ export default function TalkWithUsSection({
 			opacity-90 hover:opacity-100"
             >
               <Icon id="WhatsApp" width={14} height={16} class="mr-2" />
-              {cta?.text}
+              {textContent[languageSwitcher.value].contactSection.mobileButton}
             </a>
           </div>
         </div>
@@ -196,15 +209,13 @@ export default function TalkWithUsSection({
                 <Input
                   id="name"
                   name="name"
-                  placeholder={form?.placeholder?.name ?? "Nome"}
+                  placeholder={textContent[languageSwitcher.value].contactSection.formInputs.personName}
                   class="w-full p-4 rounded-lg"
                 />
                 <Input
                   id="organization"
                   name="organization"
-                  placeholder={
-                    form?.placeholder?.organization ?? "Nome da organização"
-                  }
+                  placeholder={textContent[languageSwitcher.value].contactSection.formInputs.organizationName}
                   class="w-full p-4 rounded-lg"
                 />
                 <div>
@@ -212,9 +223,7 @@ export default function TalkWithUsSection({
                     id="phone"
                     name="phone"
                     type="tel"
-                    placeholder={
-                      form?.placeholder?.phone ?? "Telefone (WhatsApp)"
-                    }
+                    placeholder={textContent[languageSwitcher.value].contactSection.formInputs.phone}
                     class={`w-full p-4 rounded-lg ${
                       errors.phone ? "bg-error-50 !border-4 !border-error-100" : ""
                     }`}
@@ -229,7 +238,7 @@ export default function TalkWithUsSection({
                     id="email"
                     name="email"
                     type="email"
-                    placeholder={form?.placeholder?.email ?? "E-mail"}
+                    placeholder={textContent[languageSwitcher.value].contactSection.formInputs.email}
                     class={`w-full p-4 rounded-lg ${
 						errors.email ? "bg-error-50 !border-4 !border-error-100" : ""
 					  }`}
@@ -243,14 +252,12 @@ export default function TalkWithUsSection({
                   id="message"
                   name="message"
                   class="w-full p-4 placeholder-dark text-dark text-lg rounded-[10px] py-[18px] border border-green-200 !outline-green-500 focus:border-"
-                  placeholder={
-                    form?.placeholder?.message ?? "Sua mensagem aqui (opcional)"
-                  }
+                  placeholder={textContent[languageSwitcher.value].contactSection.formInputs.message}
                 />
               </div>
               <div class="w-full text-white">
                 <label class="block mb-2">
-                  Com qual perfil você se identifica?
+                  {textContent[languageSwitcher.value].contactSection.formInputs.question}
                 </label>
                 <div class="flex flex-col">
                   <label class="mb-2">
@@ -261,7 +268,7 @@ export default function TalkWithUsSection({
                       class="mr-2"
                       required
                     />{" "}
-                    Viveirista
+                    {textContent[languageSwitcher.value].contactSection.formInputs.answers[0].text}
                   </label>
                   <label class="mb-2">
                     <input
@@ -271,7 +278,7 @@ export default function TalkWithUsSection({
                       class="mr-2"
                       required
                     />{" "}
-                    Comprador de mudas
+                    {textContent[languageSwitcher.value].contactSection.formInputs.answers[1].text}
                   </label>
                   <label class="mb-2">
                     <input
@@ -281,7 +288,7 @@ export default function TalkWithUsSection({
                       class="mr-2"
                       required
                     />{" "}
-                    Outro
+                    {textContent[languageSwitcher.value].contactSection.formInputs.answers[2].text}
                   </label>
                   {errors.profile && (
                     <p class="text-error-50">{errors.profile}</p>
@@ -292,7 +299,7 @@ export default function TalkWithUsSection({
                 type="submit"
                 class="w-fit font-bold text-base text-dark py-3 rounded-lg"
               >
-                {form.buttonLabel ?? "Enviar"}
+                {textContent[languageSwitcher.value].contactSection.formInputs.sendButton}
               </Button>
 
               {alert.isActive && (

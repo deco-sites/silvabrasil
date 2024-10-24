@@ -16,7 +16,6 @@ interface Props {
 }
 
 export default function MapSection({
-  description = "my description",
   mapImage,
   cta,
 }: Props) {
@@ -27,7 +26,7 @@ export default function MapSection({
         <div class="w-full lg:w-1/2 flex flex-col gap-4 lg:gap-6 items-start">
           <div class="text-4xl text-green-900 font-serif max-w-[312px] lg:max-w-[422px]">
             <span
-            //   class="inline-flex"
+              class="[&>span]:items-baseline"
               dangerouslySetInnerHTML={{
                 __html: textContent[languageSwitcher.value].mapSection.title
               }}

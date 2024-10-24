@@ -84,7 +84,7 @@ export default {
             "description": "Já fomos <strong class='text-green-900'>viveiristas</strong><br /> Já fomos <strong class='text-green-900'>coletores de sementes.</strong><br /> Já fomos <strong class='text-green-900'>compradores de mudas.</strong><br /><br /> Nossa equipe é composta por profissionais com <strong>experiência prática </strong>em viveiros, coleta de sementes e compra de mudas. <br /> Comprometidos com a biodiversidade e a prosperidade local, nós somos a ponte que traz eficácia e sustentabilidade à cadeia da restauração florestal.",
         },
         "mapSection": {
-            "title": "<span class='flex items-end'>Presente <svg width='39' height='54' stroke-width='16' class='-mt-5 -ml-2 -mr-2'><use href='/sprites.svg?__frsh_c=0d8298b772976e72ed45708cb692e534ede41051#LeafIcon'></use></svg>  onde </span><br /><span> a restauração acontece no Brasil</span>",
+            "title": "<span class='flex'>Presente <svg width='39' height='54' stroke-width='16' class='-mt-5 -ml-2 -mr-2'><use href='/sprites.svg?__frsh_c=0d8298b772976e72ed45708cb692e534ede41051#LeafIcon'></use></svg>  onde </span><span> a restauração acontece no Brasil</span>",
             "description": "Comercializamos mudas e sementes nativas em escala por meio de uma cadeia de suprimentos eficiente e bem organizada. <br /> Os principais viveiros e projetos já estão com a Silva. Faça parte você também!",
             "cta": "Quero fazer parte"
         },
@@ -98,7 +98,7 @@ export default {
                 "organizationName": "Nome da organização",
                 "phone": "Telefone (WhatsApp)",
                 "email": "E-mail",
-                "message": "Sua mensagem aqui",
+                "message": "Sua mensagem aqui (opcional)",
                 "question": "Com qual perfil você se identifica?",
                 "answers": [
                     {
@@ -115,7 +115,7 @@ export default {
             }
         },
         "faqSection": {
-            "title": "",
+            "title": "Perguntas e respostas",
             "items": [
                 {
                     "question": "Como posso começar a comprar mudas na Silva?",
@@ -143,6 +143,7 @@ export default {
         },
         "footerSection": {
             "slogan": "Feita no Brasil 🇧🇷 para o Planeta Terra",
+            "sloganMobile": "Feita no Brasil <br /> 🇧🇷 <br /> para o Planeta Terra",
             "text": "Somos uma plataforma que comercializa <strong>mudas e sementes nativas em escala </strong>organizando a cadeia de suprimentos",
             "copyright": "® Silva 2024. Todos os direitos reservados.",
             "enterpriseMenuTitle": "Empresa",
@@ -235,7 +236,7 @@ export default {
             "description": "We have been <strong class='text-green-900'>nurserymen</strong><br /> We have been <strong class='text-green-900'>seed collectors.</strong><br /> We have been <strong class='text-green-900'>seedling buyers.</strong><br /><br /> Our team consists of professionals with <strong>practical experience </strong>in nurseries, seed collection, and seedling purchases. <br /><br /> Committed to biodiversity and local prosperity, we are the bridge that brings efficiency and sustainability to the forest restoration supply chain."
         },
         "mapSection": {
-            "title": "Present <svg width='39' height='54' stroke-width='16' class='-mt-5 -ml-2 -mr-2'><use href='/sprites.svg?__frsh_c=0d8298b772976e72ed45708cb692e534ede41051#LeafIcon'></use></svg> where restoration happens in Brazil",
+            "title": "<span class='flex'>Present <svg width='39' height='54' stroke-width='16' class='-mt-5 -ml-2 -mr-2'><use href='/sprites.svg?__frsh_c=0d8298b772976e72ed45708cb692e534ede41051#LeafIcon'></use></svg>  on where </span><span> the restoration happens in Brazil</span>",
             "description": "We trade native seedlings and seeds at scale through an efficient and well-organized supply chain. <br /> The main nurseries and projects are already with Silva. Join us too!",
             "cta": "I want to join"
         },
@@ -249,7 +250,7 @@ export default {
                 "organizationName": "Organization name",
                 "phone": "Phone (WhatsApp)",
                 "email": "Email",
-                "message": "Your message here",
+                "message": "Your message here (optional)",
                 "question": "Which profile do you identify with?",
                 "answers": [
                     {
@@ -266,7 +267,7 @@ export default {
             }
         },
         "faqSection": {
-            "title": "",
+            "title": "Questions and answers",
             "items": [
                 {
                     "question": "How can I start buying seedlings with Silva?",
@@ -294,6 +295,7 @@ export default {
         },
         "footerSection": {
             "slogan": "Made in Brazil 🇧🇷 for Planet Earth",
+            "sloganMobile": "Made in Brazil <br /> 🇧🇷 <br /> for Planet Earth",
             "text": "We are a platform that trades <strong>native seedlings and seeds at scale</strong>, organizing the supply chain",
             "copyright": "® Silva 2024. All rights reserved.",
             "enterpriseMenuTitle": "Company",
