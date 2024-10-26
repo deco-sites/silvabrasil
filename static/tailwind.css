@@ -3903,6 +3903,10 @@ html {
     margin-top: -12rem;
   }
 
+  .xl\:block {
+    display: block;
+  }
+
   .xl\:justify-evenly {
     justify-content: space-evenly;
   }

@@ -2,7 +2,6 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 import { useEffect } from "preact/hooks";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "../components/ui/Icon.tsx";
-import { clx } from "site/sdk/clx.ts";
 import { useUI } from "site/sdk/useUI.ts";
 import textContent from "site/content/text-lang.ts";
 
@@ -60,12 +59,12 @@ export default function Header({
   const { languageSwitcher } = useUI();
 
   const handleClick = () => {
-    const drawerCheckbox: HTMLInputElement = document!.getElementById("language-switcher")!.checked; 
-
-    if (drawerCheckbox) {
-      languageSwitcher.value = "en";
+    const details: HTMLDetailsElement | null = document.querySelector("details");
+    
+    if (details?.open) {
+      details!.open = false;
     } else {
-      languageSwitcher.value = "pt";
+      details!.open = true;
     }
   };
 
@@ -122,7 +121,9 @@ export default function Header({
 
         <ul class="hidden lg:flex items-center lg:max-w-4xl xl:gap-8">
           {navigation.links.map((link, index) => (
-            <li key={link.label}>
+            <li key={link.label} class={
+              index === navigation.links.length - 1 ? "lg:hidden xl:block" : ""
+            }>
               <a
                 href={link.url}
                 aria-label={link.label}
@@ -149,13 +150,19 @@ export default function Header({
               </summary>
               <ul class="menu dropdown-content top-10 z-[1] gap-2 p-2 shadow bg-white rounded-lg py-3.5 px-6">
                 <div
-                  onClick={() => languageSwitcher.value = "pt"}
+                  onClick={() => {
+                    handleClick();
+                    languageSwitcher.value = "pt";
+                  }}
                   class="flex w-fit font-bold font-sans text-base/6 text-dark transition-colors hover:underline hover:text-black"
                 >
                   <span class="block w-max p-0">PT-BR</span> <span class="block w-fit p-0">{languageSwitcher.value === "pt" && <Icon id="checked-icon" size={16} strokeWidth={2} class="ml-6 p-0 rounded-none" />}</span>
                 </div>
                 <div
-                  onClick={() => languageSwitcher.value = "en"}
+                  onClick={() => {
+                    handleClick();
+                    languageSwitcher.value = "en";
+                  }}
                   class="flex w-fit font-bold font-sans text-base/6 text-dark transition-colors hover:underline hover:text-black"
                 >
                   <span class="block w-max p-0">EN-US</span> <span class="block w-fit p-0">{languageSwitcher.value === "en" && <Icon id="checked-icon" size={16} strokeWidth={2} class="ml-6 p-0 rounded-none" />}</span>
