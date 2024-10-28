@@ -2,6 +2,8 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 import { useEffect } from "preact/hooks";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "../components/ui/Icon.tsx";
+import { useUI } from "site/sdk/useUI.ts";
+import textContent from "site/content/text-lang.ts";
 
 export interface CTA {
   id?: string;
@@ -36,7 +38,8 @@ export interface Nav {
 
 export default function Header({
   logo = {
-    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
+    src:
+      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
     alt: "Logo",
   },
   navigation = {
@@ -53,6 +56,18 @@ export default function Header({
   contact,
   social,
 }: Nav) {
+  const { languageSwitcher } = useUI();
+
+  const handleClick = () => {
+    const details: HTMLDetailsElement | null = document.querySelector("details");
+    
+    if (details?.open) {
+      details!.open = false;
+    } else {
+      details!.open = true;
+    }
+  };
+
   function toggleScrollBody() {
     const body = document.body;
     body.style.overflow = body.style.overflow === "hidden" ? "" : "hidden";
@@ -104,48 +119,94 @@ export default function Header({
           />
         </a>
 
-        <ul class="hidden lg:flex items-center lg:mt-[10px] lg:max-w-4xl xl:gap-8">
-          {navigation.links.map((link) => (
-            <li key={link.label}>
+        <ul class="hidden lg:flex items-center lg:max-w-4xl xl:gap-8">
+          {navigation.links.map((link, index) => (
+            <li key={link.label} class={
+              index === navigation.links.length - 1 ? "lg:hidden xl:block" : ""
+            }>
               <a
                 href={link.url}
                 aria-label={link.label}
                 class="text-slate whitespace-nowrap font-sans font-semibold text-base cursor-pointer px-4 hover:underline underline-offset-4"
               >
-                <span>{link.label}</span>
+                <span>
+                  {textContent[languageSwitcher.value].menu.menuItems[index].menuItem}
+                </span>
               </a>
             </li>
           ))}
         </ul>
-        <ul class="gap-3 hidden items-center lg:flex">
-          {navigation.buttons?.map((button) => (
-            <a
-              key={button?.id}
-              id={button?.id}
-              href={button?.href ?? "#"}
-              target={button?.href.includes("http") ? "_blank" : "_self"}
-              class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
-			px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
-			transition duration-400
-			opacity-90 hover:opacity-100 whitespace-nowrap"
-            >
-              {button?.text}
-            </a>
-          ))}
-        </ul>
 
-        <label
-          htmlFor="mobile-drawer-nav"
-          class="flex lg:hidden btn btn-ghost drawer-button"
-        >
-          <Icon
-            id="Bars3"
-            class="text-slate w-[25px] h-[25px]"
-            width={25}
-            height={25}
-            strokeWidth={2}
-          />
-        </label>
+        <div class="flex items-center gap-3.5">
+          <div class="flex items-center relative">
+            <Icon
+              id="world-icon"
+              class="mr-1"
+              size={16}
+            />
+            <details class="dropdown dropdown-end cursor-pointer static">
+              <summary class="font-bold font-sans text-base/6 text-slate list-none">
+                {languageSwitcher.value === "pt" ? "PT-BR" : "EN-US"}
+              </summary>
+              <ul class="menu dropdown-content top-10 z-[1] gap-2 p-2 shadow bg-white rounded-lg py-3.5 px-6">
+                <div
+                  onClick={() => {
+                    handleClick();
+                    languageSwitcher.value = "pt";
+                  }}
+                  class="flex w-fit font-bold font-sans text-base/6 text-dark transition-colors hover:underline hover:text-black"
+                >
+                  <span class="block w-max p-0">PT-BR</span> <span class="block w-fit p-0">{languageSwitcher.value === "pt" && <Icon id="checked-icon" size={16} strokeWidth={2} class="ml-6 p-0 rounded-none" />}</span>
+                </div>
+                <div
+                  onClick={() => {
+                    handleClick();
+                    languageSwitcher.value = "en";
+                  }}
+                  class="flex w-fit font-bold font-sans text-base/6 text-dark transition-colors hover:underline hover:text-black"
+                >
+                  <span class="block w-max p-0">EN-US</span> <span class="block w-fit p-0">{languageSwitcher.value === "en" && <Icon id="checked-icon" size={16} strokeWidth={2} class="ml-6 p-0 rounded-none" />}</span>
+                </div>
+              </ul>
+            </details>
+            <Icon
+              id="arrow-down"
+              class="ml-2"
+              width={14}
+              height={16}
+            />
+          </div>
+
+          <ul class="gap-3 hidden items-center lg:flex">
+            {navigation.buttons?.map((button) => (
+              <a
+                key={button?.id}
+                id={button?.id}
+                href={button?.href ?? "#"}
+                target={button?.href.includes("http") ? "_blank" : "_self"}
+                class="cursor-pointer font-sans font-bold text-base bg-slate text-dark
+                  px-6 py-[14px] flex justify-center items-center w-fit rounded-lg transform
+                  transition duration-400
+                  opacity-90 hover:opacity-100 whitespace-nowrap"
+              >
+                {textContent[languageSwitcher.value].menu.menuCta}
+              </a>
+            ))}
+          </ul> 
+
+          <label
+            htmlFor="mobile-drawer-nav"
+            class="flex lg:hidden btn btn-ghost drawer-button"
+          >
+            <Icon
+              id="Bars3"
+              class="text-slate w-[25px] h-[25px]"
+              width={25}
+              height={25}
+              strokeWidth={2}
+            />
+          </label>
+        </div>
       </div>
 
       {/* sidebar */}
@@ -175,14 +236,14 @@ export default function Header({
           </div>
 
           <ul class="">
-            {navigation?.links.map((link) => (
+            {navigation?.links.map((link, index) => (
               <li
                 key={link.label}
                 class="mb-4 font-bold font-sans text-base text-white"
               >
                 <label htmlFor="mobile-drawer-nav" class="  drawer-button p-0">
                   <a href={link.url} aria-label={link.label}>
-                    {link.label}
+                    {textContent[languageSwitcher.value].menu.menuItems[index].menuItem}
                   </a>
                 </label>
               </li>
@@ -191,7 +252,7 @@ export default function Header({
 
           <div class="flex flex-col items-start gap-4">
             <div class="flex flex-col items-start gap-4">
-              <h3> {contact?.title} </h3>
+              <h3>{textContent[languageSwitcher.value].contactSection.title}</h3>
               {contact?.links.map((link) => (
                 <a key={link.label} href={link.href} aria-label={link.label}>
                   {link.label}
@@ -204,21 +265,21 @@ export default function Header({
 			  transition duration-400
 			  opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
             >
-              Fale com a gente
+              {textContent[languageSwitcher.value].menu.menuCta}
             </a>
             <a
               href="https://wa.me/5511964769833?text=Olá%2C%20vim%20do%20site%20da%20Silva%20e%20quero%20falar%20com%20vocês."
               target="_blank"
               class="cursor-pointer font-bold text-base bg-green-500 text-white w-fit h-fit flex justify-center items-center rounded-lg transform
-			transition duration-400
-			opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
+                transition duration-400
+                opacity-90 hover:opacity-100 gap-2 px-6 py-[14px]"
             >
               <Icon size={16} id="WhatsApp" />
-              <span>Conversar no WhatsApp</span>
+              <span>{textContent[languageSwitcher.value].contactSection.mobileButton}</span>
             </a>
           </div>
           <div class="flex flex-col gap-4 items-start">
-            <h3>{social?.title}</h3>
+            <h3>{textContent[languageSwitcher.value].footerSection.socialMedia}</h3>
             {social?.links?.map((item) => (
               <a
                 key={item.network}

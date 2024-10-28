@@ -28,6 +28,7 @@ export default {
       dark: "#001A14",
       slate: "#FEF5E6",
       white: "#FDFDFD",
+      black: "#000000",
     },
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],
