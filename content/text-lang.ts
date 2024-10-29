@@ -172,13 +172,10 @@ export default {
         "mainBanner": {
             "static": "We organize the supply chain of seedlings and seeds for",
             "animate": [
-                "implementers.",
-                "nurserymen.",
+                "nurseries.",
                 "agroforestry systems.",
                 "developers.",
                 "environmental compensation.",
-                "implementers.",
-                "nurserymen."
             ]
         },
         "introductionSection": {
@@ -233,7 +230,7 @@ export default {
         "aboutSilvaSection": {
             "title": "About Silva",
             "text": "We create supply chains for forest restoration. <br />",
-            "description": "We have been <strong class='text-green-900'>nurserymen</strong><br /> We have been <strong class='text-green-900'>seed collectors.</strong><br /> We have been <strong class='text-green-900'>seedling buyers.</strong><br /><br /> Our team consists of professionals with <strong>practical experience </strong>in nurseries, seed collection, and seedling purchases. <br /><br /> Committed to biodiversity and local prosperity, we are the bridge that brings efficiency and sustainability to the forest restoration supply chain."
+            "description": "We have been <strong class='text-green-900'>nursery professionals</strong><br /> We have been <strong class='text-green-900'>seed collectors.</strong><br /> We have been <strong class='text-green-900'>seedling buyers.</strong><br /><br /> Our team consists of professionals with <strong>practical experience </strong>in nurseries, seed collection, and seedling purchases. <br /><br /> Committed to biodiversity and local prosperity, we are the bridge that brings efficiency and sustainability to the forest restoration supply chain."
         },
         "mapSection": {
             "title": "<span class='flex'>Present <svg width='39' height='54' stroke-width='16' class='-mt-5 -ml-2 -mr-2'><use href='/sprites.svg?__frsh_c=0d8298b772976e72ed45708cb692e534ede41051#LeafIcon'></use></svg>  on where </span><span> the restoration happens in Brazil</span>",
@@ -254,7 +251,7 @@ export default {
                 "question": "Which profile do you identify with?",
                 "answers": [
                     {
-                        "text": "Nurseryman"
+                        "text": "Nursery professional"
                     },
                     {
                         "text": "Seedling buyer"
