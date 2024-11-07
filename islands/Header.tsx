@@ -58,6 +58,14 @@ export default function Header({
 }: Nav) {
   const { languageSwitcher } = useUI();
 
+  if (window.location.search === "?lang=pt-br") {
+    languageSwitcher.value = "pt";
+  } else if (window.location.search === "?lang=en-us") {
+    languageSwitcher.value = "en";
+  } else {
+    languageSwitcher.value = "pt";
+  }
+
   const handleClick = () => {
     const details: HTMLDetailsElement | null = document.querySelector("details");
     
@@ -151,6 +159,9 @@ export default function Header({
               <ul class="menu dropdown-content top-10 z-[1] gap-2 p-2 shadow bg-white rounded-lg py-3.5 px-6">
                 <div
                   onClick={() => {
+                    const url = new URL(window.location?.href);
+                    url.searchParams.set("lang", "pt-br");
+                    globalThis?.history?.pushState({}, "", url.toString());
                     handleClick();
                     languageSwitcher.value = "pt";
                   }}
@@ -160,6 +171,9 @@ export default function Header({
                 </div>
                 <div
                   onClick={() => {
+                    const url = new URL(window.location?.href);
+                    url.searchParams.set("lang", "en-us");
+                    globalThis?.history?.pushState({}, "", url.toString());
                     handleClick();
                     languageSwitcher.value = "en";
                   }}
