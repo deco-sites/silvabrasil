@@ -2,8 +2,7 @@
   "__resolveType": "site/apps/deco/resend.ts",
   "apiWrite": {},
   "emailTo": [
-    "contato@silvabrasil.bio",
-    "igorcantelmo@gmail.com"
+    "contato@silvabrasil.bio"
   ],
   "apiKey": {
     "__resolveType": "website/loaders/secret.ts",
