@@ -91,7 +91,7 @@ export default {
         "contactSection": {
             "title": "Vamos marcar uma conversa?",
             "subtitle": "Queremos entender sua situação para te apoiar da melhor forma.",
-            "text": "Manda um WhatsApp pra gente ou preencha o formulário. Vamos entrar em contato.",
+            "text": "Manda um WhatsApp pra gente, vamos entrar em contato.",
             "mobileButton": "Conversar no WhatsApp",
             "formInputs": {
                 "personName": "Nome",
